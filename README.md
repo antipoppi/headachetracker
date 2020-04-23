@@ -6,7 +6,8 @@
 5. [Toiminnot](#toiminnot)
 6. [Käyttötapauskaavio](#usecase)
 7. [Käsitemalli](#käsitemalli)
-8. [Työnjako ja työaikasuunnitelma](#työnjako)
+8. [Työnjako](#työnjako)
+9. [Työaikasuunnitelma](#työaikasuunnitelma)
 
 <a name="tietoa"></a>
 ## Tietoa tekijöistä
@@ -54,4 +55,8 @@ Ei-pakolliset
 ## Käsitemalli / luokkakaavio?
 
 <a name="työnjako"></a>
-## Työnjako ja työaikasuunnitelma
+## Työnjako
+
+
+<a name="työaikasuunnitelma"></a>
+## Työaikasuunnitelma
