@@ -60,3 +60,8 @@ Ei-pakolliset
 
 <a name="työaikasuunnitelma"></a>
 ## Työaikasuunnitelma
+*  Vko17: Suunnitelman tekeminen
+*  Vko18: Tietokannan suunnittelu ja toteutus, käyttöliittymän suunnittelu
+*  Vko19: Käyttöliittymän suunnittelu ja toteutus XAML, C#-koodi
+*  Vko20: Käyttöliittymä XAML, C#-koodi
+*  Vko21: Testaaminen, dokumentointi ja työn palautus
