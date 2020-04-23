@@ -62,7 +62,7 @@ mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto talle
 
 <a name="työnjako"></a>
 ## Työnjako
-
+Työt jaetaan suunnilleen tasan, oman motivaation mukaan. 
 
 <a name="työaikasuunnitelma"></a>
 ## Työaikasuunnitelma
@@ -72,3 +72,5 @@ mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto talle
 *  Vko20: Käyttöliittymä XAML, C#-koodi (30 tuntia)
 *  Vko21: Testaaminen, dokumentointi ja työn palautus (20 tuntia)  
 **Yhteensä 120 tuntia**
+
+Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/tyotunnit.md).
