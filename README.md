@@ -13,7 +13,8 @@
 ## Tietoa tekijöistä
 Tatu Alatalo (N4927)
 
-Venla Lyytikäinen (N3091)
+Venla Lyytikäinen (N3091): ensimmäisen vuoden tieto- ja viestintätekniikan monimuotoinen opiskelija JAMKissa.
+
 
 <a name="kuvaus"></a>
 ## Sovelluksen yleiskuvaus
@@ -29,9 +30,7 @@ Sovelluksen kohderyhmä on melko laaja, joten ulkoasun tulisi miellyttää suurt
 
 <a name="ympäristö"></a>
 ## Käyttöympäristö ja käytetyt teknologiat
-* WPF
-* SQLite
-
+Sovelluksen käyttöympäristönä on Windows. Ohjelmoinnissa käytetään SQLiteä, C#-kieltä ja WPF-tekniikkaa.
 
 <a name="toiminnot"></a>
 ## Toteutettavat toiminnot
