@@ -51,6 +51,12 @@ Ei-pakolliset
 
 ![Käyttötapauskaavio](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecases.jpg "Käyttötapauskaavio")
 
+**Tietojen syöttäminen:**   Sovellukseen lisätään uusi merkintä jossa selviää päänsärkytyyppi, särkytaso, mahdolliset lääkkeet, oireet, särynlievitys, 
+mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto tallennetaan tietokantaan.  
+**Tietojen tarkastelu:**    Merkintöjä voi etsiä tietokannasta ja lukea niitä.  
+**Tietojen poistaminen:**   Etsityn/valitun merkinnän voi poistaa tietokannasta.  
+**Tietojen muokkaus:**      Etsityn/valitun merkinnän tietoja voi muokata ja päivitys tallennetaan tietokantaan.  
+
 <a name="käsitemalli"></a>
 ## Käsitemalli / luokkakaavio?
 
