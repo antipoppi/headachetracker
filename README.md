@@ -49,7 +49,16 @@ Sovelluksen käyttöympäristönä on Windows. Ohjelmoinnissa käytetään SQLit
 <a name="usecase"></a>
 ## Käyttötapauskaavio
 
-![Käyttötapauskaavio](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecases.jpg "Käyttötapauskaavio")
+### Sovellukseen kirjautuminen
+
+![Sovellukseen kirjautuminen](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecase_register_login.jpg "Sovellukseen kirjautuminen")  
+**Sovellukseen rekisteröityminen:** Sovelluksen käyttämiseksi täytyy luoda ensin käyttäjätunnus, jossa pakollisena tietona on käyttäjänimi. Käyttäjä voi tallentaa myös muuta tietoa käyttäjäprofiiliinsa joka tallennetaan tietokantaan.  
+**Sovellukseen kirjautuminen:** Sovellukseen kirjaudutaan valitsemalla käyttäjänimi.  
+**Käyttäjän tietojen muokkaaminen:** Käyttäjän tietoja voidaan muokata (esim. käyttäjänimi vaihtaa)  
+
+### Merkintöjen lisäys
+
+![Tietojen käsittely](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecases.jpg "Tietojen käsittely")
 
 **Tietojen syöttäminen:**   Sovellukseen lisätään uusi merkintä jossa selviää päänsärkytyyppi, särkytaso, mahdolliset lääkkeet, oireet, särynlievitys, 
 mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto tallennetaan tietokantaan.  
