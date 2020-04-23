@@ -34,10 +34,16 @@ Sovelluksen kohderyhmä on melko laaja, joten ulkoasun tulisi miellyttää suurt
 
 <a name="toiminnot"></a>
 ## Toteutettavat toiminnot
+
+Pakolliset
 * Uusien merkintöjen tekeminen
 * Merkintöjen tarkastelu
+* Merkintöjen muokkaaminen
 * Merkintöjen poistaminen
-* ?
+
+Ei-pakolliset
+* Kirjautuminen
+
 
 <a name="usecase"></a>
 ## Käyttötapauskaavio
