@@ -48,6 +48,8 @@ Ei-pakolliset
 <a name="usecase"></a>
 ## Käyttötapauskaavio
 
+![Käyttötapauskaavio](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecases.jpg "Käyttötapauskaavio")
+
 <a name="käsitemalli"></a>
 ## Käsitemalli / luokkakaavio?
 
