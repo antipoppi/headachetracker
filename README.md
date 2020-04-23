@@ -4,6 +4,9 @@
 3. [Kohdeyleisö](#kohde)
 4. [Käyttöympäristö](#ympäristö)
 5. [Toiminnot](#toiminnot)
+6. [Käyttötapauskaavio](#usecase)
+7. [Käsitemalli](#käsitemalli)
+8. [Työnjako ja työaikasuunnitelma](#työnjako)
 
 <a name="tietoa"></a>
 ## Tietoa tekijöistä
@@ -29,11 +32,11 @@ WPF, SQLite
 <a name="toiminnot"></a>
 ## Toteutettavat toiminnot
 
-
+<a name="usecase"></a>
 ## Käyttötapauskaavio
 
-
+<a name="käsitemalli"></a>
 ## Käsitemalli / luokkakaavio?
 
-
+<a name="työnjako"></a>
 ## Työnjako ja työaikasuunnitelma
