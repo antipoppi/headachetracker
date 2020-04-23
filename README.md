@@ -28,11 +28,16 @@ Sovelluksen kohderyhmä on melko laaja, joten ulkoasun tulisi miellyttää suurt
 
 <a name="ympäristö"></a>
 ## Käyttöympäristö ja käytetyt teknologiat
-WPF, SQLite
+* WPF
+* SQLite
 
 
 <a name="toiminnot"></a>
 ## Toteutettavat toiminnot
+* Uusien merkintöjen tekeminen
+* Merkintöjen tarkastelu
+* Merkintöjen poistaminen
+* ?
 
 <a name="usecase"></a>
 ## Käyttötapauskaavio
