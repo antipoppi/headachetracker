@@ -61,9 +61,13 @@ mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto talle
 ## Käsitemalli / luokkakaavio?
 
 Sovelluksen yksinkertainen käsitemalli:
+
+
 ![Käsitemalli](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/kasitemalli.jpg "Käsitemalli")
 
 Sovelluksen tietokannan luokkakaavio:
+
+
 ![SQL-kaavio](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/SQL_classdiagram.jpg "SQL-kaavio")
 
 <a name="työnjako"></a>
