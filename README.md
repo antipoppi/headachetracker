@@ -1,9 +1,9 @@
 # Sisällysluettelo
 1. [Tietoa tekijöistä](#tietoa)
-2. [Sovelluksen yleiskuvaus] (#kuvaus)
-3. [Kohdeyleisö] (#kohde)
-4. [Käyttöympäristö] (#ympäristö)
-5. [Toiminnot] (#toiminnot)
+2. [Sovelluksen yleiskuvaus](#kuvaus)
+3. [Kohdeyleisö](#kohde)
+4. [Käyttöympäristö](#ympäristö)
+5. [Toiminnot](#toiminnot)
 
 <a name="tietoa"></a>
 ## Tietoa tekijöistä
