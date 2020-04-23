@@ -44,6 +44,7 @@ Sovelluksen kohderyhmä on melko laaja, joten ulkoasun tulisi miellyttää suurt
 
 **Ei-pakolliset**
 * Kirjautuminen
+* Rekisteröityminen
 
 
 <a name="usecase"></a>
