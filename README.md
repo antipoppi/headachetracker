@@ -36,13 +36,13 @@ Sovelluksen kohderyhmä on melko laaja, joten ulkoasun tulisi miellyttää suurt
 <a name="toiminnot"></a>
 ## Toteutettavat toiminnot
 
-Pakolliset
+**Pakolliset**
 * Uusien merkintöjen tekeminen
 * Merkintöjen tarkastelu
 * Merkintöjen muokkaaminen
 * Merkintöjen poistaminen
 
-Ei-pakolliset
+**Ei-pakolliset**
 * Kirjautuminen
 
 
