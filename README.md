@@ -14,3 +14,15 @@ Sovelluksen kohderyhmä on melko laaja, joten ulkoasun tulisi miellyttää suurt
 
 ##Käyttöympäristö ja käytetyt teknologiat
 WPF, SQLite
+
+
+## Toteutettavat toiminnot
+
+
+## Käyttötapauskaavio
+
+
+## Käsitemalli / luokkakaavio?
+
+
+## Työnjako ja työaikasuunnitelma
