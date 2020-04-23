@@ -64,5 +64,5 @@ Ei-pakolliset
 *  Vko18: Tietokannan suunnittelu ja toteutus, käyttöliittymän suunnittelu (30 tuntia)
 *  Vko19: Käyttöliittymän suunnittelu ja toteutus XAML, C#-koodi (30 tuntia)
 *  Vko20: Käyttöliittymä XAML, C#-koodi (30 tuntia)
-*  Vko21: Testaaminen, dokumentointi ja työn palautus (20 tuntia)
+*  Vko21: Testaaminen, dokumentointi ja työn palautus (20 tuntia)  
 **Yhteensä 120 tuntia**
