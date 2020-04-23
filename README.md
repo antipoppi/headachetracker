@@ -60,6 +60,9 @@ mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto talle
 <a name="käsitemalli"></a>
 ## Käsitemalli / luokkakaavio?
 
+Sovelluksen tietokannan luokkakaavio:
+![SQL-kaavio](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/kuvat/SQL_classdiagram.jpg)
+
 <a name="työnjako"></a>
 ## Työnjako
 Työt jaetaan suunnilleen tasan, oman motivaation mukaan. 
