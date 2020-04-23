@@ -22,7 +22,7 @@ Sovelluksen kohderyhmä on melko laaja, joten ulkoasun tulisi miellyttää suurt
 
 
 <a name="ympäristö"></a>
-##Käyttöympäristö ja käytetyt teknologiat
+## Käyttöympäristö ja käytetyt teknologiat
 WPF, SQLite
 
 
