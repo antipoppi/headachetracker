@@ -10,7 +10,9 @@
 
 <a name="tietoa"></a>
 ## Tietoa tekijöistä
+Tatu Alatalo (N4927)
 
+Venla Lyytikäinen (N3091)
 
 <a name="kuvaus"></a>
 ## Sovelluksen yleiskuvaus
