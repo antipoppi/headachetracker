@@ -2,7 +2,7 @@
 
 **23.4.2020**
 
-Venla 2,5h - Speksin suunnittelu  
+Venla 3h - Speksin suunnittelu  
 Tatu 2,5h - Speksin suunnittelu
 
 **24.4.2020**
