@@ -11,7 +11,7 @@
 
 <a name="tietoa"></a>
 ## Tietoa tekijöistä
-Tatu Alatalo (N4927)
+Tatu Alatalo (N4927): tieto- ja viestintätekniikan muuntokoulutusopiskelija (valmistuu 2021 lopussa)
 
 Venla Lyytikäinen (N3091): ensimmäisen vuoden tieto- ja viestintätekniikan monimuotoinen opiskelija JAMKissa.
 
