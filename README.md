@@ -44,7 +44,8 @@ Sovelluksen käyttöympäristönä on Windows. Ohjelmoinnissa käytetään SQLit
 **Ei-pakolliset**
 * Kirjautuminen
 * Rekisteröityminen
-
+* Käyttäjän tietojen muokkaaminen
+* Käyttäjän tietojen poistaminen
 
 <a name="usecase"></a>
 ## Käyttötapauskaavio
@@ -54,7 +55,12 @@ Sovelluksen käyttöympäristönä on Windows. Ohjelmoinnissa käytetään SQLit
 ![Sovellukseen kirjautuminen](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecase_register_login.jpg "Sovellukseen kirjautuminen")  
 **Sovellukseen rekisteröityminen:** Sovelluksen käyttämiseksi täytyy luoda ensin käyttäjätunnus, jossa pakollisena tietona on käyttäjänimi. Käyttäjä voi tallentaa myös muuta tietoa käyttäjäprofiiliinsa joka tallennetaan tietokantaan.  
 **Sovellukseen kirjautuminen:** Sovellukseen kirjaudutaan valitsemalla käyttäjänimi.  
-**Käyttäjän tietojen muokkaaminen:** Käyttäjän tietoja voidaan muokata (esim. käyttäjänimi vaihtaa)  
+
+### Käyttäjän tietojen muokkaaminen
+
+![Käyttäjän tietojen muokkaaminen](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecase_edit_delete_user.png "Käyttäjän tietojen muokkaaminen")  
+**Käyttäjän tietojen muokkaaminen** Käyttäjän voi muokata omia tietojaan, kuten esim. käyttäjänimeään  
+**Käyttäjän tietojen poistaminen** Käyttäjä voi poistaa tunnuksensa sekä kaikki merkintänsä.
 
 ### Merkintöjen lisäys
 
@@ -67,7 +73,7 @@ mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto talle
 **Tietojen muokkaus:**      Etsityn/valitun merkinnän tietoja voi muokata ja päivitys tallennetaan tietokantaan.  
 
 <a name="käsitemalli"></a>
-## Käsitemalli / luokkakaavio?
+## Käsitemalli / luokkakaavio
 
 Sovelluksen yksinkertainen käsitemalli:
 
