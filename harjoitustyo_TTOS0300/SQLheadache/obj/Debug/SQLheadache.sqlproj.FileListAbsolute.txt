@@ -1,0 +1,9 @@
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\bin\Debug\SQLheadache.dacpac
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\bin\Debug\SQLheadache.dll
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\bin\Debug\SQLheadache.pdb
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\obj\Debug\Model.xml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\obj\Debug\refactor.xml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\obj\Debug\postdeploy.sql
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\obj\Debug\predeploy.sql
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\obj\Debug\SQLheadache.dll
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\SQLheadache\obj\Debug\SQLheadache.pdb

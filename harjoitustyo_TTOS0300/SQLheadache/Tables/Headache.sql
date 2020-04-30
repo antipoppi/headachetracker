@@ -9,7 +9,7 @@
     [AcheReliefsID] INT NULL, 
     [AcheTriggersID] INT NULL, 
     [Notes] TEXT NULL, 
-    [Date] DATE NULL,
+    [Date] DATE NOT NULL,
 
     CONSTRAINT [UserID] FOREIGN KEY ([UserID]) REFERENCES [User]([UserID]),
     CONSTRAINT [AcheTypeID] FOREIGN KEY ([AcheTypeID]) REFERENCES [AcheType]([AcheTypeID]),
