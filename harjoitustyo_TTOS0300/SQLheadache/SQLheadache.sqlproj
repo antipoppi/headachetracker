@@ -57,4 +57,19 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Headache.sql" />
+    <Build Include="AcheType.sql" />
+    <Build Include="Medications.sql" />
+    <Build Include="HeadacheSymptoms.sql" />
+    <Build Include="Symptoms.sql" />
+    <Build Include="HeadacheReliefs.sql" />
+    <Build Include="Reliefs.sql" />
+    <Build Include="User.sql" />
+    <Build Include="HeadacheTriggers.sql" />
+    <Build Include="Triggers.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SQLheadache.refactorlog" />
+  </ItemGroup>
 </Project>
