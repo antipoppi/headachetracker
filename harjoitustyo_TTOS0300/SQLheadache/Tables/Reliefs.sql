@@ -1,5 +1,0 @@
-﻿CREATE TABLE [dbo].[Reliefs]
-(
-	[ReliefID] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [Relief] VARCHAR(50) NULL
-)

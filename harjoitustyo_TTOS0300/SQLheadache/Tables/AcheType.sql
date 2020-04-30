@@ -1,5 +1,0 @@
-﻿CREATE TABLE [dbo].[AcheType]
-(
-	[AcheTypeID] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [AcheType] VARCHAR(50) NULL
-)
