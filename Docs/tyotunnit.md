@@ -8,3 +8,10 @@ Tatu 2,5h - Speksin suunnittelu
 **24.4.2020**
 
 Tatu 0,5h - Speksin suunnittelu
+
+# Vko 18
+
+**30.4.2020**
+
+Venla
+Tatu 2h - Tietokannan toteutus
