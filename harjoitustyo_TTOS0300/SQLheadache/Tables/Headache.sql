@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Headache]
 (
-	[AcheID] INT NOT NULL PRIMARY KEY, 
+	[AcheID] INT NOT NULL PRIMARY KEY IDENTITY, 
     [UserID] INT NULL, 
     [AcheTypeID] INT NULL, 
     [PainLevel] INT NULL, 

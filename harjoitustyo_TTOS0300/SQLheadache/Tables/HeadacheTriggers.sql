@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[HeadacheTriggers]
 (
-	[ID] INT NOT NULL PRIMARY KEY, 
+	[ID] INT NOT NULL PRIMARY KEY IDENTITY, 
     [AcheID] INT NULL, 
     [TriggerID] INT NULL,
 
