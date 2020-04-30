@@ -1,0 +1,15 @@
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\bin\Debug\headachetracker.exe.config
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\bin\Debug\headachetracker.exe
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\bin\Debug\headachetracker.pdb
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.csprojAssemblyReference.cache
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\MainWindow.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\App.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker_MarkupCompile.cache
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker_MarkupCompile.lref
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\MainWindow.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.g.resources
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.Properties.Resources.resources
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.csproj.GenerateResource.cache
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.csproj.CoreCompileInputs.cache
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.exe
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.pdb
