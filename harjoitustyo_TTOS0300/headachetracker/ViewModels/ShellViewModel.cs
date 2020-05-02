@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace headachetracker.ViewModels
 {
     public class ShellViewModel : Screen
-    {
+    {/*
         #region Fields
         private int acheID;
 		private int triggerID;
@@ -69,15 +69,14 @@ namespace headachetracker.ViewModels
 			get { return triggerID; }
 			set { triggerID = value; }
 		}
-
-				
+						
 		public string Notes
 		{
 			get { return notes; }
 			set { notes = value; }
 		}
 		#endregion
-
+		*/
 
 
 	}

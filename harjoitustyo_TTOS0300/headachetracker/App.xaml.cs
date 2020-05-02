@@ -13,5 +13,7 @@ namespace headachetracker
     /// </summary>
     public partial class App : Application
     {
+        static string databaseName = "SQLheadache.db";
+        static string databasePath = ".\\" + databaseName;
     }
 }
