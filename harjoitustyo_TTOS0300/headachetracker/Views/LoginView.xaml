@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:headachetracker.Views"
         mc:Ignorable="d"
-        Title="Headache tracker" Height="300" Width="350" FontSize="16" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="300" Width="350" FontSize="16" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -25,5 +25,9 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-  </Grid>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Käyttäjänimi:" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="0 40 0 0"/>
+        <TextBox Grid.Column="1" Grid.Row="2" x:Name="Username" MinWidth="100" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="0 10"/>
+
+        <Button x:Name="btnKirjaudu" Content="Kirjaudu sisään" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="0 20" Click="btnKirjaudu_Click"/>
+    </Grid>
 </Window>
