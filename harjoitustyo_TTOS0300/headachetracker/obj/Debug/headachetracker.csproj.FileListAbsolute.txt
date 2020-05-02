@@ -39,3 +39,4 @@ F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headac
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.pdb
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\Views\ShellView.g.cs
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\Views\ShellView.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\headachetracker\obj\Debug\headachetracker.csprojAssemblyReference.cache

@@ -23,5 +23,10 @@ namespace headachetracker.Views
         {
             InitializeComponent();
         }
+
+        private void btnKirjaudu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

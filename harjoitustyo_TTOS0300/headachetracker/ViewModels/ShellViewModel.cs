@@ -9,6 +9,20 @@ namespace headachetracker.ViewModels
 {
     class ShellViewModel : Screen
     {
+		private string username;
 
-    }
+		public string Username
+		{
+			get 
+			{ 
+				return username; 
+			}
+			
+			set 
+			{ 
+				username = value; 
+			}
+		}
+
+	}
 }
