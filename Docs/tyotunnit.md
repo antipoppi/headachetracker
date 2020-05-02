@@ -18,5 +18,5 @@ Tatu 2h - Tietokannan toteutus
 
 **2.5.2020**
 
-Venla  
+Venla  3h - Käyttöliittymän suunnittelua
 Tatu 2h - Käyttöliittymän suunnittelu, tietokannan toteutus
