@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace headachetracker.ViewModels
 {
-    class ShellViewModel : Screen
+    public class ShellViewModel : Screen
     {
         #region Fields
         private int acheID;
@@ -18,10 +18,11 @@ namespace headachetracker.ViewModels
 		private int medicationID;
 		private int symptomID;
 		private int reliefID;
-        #endregion
+		private string notes;
+		#endregion
 
 		#region Properties
-        public int AcheID
+		public int AcheID
 		{
 			get { return acheID; }
 			set { acheID = value; }
@@ -69,6 +70,12 @@ namespace headachetracker.ViewModels
 			set { triggerID = value; }
 		}
 
+				
+		public string Notes
+		{
+			get { return notes; }
+			set { notes = value; }
+		}
 		#endregion
 
 
