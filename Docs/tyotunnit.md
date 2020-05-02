@@ -15,3 +15,8 @@ Tatu 0,5h - Speksin suunnittelu
 
 Venla 7h - Tietokannan toteusta, MVVM-mallin käyttöönottoa
 Tatu 2h - Tietokannan toteutus
+
+**2.5.2020**
+
+Venla
+Tatu 2h - Käyttöliittymän suunnittelu, tietokannan toteutus
