@@ -9,20 +9,68 @@ namespace headachetracker.ViewModels
 {
     class ShellViewModel : Screen
     {
-		private string username;
+        #region Fields
+        private int acheID;
+		private int triggerID;
+		private int userID;
+		private int acheTypeID;
+		private int painLevel;
+		private int medicationID;
+		private int symptomID;
+		private int reliefID;
+        #endregion
 
-		public string Username
+		#region Properties
+        public int AcheID
 		{
-			get 
-			{ 
-				return username; 
-			}
-			
-			set 
-			{ 
-				username = value; 
-			}
+			get { return acheID; }
+			set { acheID = value; }
 		}
+
+		public int UserID
+		{
+			get { return userID; }
+			set { userID = value; }
+		}
+
+		public int AcheTypeID
+		{
+			get { return acheTypeID; }
+			set { acheTypeID = value; }
+		}
+
+		public int PainLevel
+		{
+			get { return painLevel; }
+			set { painLevel = value; }
+		}
+
+		public int MyProperty
+		{
+			get { return medicationID; }
+			set { medicationID = value; }
+		}
+
+		public int SymptomID
+		{
+			get { return symptomID; }
+			set { symptomID = value; }
+		}
+
+		public int ReliefID
+		{
+			get { return reliefID; }
+			set { reliefID = value; }
+		}
+
+		public int TriggerID
+		{
+			get { return triggerID; }
+			set { triggerID = value; }
+		}
+
+		#endregion
+
 
 
 	}

@@ -24,6 +24,6 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-
-  </Grid>
+        <DataGrid x:Name="Headache"/>
+    </Grid>
 </Window>
