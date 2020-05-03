@@ -23,7 +23,7 @@
 
 **2.5.2020**
 
-* Venla  3h - Käyttöliittymän suunnittelua, tietokannan yksinkertaistus, MVVM:n poisto
+* Venla  5h - Käyttöliittymän suunnittelua, tietokannan yksinkertaistus, MVVM:n poisto
 * Tatu ?
 
 En saanut noita menemään omille riveille ilman noita palleroita. Ne voi kyllä poistaa
