@@ -18,11 +18,11 @@ Tatu 2h - Tietokannan toteutus
 
 **2.5.2020**
 
-Venla  3h - Käyttöliittymän suunnittelua
-Tatu 2h - Käyttöliittymän suunnittelu, tietokannan toteutus
+* Venla  3h - Käyttöliittymän suunnittelua
+* Tatu 2h - Käyttöliittymän suunnittelu, tietokannan toteutus
 
 **2.5.2020**
 
-Venla  3h - Käyttöliittymän suunnittelua, tietokannan yksinkertaistus, MVVM:n poisto
-Tatu ?
+* Venla  3h - Käyttöliittymän suunnittelua, tietokannan yksinkertaistus, MVVM:n poisto
+* Tatu ?
 
