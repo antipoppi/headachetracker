@@ -18,12 +18,10 @@
 
 **2.5.2020**
 
-* Venla  3h - Käyttöliittymän suunnittelua
+* Venla 3h - Käyttöliittymän suunnittelua
 * Tatu 2h - Käyttöliittymän suunnittelu, tietokannan toteutus
 
-**2.5.2020**
+**3.5.2020**
 
-* Venla  5h - Käyttöliittymän suunnittelua, tietokannan yksinkertaistus, MVVM:n poisto
-* Tatu ?
-
-En saanut noita menemään omille riveille ilman noita palleroita. Ne voi kyllä poistaa
+* Venla 5h - Käyttöliittymän suunnittelua, tietokannan yksinkertaistus, MVVM:n poisto
+* Tatu 3h - Käyttöliittymän suunnittelua, tietokannan suunnittelu
