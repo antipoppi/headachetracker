@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 namespace headachatracker
 {
     /// <summary>
-    /// Interaction logic for SymptomsWindow.xaml
+    /// Interaction logic for AcheTypeWindow.xaml
     /// </summary>
-    public partial class SymptomsWindow : Window
+    public partial class AcheTypeWindow : Window
     {
-        public SymptomsWindow()
+        public AcheTypeWindow()
         {
             InitializeComponent();
+
         }
+
     }
 }

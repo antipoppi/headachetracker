@@ -44,5 +44,11 @@ namespace headachatracker
         {
 
         }
+
+        private void btnTesti_Click(object sender, RoutedEventArgs e)
+        {
+            AcheTypeWindow window = new AcheTypeWindow();
+            window.Show();
+        }
     }
 }

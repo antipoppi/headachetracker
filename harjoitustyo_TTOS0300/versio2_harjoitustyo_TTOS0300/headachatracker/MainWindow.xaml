@@ -31,27 +31,11 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Ache Type" Grid.Column="1" Grid.Row="1"/>
-        <ComboBox x:Name="comboAcheType" Grid.Column="2" Grid.Row="1"/>
 
-        <TextBlock Text="Medication" Grid.Column="1" Grid.Row="2"/>
-        <ComboBox x:Name="comboMedication" Grid.Column="2" Grid.Row="2"/>
 
-        <TextBlock Text="Symptoms" Grid.Column="1" Grid.Row="3"/>
-        <CheckBox x:Name="checkSymptoms" Content="Symptom" Grid.Column="2" Grid.Row="3"/>
-
-        <TextBlock Text="Reliefs" Grid.Column="1" Grid.Row="4"/>
-        <CheckBox x:Name="checkReliefs" Content="Relief" Grid.Column="2" Grid.Row="4"/>
-
-        <TextBlock Text="Triggers" Grid.Column="1" Grid.Row="5"/>
-        <CheckBox x:Name="checkTriggers" Content="Trigger" Grid.Column="2" Grid.Row="5"/>
-
-        <TextBlock Text="Notes" Grid.Column="1" Grid.Row="6"/>
-        <TextBox x:Name="txtNotes" Grid.Column="2" Grid.Row="6"/>
-
-        <Button x:Name="btnAdd" Content="Add" Grid.Column="2" Grid.Row="7" MinWidth="100" Click="btnAdd_Click"/>
 
         <DataGrid x:Name="dataHeadache" ItemsSource="{Binding}" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" IsEnabled="False" MinWidth="250" MinHeight="200" Grid.RowSpan="6"/>
+        <Button x:Name="btnAdd" Content="Add entry" Grid.Column="2" Grid.Row="9" MinWidth="100" Click="btnTesti_Click"/>
 
     </Grid>
 </Window>

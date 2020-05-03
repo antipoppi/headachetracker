@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\App.xaml
-21285293070
+21611425442
 
-9-88414885
+9600499094
 19165755320
-MainWindow.xaml;SymptomsWindow.xaml;
+AddEntriesUI.xaml;MainWindow.xaml;
 
-True
+False
 
