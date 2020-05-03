@@ -25,7 +25,7 @@ namespace headachatracker.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\SQLheadache.db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\SQLheadache.db")]
         public string databasePath {
             get {
                 return ((string)(this["databasePath"]));
