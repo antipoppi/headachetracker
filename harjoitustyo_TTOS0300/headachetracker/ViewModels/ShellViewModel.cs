@@ -4,80 +4,41 @@ using System.Linq;
 using System.Text;
 using Caliburn.Micro;
 using System.Threading.Tasks;
+using System.Data.SQLite;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using headachetracker.Models;
+using System.Configuration;
+using System.Data;
+using Dapper;
 
 namespace headachetracker.ViewModels
 {
     public class ShellViewModel : Screen
-    {/*
-        #region Fields
-        private int acheID;
-		private int triggerID;
-		private int userID;
-		private int acheTypeID;
-		private int painLevel;
-		private int medicationID;
-		private int symptomID;
-		private int reliefID;
-		private string notes;
-		#endregion
+    {
+        public static List<HeadacheModel> LoadEntries()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<HeadacheModel>("Select * from Headache", new DynamicParameters());
+                return output.ToList();
+            }
+        }
 
-		#region Properties
-		public int AcheID
+		public static void SaveEntry(HeadacheModel headache)
 		{
-			get { return acheID; }
-			set { acheID = value; }
-		}
+            // Tää ei oo valmis
 
-		public int UserID
-		{
-			get { return userID; }
-			set { userID = value; }
-		}
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("Insert into Headache (PainLevel) values (@PainLevel)", headache);
+            }
 
-		public int AcheTypeID
-		{
-			get { return acheTypeID; }
-			set { acheTypeID = value; }
-		}
+        }
 
-		public int PainLevel
-		{
-			get { return painLevel; }
-			set { painLevel = value; }
-		}
-
-		public int MyProperty
-		{
-			get { return medicationID; }
-			set { medicationID = value; }
-		}
-
-		public int SymptomID
-		{
-			get { return symptomID; }
-			set { symptomID = value; }
-		}
-
-		public int ReliefID
-		{
-			get { return reliefID; }
-			set { reliefID = value; }
-		}
-
-		public int TriggerID
-		{
-			get { return triggerID; }
-			set { triggerID = value; }
-		}
-						
-		public string Notes
-		{
-			get { return notes; }
-			set { notes = value; }
-		}
-		#endregion
-		*/
-
-
-	}
+        private static string LoadConnectionString(string id = "Default")
+        {
+            return ConfigurationManager.ConnectionStrings[id].ConnectionString; // Etsii connection stringin app.configista
+        }
+    }
 }

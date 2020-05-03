@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using headachetracker.Models;
+using headachetracker.ViewModels;
 
 namespace headachetracker.Views
 {
@@ -19,14 +21,33 @@ namespace headachetracker.Views
     /// </summary>
     public partial class ShellView : Window
     {
+        List<HeadacheModel> headache = new List<HeadacheModel>();
+
         public ShellView()
         {
             InitializeComponent();
         }
 
-        private void btnKirjaudu_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            HeadacheModel h = new HeadacheModel();
+
+            ShellViewModel.SaveEntry(h);
+                    }
+
+        private void dataHeadache_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void dataHeadache_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            headache = ShellViewModel.LoadEntries();
         }
     }
 }
