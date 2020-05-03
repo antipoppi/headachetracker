@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:headachetracker.Views"
         mc:Ignorable="d"
-        Title="Headache tracker" Height="500" Width="500" FontSize="18" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
-    <Grid>
+        Title="Headache tracker" Height="500" Width="500" FontSize="18" WindowStartupLocation="CenterScreen">
+    <Grid Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="auto"/>

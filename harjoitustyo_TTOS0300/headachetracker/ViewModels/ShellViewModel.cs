@@ -5,8 +5,6 @@ using System.Text;
 using Caliburn.Micro;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using System.Data.Sql;
-using System.Data.SqlClient;
 using headachetracker.Models;
 using System.Configuration;
 using System.Data;
@@ -16,22 +14,45 @@ namespace headachetracker.ViewModels
 {
     public class ShellViewModel : Screen
     {
-        public static List<HeadacheModel> LoadEntries()
-        {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                var output = cnn.Query<HeadacheModel>("Select * from Headache", new DynamicParameters());
-                return output.ToList();
-            }
-        }
-
 		public static void SaveEntry(HeadacheModel headache)
 		{
-            // Tää ei oo valmis
+            /*
 
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute("Insert into Headache (PainLevel) values (@PainLevel)", headache);
+            }
+            */
+
+        }
+
+        public static DataTable ReadFromSQLite()
+        {
+            if (System.IO.File.Exists(".\\SQLheadache.db"))
+            {
+                SQLiteConnection connection = new SQLiteConnection(LoadConnectionString()); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                SQLiteCommand cmd = new SQLiteCommand("SELECT * from Headache", connection); // SQL-komento
+
+                // Tiedon luku:
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                // Tiedot dataTableen:
+                DataTable dt = new DataTable();
+                dt.Load(rdr);
+
+                // Suljetaan lukija + yhteys
+                rdr.Close();
+                connection.Close();
+
+                // Palautetaan datatable-muuttuja
+                return dt;
+
+            }
+
+            else
+            {
+                throw new System.IO.FileNotFoundException("File not found");
             }
 
         }

@@ -45,9 +45,20 @@ namespace headachetracker.Views
 
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            headache = ShellViewModel.LoadEntries();
+            // Ikkuna ladattaessa haetaan tiedot ShellViewModel-luokasta
+
+            try
+            {
+                dataHeadache.DataContext = headachetracker.ViewModels.ShellViewModel.ReadFromSQLite;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", "Error", MessageBoxButton.OK);
+            }
+
         }
     }
 }
