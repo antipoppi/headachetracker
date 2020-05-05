@@ -1,0 +1,79 @@
+﻿<Window x:Class="headachatracker.AddSymptoms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:headachatracker"
+        mc:Ignorable="d"
+        Title="Add symptoms" Height="600" Width="350" FontSize="16">
+    <Grid>              
+<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Border Background="#C4F2FE" Grid.Column="6" Grid.Row="0" Grid.RowSpan="24"/>
+        <Border Background="#C4F2FE" Grid.Column="0" Grid.Row="24" Grid.ColumnSpan="6" Height="30"/>
+        <Border Background="#87DBE6" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"/>
+        <Border Background="#87DBE6" Grid.Column="0" Grid.Row="0" Grid.RowSpan="24"/>
+
+        
+        <TextBlock Text="Symptoms" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" Margin="10" FontWeight="Bold"/>
+
+        <CheckBox x:Name="checkThrobbing" Content="Throbbing pain" Grid.Row="2" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkPulsating" Content="Pulsating pain" Grid.Row="3" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkPounding" Content="Pounding pain" Grid.Row="4" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkOneSided" Content="One sided pain" Grid.Row="5" Grid.Column="1" Margin="10 0 0 0"/>
+
+        <CheckBox x:Name="checkSensLight" Content="Sensitivity to light" Grid.Row="6" Grid.Column="1"  Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkSensNoise" Content="Sensitivity to noise" Grid.Row="7" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkSensSmell" Content="Sensitivity to smell" Grid.Row="8" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkTinnitus" Content="Tinnitus" Grid.Row="9" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkWeakness" Content="Weakness" Grid.Row="10" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkMoodiness" Content="Moodiness" Grid.Row="11" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkAnxiety" Content="Anxiety" Grid.Row="12" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkFatigue" Content="Fatigue" Grid.Row="13" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkStuffedNose" Content="Stuffed nose" Grid.Row="14" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkBlurry" Content="Blurred vision or visual disturbances" Grid.Row="15" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkMuscle" Content="Muscle stiffness or achiness" Grid.Row="16" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkIrritation" Content="Irritability" Grid.Row="17" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkExercise" Content="Pain worsens during exercise" Grid.Row="18" Grid.Column="1" Margin="10 0 0 0"/>
+        <CheckBox x:Name="checkOther" Content="Other" Grid.Row="19" Grid.Column="1" Checked="checkOther_Checked" Unchecked="checkOther_Unchecked"  Margin="10 0 0 0"/>
+
+        <TextBlock x:Name="txtAddSymptom" Text="Specify, what" Grid.Row="20" Grid.Column="1" Visibility="Hidden" Margin="10 0 0 0"/>
+        <TextBox x:Name="txbAddOtherSymptom" Grid.Row="21" Grid.Column="1" Width="240" Visibility="Hidden" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+        <Button x:Name="btnAddSymptoms" Content="Add" Grid.Column="1" Grid.Row="22" Padding="5" HorizontalAlignment="Right"  Margin="0 10 0 10" Background="#62D0ED"/>
+
+    </Grid>
+</Window>
