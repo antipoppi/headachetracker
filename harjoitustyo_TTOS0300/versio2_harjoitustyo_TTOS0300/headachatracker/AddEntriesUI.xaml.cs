@@ -25,5 +25,24 @@ namespace headachatracker
 
         }
 
+        private void btnAddMedications_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAddSymptoms_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAddReliefs_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAddTriggers_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

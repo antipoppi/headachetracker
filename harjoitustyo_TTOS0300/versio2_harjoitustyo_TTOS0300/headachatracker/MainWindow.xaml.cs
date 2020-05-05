@@ -27,7 +27,7 @@ namespace headachatracker
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            // Ikkuna ladattaessa haetaan tiedot ShellViewModel-luokasta
+            // Ikkuna ladattaessa haetaan tiedot DatabaseAccess-luokasta
 
             try
             {
@@ -36,19 +36,18 @@ namespace headachatracker
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
             }
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btnTesti_Click(object sender, RoutedEventArgs e)
         {
+            // Avataan merkintöjen lisäämistä varten uusi ikkuna 
+
             AcheTypeWindow window = new AcheTypeWindow();
             window.Show();
+            this.Hide();        // Piilotetaan tämä MainWindow ikkuna
         }
     }
 }

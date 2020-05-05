@@ -10,13 +10,18 @@ namespace headachatracker
 {
     public static class DatabaseAccess
     {
+        #region Fields
         private static string filePath;
+        #endregion
 
+        #region Constructors
         static DatabaseAccess()
         {
             filePath = headachatracker.Properties.Settings.Default.databasePath;  // Etsitään tietokannan sijainti Propertiesseistä
         }
+        #endregion
 
+        #region Methods
         public static DataTable ReadFromSQLite()
         {
             if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
@@ -47,6 +52,6 @@ namespace headachatracker
             }
 
         }
-
+        #endregion
     }
 }
