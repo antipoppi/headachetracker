@@ -19,14 +19,16 @@ namespace headachatracker
     /// </summary>
     public partial class AddEntriesUI : Window
     {
-        public AddEntriesUI(object headacheObj)
+        private Headache headacheObj;
+        public AddEntriesUI()
         {
             InitializeComponent();
+            headacheObj = new Headache();
         }
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
-            AddMedication medicationWindow = new AddMedication();
+            AddMedication medicationWindow = new AddMedication(headacheObj);
             medicationWindow.Show();
 
         }
@@ -48,12 +50,17 @@ namespace headachatracker
             AddTriggers addTriggersWindow = new AddTriggers();
             addTriggersWindow.Show();
         }
-
+        private void txbNotes_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string hold = txbNotes.Text;
+            headacheObj.Notes = hold;
+        }
         private void btnAddEntry_Click(object sender, RoutedEventArgs e)
         {
             try
             {
 
+                DatabaseAccess.AddToSQLite(headacheObj);
             }
 
             catch (Exception ex)

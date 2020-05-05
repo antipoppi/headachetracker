@@ -19,7 +19,7 @@ namespace headachatracker
     /// </summary>
     public partial class AddMedication : Window
     {
-        public AddMedication()
+        public AddMedication(object headacheObj)
         {
             InitializeComponent();
         }

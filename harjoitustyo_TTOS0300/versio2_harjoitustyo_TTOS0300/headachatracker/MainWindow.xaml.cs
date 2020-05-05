@@ -44,8 +44,7 @@ namespace headachatracker
         private void btnTesti_Click(object sender, RoutedEventArgs e)
         {
             // Avataan merkintöjen lisäämistä varten uusi ikkuna
-            Headache headacheObj = new Headache();
-            AddEntriesUI window = new AddEntriesUI(headacheObj);
+            AddEntriesUI window = new AddEntriesUI();
             window.Show();
             this.Hide();        // Piilotetaan tämä MainWindow ikkuna
         }
