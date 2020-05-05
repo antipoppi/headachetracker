@@ -59,9 +59,10 @@ namespace headachatracker
         {
             try
             {
-
-
                 DatabaseAccess.AddToSQLite(headacheObj);
+                MainWindow window = new MainWindow();
+                this.Hide();
+                window.Show();
             }
 
             catch (Exception ex)
