@@ -52,6 +52,10 @@ namespace headachatracker
             }
 
         }
+
+
+        // Tänne vielä lisäys- ja poistovaihtoehdot
+
         #endregion
     }
 }
