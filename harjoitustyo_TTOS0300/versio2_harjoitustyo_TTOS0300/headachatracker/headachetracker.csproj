@@ -85,12 +85,33 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddReliefs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddSymptoms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddTriggers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="AddMedication.xaml.cs">
       <DependentUpon>AddMedication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddReliefs.xaml.cs">
+      <DependentUpon>AddReliefs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddSymptoms.xaml.cs">
+      <DependentUpon>AddSymptoms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddTriggers.xaml.cs">
+      <DependentUpon>AddTriggers.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

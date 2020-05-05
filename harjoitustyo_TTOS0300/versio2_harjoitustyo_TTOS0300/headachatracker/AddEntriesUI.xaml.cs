@@ -34,17 +34,20 @@ namespace headachatracker
 
         private void btnAddSymptoms_Click(object sender, RoutedEventArgs e)
         {
-
+            AddSymptoms symptomWindow = new AddSymptoms();
+            symptomWindow.Show();
         }
 
         private void btnAddReliefs_Click(object sender, RoutedEventArgs e)
         {
-
+            AddReliefs addReliefsWindow = new AddReliefs();
+            addReliefsWindow.Show();
         }
 
         private void btnAddTriggers_Click(object sender, RoutedEventArgs e)
         {
-
+            AddTriggers addTriggersWindow = new AddTriggers();
+            addTriggersWindow.Show();
         }
 
         private void btnAddEntry_Click(object sender, RoutedEventArgs e)

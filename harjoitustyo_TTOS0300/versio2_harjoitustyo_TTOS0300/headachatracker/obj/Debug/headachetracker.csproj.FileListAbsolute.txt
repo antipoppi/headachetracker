@@ -50,3 +50,10 @@ F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\he
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddEntriesUI.baml
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddMedication.g.cs
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddMedication.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachetracker.csprojAssemblyReference.cache
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddSymptoms.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddSymptoms.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddReliefs.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddTriggers.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddReliefs.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddTriggers.baml
