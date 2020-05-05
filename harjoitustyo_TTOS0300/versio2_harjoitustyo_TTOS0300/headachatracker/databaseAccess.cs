@@ -14,12 +14,12 @@ namespace headachatracker
 
         static DatabaseAccess()
         {
-            filePath = headachatracker.Properties.Settings.Default.databasePath;
+            filePath = headachatracker.Properties.Settings.Default.databasePath;  // Etsitään tietokannan sijainti Propertiesseistä
         }
 
         public static DataTable ReadFromSQLite()
         {
-            if (System.IO.File.Exists(filePath))
+            if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
             {
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
@@ -41,7 +41,7 @@ namespace headachatracker
 
             }
 
-            else
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
             {
                 throw new System.IO.FileNotFoundException("File not found");
             }

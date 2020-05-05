@@ -54,11 +54,10 @@
             <ComboBoxItem>10</ComboBoxItem>
         </ComboBox>
 
-        <CheckBox Content="Took medication" Grid.Row="4" Grid.Column="1" Margin="0 0"/>
-
         <Button x:Name="btnAddSymptoms" Content="Add symptoms" Grid.Row="5" Grid.Column="1" Margin="10"/>
         <Button x:Name="btnAddReliefs" Content="Add reliefs" Grid.Row="6" Grid.Column="1" Margin="10"/>
         <Button x:Name="btnAddTriggers" Content="Add triggers" Grid.Row="7" Grid.Column="1" Margin="10"/>
+        <Button x:Name="btnAddMedications" Content="Add medications" Grid.Row="4" Grid.Column="1" Margin="10"/>
 
 
 
