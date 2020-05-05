@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\
+D:\Git\k2020\KL-Harjoitustyö\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\
 headachatracker
 none
 false
 DEBUG;TRACE
-F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\App.xaml
+D:\Git\k2020\KL-Harjoitustyö\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\App.xaml
 6-743598973
 
 121234277978
-19165755320
+19-1595413097
 AddEntriesUI.xaml;AddMedication.xaml;AddReliefs.xaml;AddSymptoms.xaml;AddTriggers.xaml;MainWindow.xaml;
 
 False
