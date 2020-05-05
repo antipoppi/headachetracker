@@ -27,4 +27,4 @@
 * Tatu 3h - Käyttöliittymän suunnittelua, tietokannan suunnittelu
 
 **5.5.2020**
-* Venla 2h - Käyttöliittymän toteutusta
+* Venla 3h - Käyttöliittymän toteutusta
