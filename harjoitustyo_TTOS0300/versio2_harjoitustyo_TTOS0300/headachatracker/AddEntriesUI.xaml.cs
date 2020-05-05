@@ -60,6 +60,7 @@ namespace headachatracker
             try
             {
 
+
                 DatabaseAccess.AddToSQLite(headacheObj);
             }
 
