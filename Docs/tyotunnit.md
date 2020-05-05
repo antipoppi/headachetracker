@@ -26,5 +26,8 @@
 * Venla 5h - Käyttöliittymän suunnittelua, tietokannan yksinkertaistus, MVVM:n poisto
 * Tatu 3h - Käyttöliittymän suunnittelua, tietokannan suunnittelu
 
+# Vko 19
+
 **5.5.2020**
 * Venla 3h - Käyttöliittymän toteutusta
+* Tatu 4h - Käyttöliittymän toteutusta, repositorion siivousta
