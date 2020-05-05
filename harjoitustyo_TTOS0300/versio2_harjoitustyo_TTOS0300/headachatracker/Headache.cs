@@ -8,24 +8,72 @@ namespace headachatracker
 {
     public class Headache
     {
-        public List<string> acheTypes = new List<string>();
+		#region Fields
+		private int acheID;
+		private string triggers;
+		private int userID;
+		private string acheType;
+		private int painLevel;
+		private string medications;
+		private string symptoms;
+		private string reliefs;
+		private string notes;
+		#endregion
 
-        public List<string> AcheTypes
-        {
-            get { return acheTypes; }
-            set { acheTypes = value; }
-        }
+		#region Properties
+		public int AcheID
+		{
+			get { return acheID; }
+			set { acheID = value; }
+		}
 
+		public int UserID
+		{
+			get { return userID; }
+			set { userID = value; }
+		}
 
-        public Headache()
-        {           
-            acheTypes.Add("Regular headache");
-            acheTypes.Add("Migraine");
-            acheTypes.Add("Tension headache");
-            acheTypes.Add("Cluster headache");
-            acheTypes.Add("Allergic headache");
-        }
+		public string AcheType
+		{
+			get { return acheType; }
+			set { acheType = value; }
+		}
 
+		public int PainLevel
+		{
+			get { return painLevel; }
+			set { painLevel = value; }
+		}
 
-    }
+		public string Medications
+		{
+			get { return medications; }
+			set { medications = value; }
+		}
+
+		public string Symptoms
+		{
+			get { return symptoms; }
+			set { symptoms = value; }
+		}
+
+		public string Reliefs
+		{
+			get { return reliefs; }
+			set { reliefs = value; }
+		}
+
+		public string Triggers
+		{
+			get { return triggers; }
+			set { triggers = value; }
+		}
+
+		public string Notes
+		{
+			get { return notes; }
+			set { notes = value; }
+		}
+		#endregion
+	}
 }

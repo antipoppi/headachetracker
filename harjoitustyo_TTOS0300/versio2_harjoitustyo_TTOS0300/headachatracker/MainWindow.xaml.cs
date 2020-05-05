@@ -43,7 +43,7 @@ namespace headachatracker
 
         private void btnTesti_Click(object sender, RoutedEventArgs e)
         {
-            // Avataan merkintöjen lisäämistä varten uusi ikkuna 
+            // Avataan merkintöjen lisäämistä varten uusi ikkuna (jonka nimi ei ole enää AcheTypeWindow, vaan AddEntriesUI
 
             AcheTypeWindow window = new AcheTypeWindow();
             window.Show();

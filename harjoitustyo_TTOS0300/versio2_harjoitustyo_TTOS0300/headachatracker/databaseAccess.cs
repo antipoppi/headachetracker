@@ -22,7 +22,7 @@ namespace headachatracker
         #endregion
 
         #region Methods
-        public static DataTable ReadFromSQLite()
+        public static DataTable ReadFromSQLite() // Lukumetodi
         {
             if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
             {
@@ -53,8 +53,41 @@ namespace headachatracker
 
         }
 
+        public static bool AddToSQLite(Headache headache) // Lisäysmetodi
+        {
+            try
+            {
+                if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
+                {
+                    SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                    connection.Open(); // Avataan yhteys
 
-        // Tänne vielä lisäys- ja poistovaihtoehdot
+                    // Suoritetaan SQL-komento lisäämään tietoa
+                    SQLiteCommand cmd = new SQLiteCommand($"INSERT INTO Headache (UserID, AcheType, PainLevel, Symptoms, Triggers, Reliefs, Notes) values ('{headache.UserID}', '{headache.AcheType}', '{headache.PainLevel}', '{headache.Symptoms}', '{headache.Triggers}','{headache.Reliefs}', '{headache.Notes}')", connection);
+
+                    cmd.ExecuteNonQuery();
+
+                    // Suljetaan yhteys
+                    connection.Close();
+
+                    return true;
+
+                }
+
+                else // Jos tiedostoa ei löydy, heitetään poikkeus
+                {
+                    throw new System.IO.FileNotFoundException("File not found");
+                }
+            }
+
+            catch
+            {
+                throw;
+            }
+
+        }
+
+  
 
         #endregion
     }

@@ -27,6 +27,8 @@ namespace headachatracker
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
+            AddMedication medicationWindow = new AddMedication();
+            medicationWindow.Show();
 
         }
 
@@ -43,6 +45,19 @@ namespace headachatracker
         private void btnAddTriggers_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnAddEntry_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+            }
+
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
