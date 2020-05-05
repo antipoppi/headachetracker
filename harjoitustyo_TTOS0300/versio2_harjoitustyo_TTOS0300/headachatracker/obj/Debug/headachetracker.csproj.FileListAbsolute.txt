@@ -22,6 +22,7 @@ C:\Users\Venla\source\repos\harjoitustyo_TTOS0300\headachatracker\obj\Debug\head
 C:\Users\Venla\source\repos\harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachetracker.csproj.CopyComplete
 C:\Users\Venla\source\repos\harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker.exe
 C:\Users\Venla\source\repos\harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker.pdb
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\System.Data.SQLite.xml
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\headachatracker.exe.config
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\headachatracker.exe
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\headachatracker.pdb
@@ -32,12 +33,22 @@ F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\he
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\System.Data.SQLite.Linq.dll
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\EntityFramework.xml
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\EntityFramework.SqlServer.xml
-F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\System.Data.SQLite.xml
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\bin\Debug\System.Data.SQLite.dll.config
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachetracker.csprojAssemblyReference.cache
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddEntriesUI.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddMedication.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddReliefs.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddSymptoms.g.cs
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddTriggers.g.cs
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\MainWindow.g.cs
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\App.g.cs
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker_MarkupCompile.cache
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker_MarkupCompile.lref
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddEntriesUI.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddMedication.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddReliefs.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddSymptoms.baml
+F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddTriggers.baml
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\MainWindow.baml
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker.g.resources
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker.Properties.Resources.resources
@@ -46,6 +57,8 @@ F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\he
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachetracker.csproj.CopyComplete
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker.exe
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachatracker.pdb
+<<<<<<< HEAD
+=======
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddEntriesUI.g.cs
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddEntriesUI.baml
 F:\Gitlab\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\AddMedication.g.cs
@@ -92,3 +105,4 @@ D:\Git\k2020\KL-Harjoitustyö\headachetracker\harjoitustyo_TTOS0300\versio2_harj
 D:\Git\k2020\KL-Harjoitustyö\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachetracker.csproj.GenerateResource.cache
 D:\Git\k2020\KL-Harjoitustyö\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachetracker.csproj.CoreCompileInputs.cache
 D:\Git\k2020\KL-Harjoitustyö\headachetracker\harjoitustyo_TTOS0300\versio2_harjoitustyo_TTOS0300\headachatracker\obj\Debug\headachetracker.csproj.CopyComplete
+>>>>>>> 4b296da37a48dbdaa7c34e54ff09b264aad52d40
