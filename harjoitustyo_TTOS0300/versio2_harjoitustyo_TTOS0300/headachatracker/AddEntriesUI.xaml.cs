@@ -17,12 +17,11 @@ namespace headachatracker
     /// <summary>
     /// Interaction logic for AcheTypeWindow.xaml
     /// </summary>
-    public partial class AcheTypeWindow : Window
+    public partial class AddEntriesUI : Window
     {
-        public AcheTypeWindow()
+        public AddEntriesUI(object headacheObj)
         {
             InitializeComponent();
-
         }
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
