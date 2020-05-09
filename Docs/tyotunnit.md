@@ -31,3 +31,7 @@
 **5.5.2020**
 * Venla 3h - Käyttöliittymän toteutusta
 * Tatu 4h - Käyttöliittymän toteutusta, repositorion siivousta
+
+**9.5.2020**
+* Tatu 0.5h - Käyttöliittymän toteutusta
+
