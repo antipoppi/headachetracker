@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,31 @@ namespace headachatracker
             AddEntriesUI window = new AddEntriesUI();
             window.Show();
             this.Hide();        // Piilotetaan tämä MainWindow ikkuna
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            // poistetaan valittu tapahtuma id:n perusteella
+            var dt = (DataTable)dataHeadache.DataContext;
+            if (dataHeadache.SelectedIndex == 0)
+            {
+                return;
+            }
+            else
+            {
+                Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
+                // varmistetaan halutaanko poistaa
+                var result = MessageBox.Show($"Do you really want to delete selected entry (AcheID{entryID})?", "Entry delete confirmation", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    if (headachatracker.DatabaseAccess.DeleteFromSQLite(entryID))
+                        MessageBox.Show($"Selected entry deleted successfully", "", MessageBoxButton.OK);
+                    else
+                        MessageBox.Show($"Selected entry cannot be deleted", "", MessageBoxButton.OK);
+                    // päivitetään datagrid tietokannasta
+                    dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite();
+                }
+            }
         }
     }
 }

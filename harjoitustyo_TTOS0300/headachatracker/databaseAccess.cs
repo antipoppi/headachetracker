@@ -86,6 +86,23 @@ namespace headachatracker
             }
 
         }
+        public static bool DeleteFromSQLite(int entryID) // poistometodi
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento poistamaan tietoa
+                SQLiteCommand cmd = new SQLiteCommand($"DELETE FROM Headache WHERE AcheID LIKE '{entryID}'", connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+       }
 
   
 
