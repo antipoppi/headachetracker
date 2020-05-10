@@ -34,4 +34,7 @@
 
 **9.5.2020**
 * Tatu 0.5h - Käyttöliittymän toteutusta
+ 
+**10.5.2020**
+* Tatu 1h - Käyttöliittymän toteutusta
 
