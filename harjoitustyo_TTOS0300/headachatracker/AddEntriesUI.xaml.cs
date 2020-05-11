@@ -28,7 +28,7 @@ namespace headachatracker
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
-            AddMedication medicationWindow = new AddMedication(headacheObj);
+            AddMedication medicationWindow = new AddMedication();
             medicationWindow.Show();
 
         }
@@ -55,6 +55,10 @@ namespace headachatracker
             string hold = txbNotes.Text;
             headacheObj.Notes = hold;
         }
+        public void UpdateMedication(string medications) // tällä metodilla voidaan päivittää muissa ikkunoissa
+        {
+            headacheObj.Medications = medications;
+        }
         private void btnAddEntry_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -76,5 +80,6 @@ namespace headachatracker
                 throw new Exception($"Cannot close the window: {ex.Message}");
             }
         }
+
     }
 }

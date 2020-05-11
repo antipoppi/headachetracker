@@ -37,7 +37,7 @@
 
 
         <CheckBox x:Name="checkParacetamol" Content="Paracetamol" Grid.Row="2" Grid.Column="1"/>
-        <CheckBox x:Name="checkNonsteroidal" Content="Nonsteroidal anti-inflammatory drug (e.g. Ibuprofen" Grid.Row="3" Grid.Column="1"/>
+        <CheckBox x:Name="checkNonsteroidal" Content="Nonsteroidal anti-inflammatory drug (e.g. Ibuprofen)" Grid.Row="3" Grid.Column="1"/>
         <CheckBox x:Name="checkTriptan" Content="Triptan" Grid.Row="4" Grid.Column="1"/>
         <CheckBox x:Name="checkErgotamine" Content="Ergotamines" Grid.Row="5" Grid.Column="1"/>
         <CheckBox x:Name="checkAntinausea" Content="Anti-nausea drug" Grid.Row="6" Grid.Column="1"/>
@@ -47,6 +47,6 @@
         <TextBlock x:Name="txtAddMedication" Text="Specify, what" Grid.Row="8" Grid.Column="1" Visibility="Hidden"/>
         <TextBox x:Name="txbAddOtherMed" Grid.Row="9" Grid.Column="1" Width="240" Visibility="Hidden" HorizontalAlignment="Left"/>
 
-        <Button x:Name="btnAddMed" Content="Add" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Right" Padding="5"  Margin="0 10 0 10"/>
+        <Button x:Name="btnAddMed" Content="Add" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Right" Padding="5"  Margin="0 10 0 10" Click="btnAddMed_Click"/>
     </Grid>
 </Window>
