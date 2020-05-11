@@ -40,4 +40,4 @@
 
 # Vko 20
 
-* Tatu 5h - Käyttöliittymän toteutusta
+* Tatu 6h - Käyttöliittymän toteutusta
