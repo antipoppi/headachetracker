@@ -19,7 +19,7 @@ namespace headachatracker
     /// </summary>
     public partial class AddMedication : Window
     {
-        public AddMedication()
+        public AddMedication(Headache headacheObj)
         {
             InitializeComponent();
         }
@@ -62,11 +62,8 @@ namespace headachatracker
                             }
                         }
                         // päivitetään AddEntriesUI:n oliota kyseisillä lääkkeillä
-                        // KESKEN JA PAHASTI
-                        foreach (AddEntriesUI item in OwnedWindows)
-                        {
-                            item.UpdateMedication(hold);
-                        }
+                        ((AddEntriesUI)this.Owner).UpdateMedication(hold);
+                        this.Hide();
                     }
                     catch (OverflowException)
                     {

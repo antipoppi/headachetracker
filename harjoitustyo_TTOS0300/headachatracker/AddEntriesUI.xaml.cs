@@ -28,7 +28,7 @@ namespace headachatracker
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
-            AddMedication medicationWindow = new AddMedication();
+            AddMedication medicationWindow = new AddMedication(headacheObj);
             medicationWindow.Owner = this; // TÄTÄ RIVIÄ EI TIIÄ TARTTEEKO EES VIELÄ
             medicationWindow.Show();
 
