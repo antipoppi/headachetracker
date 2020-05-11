@@ -38,3 +38,6 @@
 **10.5.2020**
 * Tatu 1.5h - Käyttöliittymän toteutusta
 
+# Vko 20
+
+* Tatu 4h - Käyttöliittymän toteutusta
