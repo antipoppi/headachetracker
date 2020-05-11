@@ -62,9 +62,11 @@ namespace headachatracker
                             }
                         }
                         // päivitetään AddEntriesUI:n oliota kyseisillä lääkkeillä
-                        AddEntriesUI window = new AddEntriesUI();
-                        window.UpdateMedication(hold);
-                        this.Hide();
+                        // KESKEN JA PAHASTI
+                        foreach (AddEntriesUI item in OwnedWindows)
+                        {
+                            item.UpdateMedication(hold);
+                        }
                     }
                     catch (OverflowException)
                     {

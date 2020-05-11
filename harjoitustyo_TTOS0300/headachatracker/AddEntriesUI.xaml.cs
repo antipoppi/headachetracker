@@ -29,6 +29,7 @@ namespace headachatracker
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
             AddMedication medicationWindow = new AddMedication();
+            medicationWindow.Owner = this; // TÄTÄ RIVIÄ EI TIIÄ TARTTEEKO EES VIELÄ
             medicationWindow.Show();
 
         }
@@ -57,7 +58,7 @@ namespace headachatracker
         }
         public void UpdateMedication(string medications) // tällä metodilla voidaan päivittää muissa ikkunoissa
         {
-            headacheObj.Medications = medications;
+            this.headacheObj.Medications = medications;
         }
         private void btnAddEntry_Click(object sender, RoutedEventArgs e)
         {
