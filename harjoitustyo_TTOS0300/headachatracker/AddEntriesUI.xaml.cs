@@ -59,15 +59,21 @@ namespace headachatracker
         {
             try
             {
+                // sets headache type to headacheObj
+                headacheObj.AcheType = comboAcheType.Text;
+                // sets pain intensity to headacheObj
+                Int32.TryParse(PainLevel.Text.ToString(), out int painLvl);
+                headacheObj.PainLevel = painLvl;
+                // adds headacheObj in to database
                 DatabaseAccess.AddToSQLite(headacheObj);
                 MainWindow window = new MainWindow();
                 this.Hide();
                 window.Show();
             }
 
-            catch (Exception ex)
+            catch (InvalidOperationException ex)
             {
-
+                throw new Exception($"Cannot close the window: {ex.Message}");
             }
         }
     }
