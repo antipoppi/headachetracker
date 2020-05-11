@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
         Title="Headache tracker" Height="450" Width="500" FontSize="16">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -62,6 +63,6 @@
         <Button x:Name="btnAddEntry" Content="Add entry" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Margin="10" HorizontalAlignment="Right" Width="200" Click="btnAddEntry_Click"/>
 
         <TextBlock Text="Notes" Grid.Row="4" Grid.Column="2"/>
-        <TextBox x:Name="txbNotes" Grid.Row="5" Grid.Column="2" MinWidth="200" MinHeight="150" Grid.RowSpan="3" TextChanged="txbNotes_TextChanged"/>
+        <TextBox x:Name="txbNotes" Grid.Row="5" Grid.Column="2" Width="200" Height="150" Grid.RowSpan="3" TextChanged="txbNotes_TextChanged" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>
