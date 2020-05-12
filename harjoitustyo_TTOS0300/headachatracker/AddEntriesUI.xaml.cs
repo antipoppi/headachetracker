@@ -53,7 +53,12 @@ namespace headachatracker
         private void btnAddReliefs_Click(object sender, RoutedEventArgs e)
         {
             AddReliefs addReliefsWindow = new AddReliefs();
+            addReliefsWindow.Owner = this;
             addReliefsWindow.Show();
+        }
+        public void UpdateReliefs(string reliefs) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
+        {
+            headacheObj.Reliefs = reliefs;
         }
 
         private void btnAddTriggers_Click(object sender, RoutedEventArgs e)
