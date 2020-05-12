@@ -64,7 +64,12 @@ namespace headachatracker
         private void btnAddTriggers_Click(object sender, RoutedEventArgs e)
         {
             AddTriggers addTriggersWindow = new AddTriggers();
+            addTriggersWindow.Owner = this;
             addTriggersWindow.Show();
+        }
+        public void UpdateTriggers(string triggers) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
+        {
+            headacheObj.Triggers = triggers;
         }
         private void txbNotes_TextChanged(object sender, TextChangedEventArgs e)
         {
