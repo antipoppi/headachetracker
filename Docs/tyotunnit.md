@@ -40,4 +40,8 @@
 
 # Vko 20
 
-* Tatu 6h - Käyttöliittymän toteutusta
+**11.5.2020**  
+* Tatu 6h - Käyttöliittymän toteutusta 
+
+**12.5.2020**  
+* Tatu 0,5h - Käyttöliittymän toteutusta
