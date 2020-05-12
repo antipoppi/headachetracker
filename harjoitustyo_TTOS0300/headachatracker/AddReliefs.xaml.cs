@@ -35,5 +35,10 @@ namespace headachatracker
             txtAddRelief.Visibility = Visibility.Visible;
             txbAddOtherRelief.Visibility = Visibility.Visible;
         }
+
+        private void btnAddMed_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

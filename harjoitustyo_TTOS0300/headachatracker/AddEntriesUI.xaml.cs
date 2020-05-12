@@ -47,7 +47,7 @@ namespace headachatracker
 
         public void UpdateSymptoms(string symptoms) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
         {
-            headacheObj.Medications = symptoms;
+            headacheObj.Symptoms = symptoms;
         }
 
         private void btnAddReliefs_Click(object sender, RoutedEventArgs e)
