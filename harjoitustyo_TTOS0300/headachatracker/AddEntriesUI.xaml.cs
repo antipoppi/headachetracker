@@ -28,16 +28,26 @@ namespace headachatracker
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
-            AddMedication medicationWindow = new AddMedication(headacheObj);
-            medicationWindow.Owner = this; // TÄTÄ RIVIÄ EI TIIÄ TARTTEEKO EES VIELÄ
+            AddMedication medicationWindow = new AddMedication();
+            medicationWindow.Owner = this;
             medicationWindow.Show();
 
+        }
+        public void UpdateMedication(string medications) // tällä metodilla voidaan päivittää oliota AddMedication-ikkunassa
+        {
+            headacheObj.Medications = medications;
         }
 
         private void btnAddSymptoms_Click(object sender, RoutedEventArgs e)
         {
             AddSymptoms symptomWindow = new AddSymptoms();
+            symptomWindow.Owner = this;
             symptomWindow.Show();
+        }
+
+        public void UpdateSymptoms(string symptoms) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
+        {
+            headacheObj.Medications = symptoms;
         }
 
         private void btnAddReliefs_Click(object sender, RoutedEventArgs e)
@@ -56,10 +66,7 @@ namespace headachatracker
             string hold = txbNotes.Text;
             headacheObj.Notes = hold;
         }
-        public void UpdateMedication(string medications) // tällä metodilla voidaan päivittää muissa ikkunoissa
-        {
-            this.headacheObj.Medications = medications;
-        }
+
         private void btnAddEntry_Click(object sender, RoutedEventArgs e)
         {
             try

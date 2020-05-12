@@ -35,5 +35,48 @@ namespace headachatracker
             txtAddSymptom.Visibility = Visibility.Hidden;
             txbAddOtherSymptom.Visibility = Visibility.Hidden;
         }
+
+        private void btnAddSymptoms_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // haetaan kaikki valitut checkboxit
+                var list = (this.Content as Panel).Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
+                if (list != null)
+                {
+                    // lisätään kyseisten checkboxien sisältö hold-stringiin
+                    string hold = null;
+                    int counter = 0;
+                    try
+                    {
+                        foreach (var item in list)
+                        {
+                            {
+                                counter++;
+                                hold += item.Content;
+                                if (counter != list.Count())
+                                {
+                                    hold += ", ";
+                                }
+                            }
+                        }
+                        // päivitetään AddEntriesUI:n oliota kyseisillä oireilla
+                        ((AddEntriesUI)this.Owner).UpdateSymptoms(hold);
+                        this.Hide();
+                    }
+                    catch (OverflowException)
+                    {
+
+                        throw;
+                    }
+                }
+                else
+                    return;
+            }
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+        }
     }
 }
