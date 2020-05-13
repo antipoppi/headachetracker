@@ -74,5 +74,20 @@ namespace headachatracker
                 }
             }
         }
+
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult quit = MessageBox.Show("Do you really want to exit the application?", "Exit confirmation", MessageBoxButton.YesNo);
+            
+            switch(quit)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Application closing.", "Closing", MessageBoxButton.OK);
+                    Environment.Exit(0);
+                    break;
+                case MessageBoxResult.No:
+                    break;
+            }
+        }
     }
 }
