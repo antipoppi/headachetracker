@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,6 +61,11 @@
     </ApplicationDefinition>
     <Compile Include="AddEntriesUI.xaml.cs">
       <DependentUpon>AddEntriesUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\kuva.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kuva.resx</DependentUpon>
     </Compile>
     <Page Include="AddEntriesUI.xaml">
       <SubType>Designer</SubType>
@@ -126,6 +132,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\kuva.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>kuva.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +160,17 @@
     <PackageReference Include="System.Data.SQLite.Linq">
       <Version>1.0.112.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\paakuva.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paakuva.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-headache-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

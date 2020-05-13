@@ -21,6 +21,7 @@ namespace headachatracker
     {
         public AddSymptoms()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

@@ -21,6 +21,7 @@ namespace headachatracker
     {
         public AddMedication()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
-        Title="Add reliefs" Height="380" Width="380" FontSize="12">
+        Title="Add reliefs" Height="460" Width="320" FontSize="12">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -34,29 +34,35 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Reliefs" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" Margin="10"/>
+        <Border Background="#92CCC1" Grid.Column="6" Grid.Row="0" Grid.RowSpan="24" Opacity="0.5"/>
+        <Border Background="#92CCC1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Opacity="0.7"/>
+        <Border Background="#92CCC1" Grid.Column="0" Grid.Row="0" Grid.RowSpan="24" Opacity="0.5"/>
+        <Border Background="#92CCC1" Grid.Column="0" Grid.Row="24" Grid.ColumnSpan="6" Height="30" Opacity="0.7"/>
 
-        <CheckBox x:Name="checkSleep" Content="Sleep or rest" Grid.Row="2" Grid.Column="1"/>
-        <CheckBox x:Name="checkYoga" Content="Yoga" Grid.Row="3" Grid.Column="1"/>
-        <CheckBox x:Name="checkCaffeine" Content="Caffeine" Grid.Row="4" Grid.Column="1"/>
-        <CheckBox x:Name="checkFood" Content="Food" Grid.Row="5" Grid.Column="1"/>
-        <CheckBox x:Name="checkTens" Content="Tens machine" Grid.Row="6" Grid.Column="1"/>
-        <CheckBox x:Name="checkHotShower" Content="Hot shower" Grid.Row="7" Grid.Column="1"/>
-        <CheckBox x:Name="checkColdShower" Content="Cold shower" Grid.Row="8" Grid.Column="1"/>
-        <CheckBox x:Name="checkDrinking" Content="Drinking water" Grid.Row="9" Grid.Column="1"/>
-        <CheckBox x:Name="checkHeating" Content="Heating pad" Grid.Row="10" Grid.Column="1"/>
-        <CheckBox x:Name="checkIcePack" Content="Ice pack" Grid.Row="11" Grid.Column="1"/>
-        <CheckBox x:Name="checkStrecth" Content="Stretching" Grid.Row="12" Grid.Column="1"/>
-        <CheckBox x:Name="checkOther" Content="Other" Grid.Row="13" Grid.Column="1" Unchecked="checkOther_Unchecked" Checked="checkOther_Checked"/>
+        <TextBlock Text="Reliefs" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontSize="20" Margin="95,10" FontFamily="Yu Gothic Medium"/>
+
+        <CheckBox x:Name="checkSleep" Content="Sleep or rest" Grid.Row="2" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkYoga" Content="Yoga" Grid.Row="3" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkCaffeine" Content="Caffeine" Grid.Row="4" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkFood" Content="Food" Grid.Row="5" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkTens" Content="Tens machine" Grid.Row="6" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkHotShower" Content="Hot shower" Grid.Row="7" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkColdShower" Content="Cold shower" Grid.Row="8" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkDrinking" Content="Drinking water" Grid.Row="9" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkHeating" Content="Heating pad" Grid.Row="10" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkIcePack" Content="Ice pack" Grid.Row="11" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkStrecth" Content="Stretching" Grid.Row="12" Grid.Column="1" Margin="10 0 0 5"/>
+        <CheckBox x:Name="checkOther" Content="Other" Grid.Row="13" Grid.Column="1" Unchecked="checkOther_Unchecked" Checked="checkOther_Checked" Margin="10 0 0 5"/>
 
 
-        <TextBlock x:Name="txtAddRelief" Text="Specify, what" Grid.Row="14" Grid.Column="1" Visibility="Hidden"/>
-        <TextBox x:Name="txbAddOtherRelief" Grid.Row="15" Grid.Column="1" Width="240" Visibility="Hidden" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="txtAddRelief" Text="Specify, please:" Grid.Row="14" Grid.Column="1" Visibility="Hidden" Margin="10 0 0 5"/>
+        <TextBox x:Name="txbAddOtherRelief" Grid.Row="14" Grid.Column="1" Width="240" Visibility="Hidden" HorizontalAlignment="Left" Margin="10 0 0 5"/>
 
-        <Button x:Name="btnAddMed" Content="Add" Grid.Column="1" Grid.Row="16" HorizontalAlignment="Right" Padding="5"  Margin="0 10 0 10" Click="btnAddMed_Click"/>
+        <Button x:Name="btnAddMed" Content="ADD" Grid.Column="1" Grid.Row="17" HorizontalAlignment="Right" Height="40" Width="80" Margin="0 10 0 10" Click="btnAddMed_Click" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
     </Grid>
 </Window>

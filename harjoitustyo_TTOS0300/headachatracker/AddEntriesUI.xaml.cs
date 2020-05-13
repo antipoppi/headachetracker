@@ -22,6 +22,7 @@ namespace headachatracker
         private Headache headacheObj;
         public AddEntriesUI()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             headacheObj = new Headache();
         }

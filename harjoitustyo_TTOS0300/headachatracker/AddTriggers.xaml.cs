@@ -21,6 +21,7 @@ namespace headachatracker
     {
         public AddTriggers()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

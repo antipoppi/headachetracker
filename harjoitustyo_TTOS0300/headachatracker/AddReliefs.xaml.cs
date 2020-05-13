@@ -21,6 +21,7 @@ namespace headachatracker
     {
         public AddReliefs()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
