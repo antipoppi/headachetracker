@@ -44,4 +44,5 @@
 * Tatu 6h - Käyttöliittymän toteutusta 
 
 **12.5.2020**  
+* Venla 7h - Ulkoasun hiomista ja hienosäätöä
 * Tatu 0,5h - Käyttöliittymän toteutusta
