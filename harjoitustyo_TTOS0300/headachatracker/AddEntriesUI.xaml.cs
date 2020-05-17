@@ -89,9 +89,11 @@ namespace headachatracker
                 headacheObj.PainLevel = painLvl;
                 // adds headacheObj in to database
                 DatabaseAccess.AddToSQLite(headacheObj);
+
+                //shows mainwindow and closes this window
                 MainWindow window = new MainWindow();
-                this.Hide();
                 window.Show();
+                this.Close();
             }
 
             catch (InvalidOperationException ex)
@@ -100,5 +102,21 @@ namespace headachatracker
             }
         }
 
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            // shows mainwindow and closes this window
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
+
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            // shows mainwindow when this window is closed
+            MainWindow window = new MainWindow();
+            window.Show();
+
+        }
     }
 }
