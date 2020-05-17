@@ -99,7 +99,9 @@ namespace headachatracker
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            EditEntry editEntry = new EditEntry();
+            var dt = (DataTable)dataHeadache.DataContext;
+            Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
+            EditEntry editEntry = new EditEntry(entryID);
             editEntry.Show();
             this.Hide();
 

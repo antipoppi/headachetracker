@@ -104,8 +104,145 @@ namespace headachatracker
             }
        }
 
-  
+        /// <summary>
+        /// Below are Methods that are used to edit Entry
+        /// </summary>
+        public static string GetAcheTypeFromSQLite(int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                string hold = "";
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT AcheType FROM Headache WHERE AcheID LIKE {id}", connection);
+                hold = (string)cmd.ExecuteScalar();
+                connection.Close();
+                return hold;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
 
+        public static string GetPainLevelFromSQLite(int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                string hold = "";
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT PainLevel FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder = cmd.ExecuteScalar();
+                if (holder != null)
+                    hold = holder.ToString();
+                else
+                    throw new Exception($"PainLevel could not be retrieved!");
+                connection.Close();
+                return hold;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
+
+        public static string GetMedicationsFromSQLite(int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                string hold = "";
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT Medications FROM Headache WHERE AcheID LIKE {id}", connection);
+                hold = (string)cmd.ExecuteScalar();
+                connection.Close();
+                return hold;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
+
+        public static string GetSymptomsFromSQLite(int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                string hold = "";
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT Symptoms FROM Headache WHERE AcheID LIKE {id}", connection);
+                hold = (string)cmd.ExecuteScalar();
+                connection.Close();
+                return hold;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
+
+        public static string GetTriggersFromSQLite(int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                string hold = "";
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT Triggers FROM Headache WHERE AcheID LIKE {id}", connection);
+                hold = (string)cmd.ExecuteScalar();
+                connection.Close();
+                return hold;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
+
+        public static string GetReliefsFromSQLite(int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                string hold = "";
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT Reliefs FROM Headache WHERE AcheID LIKE {id}", connection);
+                hold = (string)cmd.ExecuteScalar();
+                connection.Close();
+                return hold;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
+
+        public static string GetNotesFromSQLite(int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                string hold = "";
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
+                // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT Notes FROM Headache WHERE AcheID LIKE {id}", connection);
+                hold = (string)cmd.ExecuteScalar();
+                connection.Close();
+                return hold;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
         #endregion
     }
 }
