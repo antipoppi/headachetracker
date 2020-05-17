@@ -79,5 +79,11 @@ namespace headachatracker
                 throw;
             }
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            // suljetaan ikkuna cancel-napista painettaessa
+            this.Close();
+        }
     }
 }

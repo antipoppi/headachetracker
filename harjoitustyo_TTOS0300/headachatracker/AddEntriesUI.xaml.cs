@@ -22,6 +22,7 @@ namespace headachatracker
         private Headache headacheObj;
         public AddEntriesUI()
         {
+            // avataan ikkuna keskellä ruutua ja luodaan olio
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             headacheObj = new Headache();
@@ -29,6 +30,7 @@ namespace headachatracker
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
+            // avataan uusi ikkuna
             AddMedication medicationWindow = new AddMedication();
             medicationWindow.Owner = this;
             medicationWindow.Show();
@@ -41,6 +43,7 @@ namespace headachatracker
 
         private void btnAddSymptoms_Click(object sender, RoutedEventArgs e)
         {
+            // avataan uusi ikkuna
             AddSymptoms symptomWindow = new AddSymptoms();
             symptomWindow.Owner = this;
             symptomWindow.Show();
@@ -53,6 +56,7 @@ namespace headachatracker
 
         private void btnAddReliefs_Click(object sender, RoutedEventArgs e)
         {
+            // avataan uusi ikkuna
             AddReliefs addReliefsWindow = new AddReliefs();
             addReliefsWindow.Owner = this;
             addReliefsWindow.Show();
@@ -64,6 +68,7 @@ namespace headachatracker
 
         private void btnAddTriggers_Click(object sender, RoutedEventArgs e)
         {
+            // avataan uusi ikkuna
             AddTriggers addTriggersWindow = new AddTriggers();
             addTriggersWindow.Owner = this;
             addTriggersWindow.Show();
@@ -74,6 +79,7 @@ namespace headachatracker
         }
         private void txbNotes_TextChanged(object sender, TextChangedEventArgs e)
         {
+            // tallennetaan tietoa olioon jos tekstiboksin tekstiä muutetaan
             string hold = txbNotes.Text;
             headacheObj.Notes = hold;
         }
@@ -96,7 +102,7 @@ namespace headachatracker
                 this.Close();
             }
 
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException ex) // Näyttää virheviestin
             {
                 throw new Exception($"Cannot close the window: {ex.Message}");
             }
@@ -119,7 +125,7 @@ namespace headachatracker
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
         {
-            
+            // näytetään esikatselu-ikkunassa olion tiedot
             MessageBox.Show("Headache information:\r\n" + headacheObj.Preview(), "Preview", MessageBoxButton.OK);
 
         }

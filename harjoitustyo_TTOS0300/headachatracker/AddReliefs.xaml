@@ -64,6 +64,7 @@
         <TextBlock x:Name="txtAddRelief" Text="Specify, please:" Grid.Row="14" Grid.Column="1" Visibility="Hidden" Margin="10 5 0 5"/>
         <TextBox x:Name="txbAddOtherRelief" Grid.Row="15" Grid.Column="1" Width="245" Visibility="Hidden" HorizontalAlignment="Left" Margin="10 0 0 5"/>
 
-        <Button x:Name="btnAddMed" Content="Add" Grid.Column="1" Grid.Row="17" HorizontalAlignment="Right" Height="40" Width="80" Margin="0 10 0 10" Click="btnAddMed_Click" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="1" Grid.Row="17" Grid.ColumnSpan="2" Height="40" Width="90" HorizontalAlignment="Left" Margin="40 10 5 10" Background="#d1d1d1" BorderBrush="#d1d1d1" FontWeight="DemiBold" Click="btnCancel_Click"/>
+        <Button x:Name="btnAddMed" Content="Add" Grid.Column="1" Grid.Row="17" HorizontalAlignment="Right" Height="40" Width="90" Margin="0 10 20 10" Click="btnAddMed_Click" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
     </Grid>
 </Window>

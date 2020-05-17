@@ -21,16 +21,19 @@ namespace headachatracker
     /// </summary>
     public partial class EditEntry : Window
     {
-        private Headache headacheObj;
+        private Headache headacheObj; // yksityinen olio käsittelyä varten
         public EditEntry(int id)
         {
             InitializeComponent();
 
+            // luodaan uusi olio
             headacheObj = new Headache();
 
             headacheObj.AcheID = id;
-            DatabaseAccess.GetHeadacheObjPFromSQLite(headacheObj, id);
+            DatabaseAccess.GetHeadacheObjPFromSQLite(headacheObj, id); // Haetaan tietoa tietokannasta
 
+
+            // laitetaan tietokannan tiedot olion kautta tekstilaatikkoihin
             txbAcheType.Text = headacheObj.AcheType;
             txbPainLevel.Text = headacheObj.PainLevel.ToString();
             txbMedications.Text = headacheObj.Medications;
@@ -42,6 +45,7 @@ namespace headachatracker
 
         private void txbAcheType_TextChanged(object sender, TextChangedEventArgs e)
         {
+            // tallennetaan tekstilaatikkoon kirjoitettua tietoa
             string hold = txbAcheType.Text;
             headacheObj.AcheType = hold;
         }
@@ -62,7 +66,7 @@ namespace headachatracker
             }
             else if (hold == null || hold == "")
                 return;
-            else
+            else // virheiden tarkistus
             {
                 MessageBox.Show("PainLevel can only be 1-10!", "Error", MessageBoxButton.OK);
                 txbPainLevel.Text = "";
@@ -72,46 +76,54 @@ namespace headachatracker
 
         private void txbMedications_TextChanged(object sender, TextChangedEventArgs e)
         {
+            // tallennetaan tekstilaatikkoon kirjoitettua tietoa
             string hold = txbMedications.Text;
             headacheObj.Medications = hold;
         }
 
         private void txbSymptoms_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {           
+            // tallennetaan tekstilaatikkoon kirjoitettua tietoa
             string hold = txbSymptoms.Text;
             headacheObj.Symptoms = hold;
         }
 
         private void txbTriggers_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {  
+            // tallennetaan tekstilaatikkoon kirjoitettua tietoa
             string hold = txbTriggers.Text;
             headacheObj.Triggers = hold;
         }
 
         private void txbReliefs_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {          
+            // tallennetaan tekstilaatikkoon kirjoitettua tietoa
             string hold = txbReliefs.Text;
             headacheObj.Reliefs = hold;
         }
         private void txbNotes_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {            
+            // tallennetaan tekstilaatikkoon kirjoitettua tietoa
             string hold = txbNotes.Text;
             headacheObj.Notes = hold;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            // suljetaan tämä ikkuna painettaessa cancel-nappia
             this.Close();
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
+            // näytetään pääikkuna, jos tämä ikkuna suljetaan
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
         }
 
         private void btnAddEdit_Click(object sender, RoutedEventArgs e)
         {
+            // lisätään tiedot tietokantaan
 
         }
 

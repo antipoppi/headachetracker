@@ -23,13 +23,14 @@ namespace headachatracker
     {
         public MainWindow()
         {
+            // avataan ikkuna keskellä ruutua
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            // Ikkuna ladattaessa haetaan tiedot DatabaseAccess-luokasta
+            // Ikkunaa ladattaessa haetaan tiedot DatabaseAccess-luokasta
 
             try
             {
@@ -93,12 +94,13 @@ namespace headachatracker
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            // closing the applicaiton when this window is closed
+            // closing the application when this window is closed
             Environment.Exit(0);
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
+            // kun painetaan edit-nappulaa, avataan uusi ikkuna ja lähetetään sille valittu indeksi. piilotetaan tämä ikkuna
             var dt = (DataTable)dataHeadache.DataContext;
             Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
             EditEntry editEntry = new EditEntry(entryID);

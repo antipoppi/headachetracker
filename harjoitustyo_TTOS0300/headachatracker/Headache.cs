@@ -73,34 +73,31 @@ namespace headachatracker
 		{
 			get { return notes; }
 			set { notes = value; }
-		}
+        }
 		#endregion
 
-		public string Preview()
+		#region Methods
+		public string Preview() // esikatselu-ikkunaa varten string, jossa ei ole notes, achetype tai painlevel
+								// koska ne näkyvät suoraan ko. ikkunassa
+
+
 		{
-			string preview = "";
+			string preview = ""; // alustetaan muuttuja
 
-			if (Medications != "")
-			{
+
+			// lisätään tiedot muuttujaan
 				preview += "\r\nMedications:\r\n" + Medications;
-			}
 
-			if (Symptoms != "")
-			{
-				preview += "\r\n\r\nSymptoms:\r\n" + Symptoms;
-			}
+				preview += "\r\n\r\nSymptoms:\r\n" + Symptoms;		
 
-			if (Reliefs != "")
-			{
-				preview += "\r\n\r\nReliefs:\r\n" + Reliefs;
-			}
+				preview += "\r\n\r\nReliefs:\r\n" + Reliefs;	
 
-			if (Triggers != "")
-			{
+
 				preview += "\r\n\r\nTriggers:\r\n" + Triggers;
-			}
-
+			
+			// palautetaan muuttuja
 			return preview;
-		}
+        }
+		#endregion
 	}
 }

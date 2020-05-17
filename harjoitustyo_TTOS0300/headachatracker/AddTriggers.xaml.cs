@@ -20,19 +20,22 @@ namespace headachatracker
     public partial class AddTriggers : Window
     {
         public AddTriggers()
-        {
+        {            
+            // avataan ikkuna keskellä ruutua
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         private void checkOther_Checked(object sender, RoutedEventArgs e)
         {
+            // jos tietty ruutu valitaan, näytetään kaksi muuta komponenttia
             txtAddRelief.Visibility = Visibility.Visible;
             txbAddOtherRelief.Visibility = Visibility.Visible;
         }
 
         private void checkOther_Unchecked(object sender, RoutedEventArgs e)
         {
+            // piilotetaan komponentit, jos rasti otetaan pois valinnasta
             txtAddRelief.Visibility = Visibility.Hidden;
             txbAddOtherRelief.Visibility = Visibility.Hidden;
         }
@@ -65,7 +68,7 @@ namespace headachatracker
                         ((AddEntriesUI)this.Owner).UpdateTriggers(hold);
                         this.Close();
                     }
-                    catch (OverflowException)
+                    catch (OverflowException) // virheiden tarkistus
                     {
 
                         throw;
@@ -74,10 +77,16 @@ namespace headachatracker
                 else
                     return;
             }
-            catch (ArgumentNullException)
+            catch (ArgumentNullException) // virheiden tarkistus
             {
                 throw;
             }
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            // suljetaan ikkuna cancel-napista painettaessa
+            this.Close();
         }
     }
 }

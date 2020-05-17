@@ -351,6 +351,7 @@ namespace headachatracker
             SQLiteCommand cmd = new SQLiteCommand($"UPDATE Headache SET AcheType='{acheType}, PainLevel={editedPainLevel}, Medications='{medications}', Symptoms='{symptoms}', Triggers='{triggers}', Reliefs='{reliefs}, Notes='{notes}' WHERE AcheID={id};");
         }
         */
-        #endregion
     }
+
+    #endregion
 }
