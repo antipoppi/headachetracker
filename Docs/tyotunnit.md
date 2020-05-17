@@ -48,5 +48,5 @@
 * Tatu 0,5h - Käyttöliittymän toteutusta
 
 **17.5.2020**
-* Venla 3h - Käyttöliittymän muokkausta, uuden ikkunan tekeminen ja uusia nappeja
+* Venla 3,5h - Käyttöliittymän muokkausta, uuden ikkunan tekeminen ja uusia nappeja. Koodin kommentointia
 * Tatu 4h - Käyttöliittymän toteutusta, entryn muokkaamisen toteutusta
