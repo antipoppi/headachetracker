@@ -57,7 +57,7 @@ namespace headachatracker
             addReliefsWindow.Owner = this;
             addReliefsWindow.Show();
         }
-        public void UpdateReliefs(string reliefs) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
+        public void UpdateReliefs(string reliefs) // tällä metodilla voidaan päivittää oliota AddReliefs-ikkunassa
         {
             headacheObj.Reliefs = reliefs;
         }
@@ -68,7 +68,7 @@ namespace headachatracker
             addTriggersWindow.Owner = this;
             addTriggersWindow.Show();
         }
-        public void UpdateTriggers(string triggers) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
+        public void UpdateTriggers(string triggers) // tällä metodilla voidaan päivittää oliota AddTriggers-ikkunassa
         {
             headacheObj.Triggers = triggers;
         }
@@ -105,8 +105,6 @@ namespace headachatracker
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             // shows mainwindow and closes this window
-            MainWindow window = new MainWindow();
-            window.Show();
             this.Close();
 
         }

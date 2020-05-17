@@ -90,16 +90,16 @@ namespace headachatracker
 				preview += "\r\n\r\nSymptoms:\r\n" + Symptoms;
 			}
 
+			if (Reliefs != "")
+			{
+				preview += "\r\n\r\nReliefs:\r\n" + Reliefs;
+			}
+
 			if (Triggers != "")
 			{
 				preview += "\r\n\r\nTriggers:\r\n" + Triggers;
 			}
 
-			if (Reliefs != "")
-			{
-				preview += "\r\n\r\nReliefs:\r\n" + Reliefs;
-			}
-			
 			return preview;
 		}
 	}
