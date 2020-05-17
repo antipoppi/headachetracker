@@ -21,17 +21,82 @@ namespace headachatracker
     /// </summary>
     public partial class EditEntry : Window
     {
+        private Headache headacheObj;
         public EditEntry(int id)
         {
             InitializeComponent();
 
-            txbAcheType.Text = DatabaseAccess.GetAcheTypeFromSQLite(id);
-            txbPainLevel.Text = DatabaseAccess.GetPainLevelFromSQLite(id);
-            txbMedications.Text = DatabaseAccess.GetMedicationsFromSQLite(id);
-            txbSymptoms.Text = DatabaseAccess.GetSymptomsFromSQLite(id);
-            txbTriggers.Text = DatabaseAccess.GetTriggersFromSQLite(id);
-            txbReliefs.Text = DatabaseAccess.GetReliefsFromSQLite(id);
-            txbNotes.Text = DatabaseAccess.GetNotesFromSQLite(id);
+            headacheObj = new Headache();
+
+            headacheObj.AcheID = id;
+            DatabaseAccess.GetHeadacheObjPFromSQLite(headacheObj, id);
+
+            txbAcheType.Text = headacheObj.AcheType;
+            txbPainLevel.Text = headacheObj.PainLevel.ToString();
+            txbMedications.Text = headacheObj.Medications;
+            txbSymptoms.Text = headacheObj.Symptoms;
+            txbTriggers.Text = headacheObj.Triggers;
+            txbReliefs.Text = headacheObj.Reliefs;
+            txbNotes.Text = headacheObj.Notes;
+        }
+
+        private void txbAcheType_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string hold = txbAcheType.Text;
+            headacheObj.AcheType = hold;
+        }
+
+        private void txbPainLevel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // tämä metodi tarkistaa että syötetty on integer ja pitää olla 1-10 väliltä
+            string hold = txbPainLevel.Text;
+            if (Int32.TryParse(hold, out int hold2))
+            {
+                if (hold2 >= 1 && hold2 <= 10)
+                    headacheObj.PainLevel = hold2;
+                else
+                {
+                    MessageBox.Show("PainLevel can only be 1-10!", "Error", MessageBoxButton.OK);
+                    txbPainLevel.Text = "";
+                }
+            }
+            else if (hold == null || hold == "")
+                return;
+            else
+            {
+                MessageBox.Show("PainLevel can only be 1-10!", "Error", MessageBoxButton.OK);
+                txbPainLevel.Text = "";
+            }
+                
+        }
+
+        private void txbMedications_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string hold = txbMedications.Text;
+            headacheObj.Medications = hold;
+        }
+
+        private void txbSymptoms_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string hold = txbSymptoms.Text;
+            headacheObj.Symptoms = hold;
+        }
+
+        private void txbTriggers_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string hold = txbTriggers.Text;
+            headacheObj.Triggers = hold;
+        }
+
+        private void txbReliefs_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string hold = txbReliefs.Text;
+            headacheObj.Reliefs = hold;
+        }
+        private void txbNotes_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string hold = txbNotes.Text;
+            headacheObj.Notes = hold;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
@@ -44,5 +109,12 @@ namespace headachatracker
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
         }
+
+        private void btnAddEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }

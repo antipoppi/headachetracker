@@ -102,8 +102,83 @@ namespace headachatracker
             {
                 throw new System.IO.FileNotFoundException("File not found");
             }
-       }
+        }
+        public static void GetHeadacheObjPFromSQLite(Headache headache, int id)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                headache.UserID = id;
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                connection.Open(); // Avataan yhteys
 
+                // asetetaan olion AcheType
+                SQLiteCommand cmdAcheType = new SQLiteCommand($"SELECT AcheType FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder1 = cmdAcheType.ExecuteScalar();
+                if (holder1 != null)
+                    headache.AcheType = holder1.ToString();
+                else
+                    headache.AcheType = null;
+
+                // aseteaan olion PainLevel
+                SQLiteCommand cmdPainLevel = new SQLiteCommand($"SELECT PainLevel FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder2 = cmdPainLevel.ExecuteScalar();
+                if (holder2 != null)
+                {
+                    string painLevelstring = holder2.ToString();
+                    Int32.TryParse(painLevelstring, out int painLevelInt);
+                    headache.PainLevel = painLevelInt;
+                }
+                else
+                    headache.PainLevel = 0;
+
+                // asetetaan olion Medications
+                SQLiteCommand cmdMedications = new SQLiteCommand($"SELECT Medications FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder3 = cmdMedications.ExecuteScalar();
+                if (holder3 != null)
+                    headache.Medications = holder3.ToString();
+                else
+                    headache.Medications = null;
+
+                // asetetaan olion Symptoms
+                SQLiteCommand cmdSymptoms = new SQLiteCommand($"SELECT Symptoms FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder4 = cmdSymptoms.ExecuteScalar();
+                if (holder4 != null)
+                    headache.Symptoms = holder4.ToString();
+                else
+                    headache.Symptoms = null;
+
+                // asetetaan olion Triggers
+                SQLiteCommand cmdTriggers = new SQLiteCommand($"SELECT Triggers FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder5 = cmdTriggers.ExecuteScalar();
+                if (holder5 != null)
+                    headache.Triggers = holder5.ToString();
+                else
+                    headache.Triggers = null;
+
+                // asetetaan olion Reliefs
+                SQLiteCommand cmdReliefs = new SQLiteCommand($"SELECT Reliefs FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder6 = cmdReliefs.ExecuteScalar();
+                if (holder6 != null)
+                    headache.Reliefs = holder6.ToString();
+                else
+                    headache.Reliefs = null;
+
+                // asetetaan olion Notes
+                SQLiteCommand cmdNotes = new SQLiteCommand($"SELECT Notes FROM Headache WHERE AcheID LIKE {id}", connection);
+                var holder7 = cmdNotes.ExecuteScalar();
+                if (holder7 != null)
+                    headache.Notes = holder7.ToString();
+                else
+                    headache.Notes = null;
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
+
+        /*
+        // NÄMÄ ON NYT YLIMÄÄRÄISIÄ ???
         /// <summary>
         /// Below are Methods that are used to edit Entry
         /// </summary>
@@ -267,6 +342,15 @@ namespace headachatracker
                 throw new System.IO.FileNotFoundException("File not found");
             }
         }
+
+        public static void UpdateEntryToSQLite(string acheType, string painLevel, string medications, string symptoms, string triggers, string reliefs, string notes, int id)
+        {
+            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+            connection.Open(); // Avataan yhteys
+            Int32.TryParse(painLevel, out int editedPainLevel);
+            SQLiteCommand cmd = new SQLiteCommand($"UPDATE Headache SET AcheType='{acheType}, PainLevel={editedPainLevel}, Medications='{medications}', Symptoms='{symptoms}', Triggers='{triggers}', Reliefs='{reliefs}, Notes='{notes}' WHERE AcheID={id};");
+        }
+        */
         #endregion
     }
 }
