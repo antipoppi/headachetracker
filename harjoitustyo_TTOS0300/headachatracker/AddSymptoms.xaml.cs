@@ -63,7 +63,7 @@ namespace headachatracker
                         }
                         // päivitetään AddEntriesUI:n oliota kyseisillä oireilla
                         ((AddEntriesUI)this.Owner).UpdateSymptoms(hold);
-                        this.Hide();
+                        this.Close();
                     }
                     catch (OverflowException)
                     {

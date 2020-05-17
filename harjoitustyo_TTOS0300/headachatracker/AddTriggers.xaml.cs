@@ -63,7 +63,7 @@ namespace headachatracker
                         }
                         // päivitetään AddEntriesUI:n oliota kyseisillä triggereillä
                         ((AddEntriesUI)this.Owner).UpdateTriggers(hold);
-                        this.Hide();
+                        this.Close();
                     }
                     catch (OverflowException)
                     {

@@ -93,7 +93,16 @@ namespace headachatracker
 
         private void Window_Closed(object sender, EventArgs e)
         {
+            // closing the applicaiton when this window is closed
             Environment.Exit(0);
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditEntry editEntry = new EditEntry();
+            editEntry.Show();
+            this.Hide();
+
         }
     }
 }

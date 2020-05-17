@@ -64,7 +64,7 @@ namespace headachatracker
                         }
                         // päivitetään AddEntriesUI:n oliota kyseisillä lääkkeillä
                         ((AddEntriesUI)this.Owner).UpdateMedication(hold);
-                        this.Hide();
+                        this.Close();
                     }
                     catch (OverflowException)
                     {

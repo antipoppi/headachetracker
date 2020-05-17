@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
-        Title="Add reliefs" Height="460" Width="320" FontSize="12">
+        Icon="/Resources/headacheicon.ico"
+        Title="Add reliefs" Height="480" Width="320" FontSize="12" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -60,8 +61,8 @@
         <CheckBox x:Name="checkOther" Content="Other" Grid.Row="13" Grid.Column="1" Unchecked="checkOther_Unchecked" Checked="checkOther_Checked" Margin="10 0 0 5"/>
 
 
-        <TextBlock x:Name="txtAddRelief" Text="Specify, please:" Grid.Row="14" Grid.Column="1" Visibility="Hidden" Margin="10 0 0 5"/>
-        <TextBox x:Name="txbAddOtherRelief" Grid.Row="14" Grid.Column="1" Width="240" Visibility="Hidden" HorizontalAlignment="Left" Margin="10 0 0 5"/>
+        <TextBlock x:Name="txtAddRelief" Text="Specify, please:" Grid.Row="14" Grid.Column="1" Visibility="Hidden" Margin="10 5 0 5"/>
+        <TextBox x:Name="txbAddOtherRelief" Grid.Row="15" Grid.Column="1" Width="245" Visibility="Hidden" HorizontalAlignment="Left" Margin="10 0 0 5"/>
 
         <Button x:Name="btnAddMed" Content="Add" Grid.Column="1" Grid.Row="17" HorizontalAlignment="Right" Height="40" Width="80" Margin="0 10 0 10" Click="btnAddMed_Click" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
     </Grid>

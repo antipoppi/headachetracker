@@ -1,0 +1,65 @@
+﻿<Window x:Class="headachatracker.EditEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:headachatracker"
+        mc:Ignorable="d"
+        Icon="/Resources/headacheicon.ico"
+        Title="Edit entry" Height="480" Width="370" FontSize="12" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#92CCC1" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="6" Opacity="0.4" Margin="0 0 0 0"/>
+
+        <TextBlock Text="Edit entry" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontSize="20" Margin="10" FontFamily="Yu Gothic Medium"/>
+
+        <TextBlock Text="Ache type" Grid.Row="2" Grid.Column="1" Margin="20 25 0 5"/>
+        <TextBlock Text="Pain level" Grid.Row="3" Grid.Column="1" Margin="20 10 0 5"/>
+        <TextBlock Text="Medications" Grid.Row="4" Grid.Column="1" Margin="20 10 0 5"/>
+        <TextBlock Text="Symptoms" Grid.Row="5" Grid.Column="1" Margin="20 10 0 5"/>
+        <TextBlock Text="Triggers" Grid.Row="6" Grid.Column="1" Margin="20 10 0 5"/>
+        <TextBlock Text="Reliefs" Grid.Row="7" Grid.Column="1" Margin="20 10 0 5"/>
+        <TextBlock Text="Notes" Grid.Row="8" Grid.Column="1" Margin="20 10 0 5"/>
+
+        <TextBox x:Name="txbAcheType" Grid.Row="2" Grid.Column="2" Width="200"  Margin="10 25 0 5" Height="25"/>
+        <TextBox x:Name="txbPainLevel" Grid.Row="3" Grid.Column="2" Width="200"  Margin="10 10 0 5" Height="25"/>
+        <TextBox x:Name="txbMedications" Grid.Row="4" Grid.Column="2" Width="200"  Margin="10 10 0 5" Height="25"/>
+        <TextBox x:Name="txbSymptoms" Grid.Row="5" Grid.Column="2" Width="200"  Margin="10 10 0 5" Height="25"/>
+        <TextBox x:Name="txbTriggers" Grid.Row="6" Grid.Column="2" Width="200"  Margin="10 10 0 5" Height="25"/>
+        <TextBox x:Name="txbReliefs" Grid.Row="7" Grid.Column="2" Width="200"  Margin="10 10 0 5" Height="25"/>
+        <TextBox x:Name="txbNotes" Grid.Row="8" Grid.Column="2" Width="200"  Margin="10 10 0 5" Height="25"/>
+
+
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Left" Height="40" Width="90" Margin="10 10 5 10" Background="#d1d1d1" BorderBrush="#92CCC1" FontWeight="DemiBold" Click="btnCancel_Click"/>
+
+        <Button x:Name="btnAddEdit" Content="Confirm edit" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Right" Height="40" Width="90" Margin="0 10 5 10" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
+    </Grid>
+</Window>

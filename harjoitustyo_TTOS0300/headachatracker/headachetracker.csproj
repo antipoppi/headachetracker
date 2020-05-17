@@ -62,11 +62,6 @@
     <Compile Include="AddEntriesUI.xaml.cs">
       <DependentUpon>AddEntriesUI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\kuva.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kuva.resx</DependentUpon>
-    </Compile>
     <Page Include="AddEntriesUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddTriggers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditEntry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,6 +107,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DatabaseAccess.cs" />
+    <Compile Include="EditEntry.xaml.cs">
+      <DependentUpon>EditEntry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Headache.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -131,10 +133,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\kuva.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>kuva.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -167,10 +165,9 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\paakuva.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-headache-64.png" />
+    <Resource Include="Resources\headacheicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
