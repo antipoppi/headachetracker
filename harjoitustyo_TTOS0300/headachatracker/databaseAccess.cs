@@ -116,7 +116,11 @@ namespace headachatracker
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT AcheType FROM Headache WHERE AcheID LIKE {id}", connection);
-                hold = (string)cmd.ExecuteScalar();
+                var holder = cmd.ExecuteScalar();
+                if (holder != null)
+                    hold = holder.ToString();
+                else
+                    return hold;
                 connection.Close();
                 return hold;
             }
@@ -139,7 +143,7 @@ namespace headachatracker
                 if (holder != null)
                     hold = holder.ToString();
                 else
-                    throw new Exception($"PainLevel could not be retrieved!");
+                    return hold;
                 connection.Close();
                 return hold;
             }
@@ -158,7 +162,11 @@ namespace headachatracker
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT Medications FROM Headache WHERE AcheID LIKE {id}", connection);
-                hold = (string)cmd.ExecuteScalar();
+                var holder = cmd.ExecuteScalar();
+                if (holder != null)
+                    hold = holder.ToString();
+                else
+                    return hold;
                 connection.Close();
                 return hold;
             }
@@ -177,7 +185,11 @@ namespace headachatracker
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT Symptoms FROM Headache WHERE AcheID LIKE {id}", connection);
-                hold = (string)cmd.ExecuteScalar();
+                var holder = cmd.ExecuteScalar();
+                if (holder != null)
+                    hold = holder.ToString();
+                else
+                    return hold;
                 connection.Close();
                 return hold;
             }
@@ -196,7 +208,11 @@ namespace headachatracker
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT Triggers FROM Headache WHERE AcheID LIKE {id}", connection);
-                hold = (string)cmd.ExecuteScalar();
+                var holder = cmd.ExecuteScalar();
+                if (holder != null)
+                    hold = holder.ToString();
+                else
+                    return hold;
                 connection.Close();
                 return hold;
             }
@@ -215,7 +231,11 @@ namespace headachatracker
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT Reliefs FROM Headache WHERE AcheID LIKE {id}", connection);
-                hold = (string)cmd.ExecuteScalar();
+                var holder = cmd.ExecuteScalar();
+                if (holder != null)
+                    hold = holder.ToString();
+                else
+                    return hold;
                 connection.Close();
                 return hold;
             }
@@ -234,7 +254,11 @@ namespace headachatracker
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT Notes FROM Headache WHERE AcheID LIKE {id}", connection);
-                hold = (string)cmd.ExecuteScalar();
+                var holder = cmd.ExecuteScalar();
+                if (holder != null)
+                    hold = holder.ToString();
+                else
+                    return hold;
                 connection.Close();
                 return hold;
             }
