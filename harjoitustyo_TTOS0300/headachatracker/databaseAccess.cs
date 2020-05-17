@@ -111,7 +111,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))
             {
-                string hold = "";
+                string hold = null;
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
@@ -134,7 +134,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))
             {
-                string hold = "";
+                string hold = null;
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
@@ -157,7 +157,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))
             {
-                string hold = "";
+                string hold = null;
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
@@ -180,7 +180,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))
             {
-                string hold = "";
+                string hold = null;
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
@@ -203,7 +203,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))
             {
-                string hold = "";
+                string hold = null;
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
@@ -226,7 +226,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))
             {
-                string hold = "";
+                string hold = null;
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
@@ -249,7 +249,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))
             {
-                string hold = "";
+                string hold = null;
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 // Suoritetaan SQL-komento hakemaan ja palauttamaan AcheType tietyllä AcheID:llä
