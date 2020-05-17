@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
         Icon="/Resources/headacheicon.ico"
-        Title="Edit entry" Height="480" Width="370" FontSize="12" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
+        Title="Edit entry" Height="480" Width="370" FontSize="12" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -49,13 +49,13 @@
         <TextBlock Text="Reliefs" Grid.Row="7" Grid.Column="1" Margin="20 10 0 5"/>
         <TextBlock Text="Notes" Grid.Row="8" Grid.Column="1" Margin="20 10 0 5"/>
 
-        <TextBox x:Name="txbAcheType" Grid.Row="2" Grid.Column="2" Width="200"  Margin="10 25 0 5" MinHeight="25" TextWrapping="Wrap"/>
-        <TextBox x:Name="txbPainLevel" Grid.Row="3" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" TextWrapping="Wrap"/>
-        <TextBox x:Name="txbMedications" Grid.Row="4" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" TextWrapping="Wrap"/>
-        <TextBox x:Name="txbSymptoms" Grid.Row="5" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" TextWrapping="Wrap"/>
-        <TextBox x:Name="txbTriggers" Grid.Row="6" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" TextWrapping="Wrap"/>
-        <TextBox x:Name="txbReliefs" Grid.Row="7" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" TextWrapping="Wrap"/>
-        <TextBox x:Name="txbNotes" Grid.Row="8" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbAcheType" Grid.Row="2" Grid.Column="2" Width="200"  Margin="10 25 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbPainLevel" Grid.Row="3" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbMedications" Grid.Row="4" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbSymptoms" Grid.Row="5" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbTriggers" Grid.Row="6" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbReliefs" Grid.Row="7" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbNotes" Grid.Row="8" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" MaxHeight="150" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
 
 
         <Button x:Name="btnCancel" Content="Cancel" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Left" Height="40" Width="90" Margin="10 10 5 10" Background="#d1d1d1" BorderBrush="#92CCC1" FontWeight="DemiBold" Click="btnCancel_Click"/>
