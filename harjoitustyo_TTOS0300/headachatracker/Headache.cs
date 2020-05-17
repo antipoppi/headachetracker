@@ -75,5 +75,32 @@ namespace headachatracker
 			set { notes = value; }
 		}
 		#endregion
+
+		public string Preview()
+		{
+			string preview = "";
+
+			if (Medications != "")
+			{
+				preview += "\r\nMedications:\r\n" + Medications;
+			}
+
+			if (Symptoms != "")
+			{
+				preview += "\r\n\r\nSymptoms:\r\n" + Symptoms;
+			}
+
+			if (Triggers != "")
+			{
+				preview += "\r\n\r\nTriggers:\r\n" + Triggers;
+			}
+
+			if (Reliefs != "")
+			{
+				preview += "\r\n\r\nReliefs:\r\n" + Reliefs;
+			}
+			
+			return preview;
+		}
 	}
 }

@@ -118,5 +118,12 @@ namespace headachatracker
             window.Show();
 
         }
+
+        private void btnPreview_Click(object sender, RoutedEventArgs e)
+        {
+            
+            MessageBox.Show("Headache information:\r\n" + headacheObj.Preview(), "Preview", MessageBoxButton.OK);
+
+        }
     }
 }
