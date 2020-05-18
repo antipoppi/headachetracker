@@ -59,23 +59,30 @@ namespace headachatracker
             {
                 if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
                 {
-                    string query = "INSERT INTO Headache (UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) Values (@1, @2, @3, @4, @5, @6, @7, @8)";
-
+                    // Luodaan yhteys
                     SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                     
-                    connection.Open(); // Avataan yhteys
 
-                    // Suoritetaan SQL-komento lisäämään tietoa
-                    SQLiteCommand cmd = new SQLiteCommand(query);
-                    cmd.Parameters.AddWithValue("@1", headache.AcheID);
-                    cmd.Parameters.AddWithValue("@2", headache.AcheType);
-                    cmd.Parameters.AddWithValue("@3", headache.PainLevel);
-                    cmd.Parameters.AddWithValue("@4", headache.Medications);
-                    cmd.Parameters.AddWithValue("@5", headache.Symptoms);
-                    cmd.Parameters.AddWithValue("@6", headache.Triggers);
-                    cmd.Parameters.AddWithValue("@7", headache.Reliefs);
-                    cmd.Parameters.AddWithValue("@8", headache.Notes);
+                    // Luodaan komento ja lisätään sille yhteys
+                    SQLiteCommand cmd = new SQLiteCommand("INSERT INTO Headache (UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) Values (@UserID, @AcheType, @PainLevel, @Medications, @Symptoms, @Triggers, @Reliefs, @Notes)", connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = connection;
 
+
+                    // Lisätään tieto komentoon muuttujina
+                    cmd.Parameters.AddWithValue("@UserID", headache.AcheID);
+                    cmd.Parameters.AddWithValue("@AcheType", headache.AcheType);
+                    cmd.Parameters.AddWithValue("@PainLevel", headache.PainLevel);
+                    cmd.Parameters.AddWithValue("@Medications", headache.Medications);
+                    cmd.Parameters.AddWithValue("@Symptoms", headache.Symptoms);
+                    cmd.Parameters.AddWithValue("@Triggers", headache.Triggers);
+                    cmd.Parameters.AddWithValue("@Reliefs", headache.Reliefs);
+                    cmd.Parameters.AddWithValue("@Notes", headache.Notes);
+
+                    // Avataan yhteys
+                    connection.Open(); 
+
+                    // Suoritetaan komento
                     cmd.ExecuteNonQuery();
 
                     // Suljetaan yhteys
@@ -99,13 +106,25 @@ namespace headachatracker
         }
         public static bool DeleteFromSQLite(int entryID) // poistometodi
         {
-            if (System.IO.File.Exists(filePath))
+            if (System.IO.File.Exists(filePath)) // tarkistetaan onko tiedosto olemassa
             {
+                // luodaan yhteys ja komento
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
-                connection.Open(); // Avataan yhteys
-                // Suoritetaan SQL-komento poistamaan tietoa
-                SQLiteCommand cmd = new SQLiteCommand($"DELETE FROM Headache WHERE AcheID LIKE '{entryID}'", connection);
+                SQLiteCommand cmd = new SQLiteCommand($"DELETE FROM Headache WHERE AcheID LIKE @AcheID", connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
+
+                // Lisätään merkinnän ID muuttujana komentoon
+                cmd.Parameters.AddWithValue("@AcheID", entryID);
+
+
+                // Avataan yhteys
+                connection.Open();
+                
+                // Suoritetaan komento
                 cmd.ExecuteNonQuery();
+
+                // Suljetaan komento
                 connection.Close();
                 return true;
             }
