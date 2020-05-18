@@ -27,5 +27,13 @@ namespace headachatracker
                 return stringBuilder.ToString();
             }
         }
+        /*
+        // tällä metodilla luodaan salt-stringi
+        public static string ComputeSaltString()
+        {
+            int length = 5;
+            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+        }
+        */
     }
 }
