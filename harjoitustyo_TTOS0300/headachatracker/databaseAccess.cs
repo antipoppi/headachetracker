@@ -200,6 +200,9 @@ namespace headachatracker
                     headache.Notes = holder7.ToString();
                 else
                     headache.Notes = null;
+
+                // Suljetaan yhteys
+                connection.Close();
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
             {
@@ -207,10 +210,48 @@ namespace headachatracker
             }
         }
 
+        public static bool SaveEditedEntryToSQLite(Headache headache)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                // Luodaan yhteys
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+                // Luodaan komento ja lisätään sille yhteys
+                SQLiteCommand cmd = new SQLiteCommand("UPDATE Headache SET AcheType = @AcheType, PainLevel = @PainLevel, Medications = @Medications, Symptoms = @Symptoms, Triggers = @Triggers, Reliefs = @Reliefs, Notes = @Notes WHERE AcheID = @AcheID;", connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
+
+                // Lisätään tieto komentoon muuttujina
+                cmd.Parameters.AddWithValue("@AcheType", headache.AcheType);
+                cmd.Parameters.AddWithValue("@PainLevel", headache.PainLevel);
+                cmd.Parameters.AddWithValue("@Medications", headache.Medications);
+                cmd.Parameters.AddWithValue("@Symptoms", headache.Symptoms);
+                cmd.Parameters.AddWithValue("@Triggers", headache.Triggers);
+                cmd.Parameters.AddWithValue("@Reliefs", headache.Reliefs);
+                cmd.Parameters.AddWithValue("@Notes", headache.Notes);
+                cmd.Parameters.AddWithValue("@AcheID", headache.AcheID);
+
+                // Avataan yhteys
+                connection.Open();
+
+                // Suoritetaan komento
+                cmd.ExecuteNonQuery();
+
+                // Suljetaan yhteys
+                connection.Close();
+
+                return true; 
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
+        }
 
         public static void LoginToDatabase(string username, string password)
         {
-           
+            
         }
 
         /*

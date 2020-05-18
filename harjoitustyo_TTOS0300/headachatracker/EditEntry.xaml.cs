@@ -123,8 +123,17 @@ namespace headachatracker
 
         private void btnAddEdit_Click(object sender, RoutedEventArgs e)
         {
-            // lisätään tiedot tietokantaan
-
+            try
+            {
+                // lisätään tiedot tietokantaan
+                DatabaseAccess.SaveEditedEntryToSQLite(headacheObj);
+                // näyttää pääikkunan ja sulkee tämän
+                this.Close();
+            }
+            catch (InvalidOperationException ex) // Näyttää virheviestin
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
+            }
         }
 
 
