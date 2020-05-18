@@ -32,7 +32,17 @@ namespace headachatracker
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            
+            /*
+            int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, pwbPassword.Password);
+            if (userID != 0)
+            {
+                //shows mainwindow and closes this window
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            */
 
         }
     }
