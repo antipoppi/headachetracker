@@ -19,8 +19,11 @@ namespace headachatracker
     /// </summary>
     public partial class Login : Window
     {
+        private Headache headacheObj;
         public Login()
-        {   // Avataan ikkuna keskellä näyttöä
+        {
+            headacheObj = new Headache();
+            // Avataan ikkuna keskellä näyttöä
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
@@ -32,17 +35,22 @@ namespace headachatracker
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            /*
+            
             int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, pwbPassword.Password);
             if (userID != 0)
             {
+                headacheObj.UserID = userID;
                 //shows mainwindow and closes this window
-                MainWindow mainWindow = new MainWindow();
+                MainWindow mainWindow = new MainWindow(headacheObj.UserID);
                 mainWindow.Show();
                 this.Close();
             }
             else
-            */
+            {
+                MessageBox.Show("Login failed! Username or Password is wrong.", "Error login", MessageBoxButton.OK);
+                pwbPassword.Password = "";
+            }
+            
 
         }
     }

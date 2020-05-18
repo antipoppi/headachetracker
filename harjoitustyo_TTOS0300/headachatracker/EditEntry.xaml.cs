@@ -22,15 +22,16 @@ namespace headachatracker
     public partial class EditEntry : Window
     {
         private Headache headacheObj; // yksityinen olio käsittelyä varten
-        public EditEntry(int id)
+        public EditEntry(int userID, int entryID)
         {
             InitializeComponent();
 
             // luodaan uusi olio
             headacheObj = new Headache();
 
-            headacheObj.AcheID = id;
-            DatabaseAccess.GetHeadacheObjPFromSQLite(headacheObj, id); // Haetaan tietoa tietokannasta
+            headacheObj.UserID = userID;
+            headacheObj.AcheID = entryID;
+            DatabaseAccess.GetHeadacheObjPFromSQLite(headacheObj, entryID); // Haetaan tietoa tietokannasta
 
 
             // laitetaan tietokannan tiedot olion kautta tekstilaatikkoihin
@@ -117,7 +118,7 @@ namespace headachatracker
         private void Window_Closed(object sender, EventArgs e)
         {
             // näytetään pääikkuna, jos tämä ikkuna suljetaan
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(headacheObj.UserID);
             mainWindow.Show();
         }
 

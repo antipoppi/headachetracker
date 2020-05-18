@@ -70,7 +70,7 @@ namespace headachatracker
 
 
                     // Lisätään tieto komentoon muuttujina
-                    cmd.Parameters.AddWithValue("@UserID", headache.AcheID);
+                    cmd.Parameters.AddWithValue("@UserID", headache.UserID);
                     cmd.Parameters.AddWithValue("@AcheType", headache.AcheType);
                     cmd.Parameters.AddWithValue("@PainLevel", headache.PainLevel);
                     cmd.Parameters.AddWithValue("@Medications", headache.Medications);
@@ -254,8 +254,9 @@ namespace headachatracker
             SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
 
             // Luodaan komento ja lisätään sille yhteys
-            SQLiteCommand cmd = new SQLiteCommand($"SELECT Password FROM User WHERE Username = @Username");
-
+            SQLiteCommand cmd = new SQLiteCommand($"SELECT Password FROM User WHERE Username = @Username", connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = connection;
             // Lisätään tieto komentoon muuttujina
             cmd.Parameters.AddWithValue("@Username", username);
 
@@ -274,11 +275,15 @@ namespace headachatracker
                 if (validPassword == inputPassword)
                 {
                     // Luodaan komento ja lisätään sille yhteys
-                    SQLiteCommand cmd2 = new SQLiteCommand($"SELECT UserID FROM User WHERE Username = @Username");
+                    SQLiteCommand cmd2 = new SQLiteCommand($"SELECT UserID FROM User WHERE Username = @Username", connection);
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.Connection = connection;
                     // Lisätään tieto komentoon muuttujina
-                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd2.Parameters.AddWithValue("@Username", username);
+                    // Avataan yhteys
+                    connection.Open();
                     // Suoritetaan komento
-                    var holdID = cmd.ExecuteScalar();
+                    var holdID = cmd2.ExecuteScalar();
                     // Suljetaan yhteys
                     connection.Close();
                     if (holdID != null)

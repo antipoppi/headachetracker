@@ -21,8 +21,11 @@ namespace headachatracker
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private Headache headacheObj;
+        public MainWindow(int userID)
         {
+            headacheObj = new Headache();
+            headacheObj.UserID = userID;
             // avataan ikkuna keskellä ruutua
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
@@ -47,7 +50,7 @@ namespace headachatracker
         private void btnTesti_Click(object sender, RoutedEventArgs e)
         {
             // Avataan merkintöjen lisäämistä varten uusi ikkuna
-            AddEntriesUI window = new AddEntriesUI();
+            AddEntriesUI window = new AddEntriesUI(headacheObj.UserID);
             window.Show();
             this.Hide();        // Piilotetaan tämä MainWindow ikkuna
         }
@@ -107,7 +110,7 @@ namespace headachatracker
             Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
 
 
-                EditEntry editEntry = new EditEntry(entryID);
+                EditEntry editEntry = new EditEntry(headacheObj.UserID, entryID);
                 editEntry.Show();
                 this.Hide();
             }

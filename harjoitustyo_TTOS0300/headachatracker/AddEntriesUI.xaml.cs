@@ -20,12 +20,13 @@ namespace headachatracker
     public partial class AddEntriesUI : Window
     {
         private Headache headacheObj;
-        public AddEntriesUI()
+        public AddEntriesUI(int userID)
         {
             // avataan ikkuna keskellä ruutua ja luodaan olio
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             headacheObj = new Headache();
+            headacheObj.UserID = userID;
         }
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
@@ -97,7 +98,7 @@ namespace headachatracker
                 DatabaseAccess.AddToSQLite(headacheObj);
 
                 //shows mainwindow and closes this window
-                MainWindow mainWindow = new MainWindow();
+                MainWindow mainWindow = new MainWindow(headacheObj.UserID);
                 mainWindow.Show();
                 this.Close();
             }
@@ -118,7 +119,7 @@ namespace headachatracker
         private void Window_Closed(object sender, EventArgs e)
         {
             // shows mainwindow when this window is closed
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(headacheObj.UserID);
             mainWindow.Show();
             
         }
