@@ -59,11 +59,22 @@ namespace headachatracker
             {
                 if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
                 {
+                    string query = "INSERT INTO Headache (UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) Values (@1, @2, @3, @4, @5, @6, @7, @8)";
+
                     SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                    
                     connection.Open(); // Avataan yhteys
 
                     // Suoritetaan SQL-komento lisäämään tietoa
-                    SQLiteCommand cmd = new SQLiteCommand($"INSERT INTO Headache (UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) values ('{headache.UserID}', '{headache.AcheType}', '{headache.PainLevel}', '{headache.Medications}', '{headache.Symptoms}', '{headache.Triggers}','{headache.Reliefs}', '{headache.Notes}')", connection);
+                    SQLiteCommand cmd = new SQLiteCommand(query);
+                    cmd.Parameters.AddWithValue("@1", headache.AcheID);
+                    cmd.Parameters.AddWithValue("@2", headache.AcheType);
+                    cmd.Parameters.AddWithValue("@3", headache.PainLevel);
+                    cmd.Parameters.AddWithValue("@4", headache.Medications);
+                    cmd.Parameters.AddWithValue("@5", headache.Symptoms);
+                    cmd.Parameters.AddWithValue("@6", headache.Triggers);
+                    cmd.Parameters.AddWithValue("@7", headache.Reliefs);
+                    cmd.Parameters.AddWithValue("@8", headache.Notes);
 
                     cmd.ExecuteNonQuery();
 
@@ -175,6 +186,12 @@ namespace headachatracker
             {
                 throw new System.IO.FileNotFoundException("File not found");
             }
+        }
+
+
+        public static void LoginToDatabase(string username, string password)
+        {
+           
         }
 
         /*

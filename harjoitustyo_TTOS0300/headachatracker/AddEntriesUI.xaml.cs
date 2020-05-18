@@ -104,7 +104,7 @@ namespace headachatracker
 
             catch (InvalidOperationException ex) // Näyttää virheviestin
             {
-                throw new Exception($"Cannot close the window: {ex.Message}");
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
             }
         }
 
