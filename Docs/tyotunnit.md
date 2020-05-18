@@ -52,4 +52,6 @@
 * Tatu 4h - Käyttöliittymän toteutusta, entryn muokkaamisen toteutusta
 
 # Vko 21
+**18.5.2020**
 * Venla 3h - SQL:n turvallisuuden parantamista, uuden ikkunan luonti ym.
+* Tatu 3.5h - Käyttöliittymän toteutusta. Kirjatumisen toteuttaminen, hashien käyttö
