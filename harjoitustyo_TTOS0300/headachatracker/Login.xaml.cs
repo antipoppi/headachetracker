@@ -20,7 +20,8 @@ namespace headachatracker
     public partial class Login : Window
     {
         public Login()
-        {
+        {   // Avataan ikkuna keskellä näyttöä
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

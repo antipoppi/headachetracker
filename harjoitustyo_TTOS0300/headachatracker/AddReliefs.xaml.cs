@@ -21,18 +21,21 @@ namespace headachatracker
     {
         public AddReliefs()
         {
+            // Avataan ikkuna keskellä näyttöä
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         private void checkOther_Unchecked(object sender, RoutedEventArgs e)
         {
+            // jos tietty ruutu valitaan, näytetään kaksi muuta komponenttia
             txtAddRelief.Visibility = Visibility.Hidden;
             txbAddOtherRelief.Visibility = Visibility.Hidden;
         }
 
         private void checkOther_Checked(object sender, RoutedEventArgs e)
         {
+            // piilotetaan komponentit, jos rasti otetaan pois valinnasta
             txtAddRelief.Visibility = Visibility.Visible;
             txbAddOtherRelief.Visibility = Visibility.Visible;
         }
