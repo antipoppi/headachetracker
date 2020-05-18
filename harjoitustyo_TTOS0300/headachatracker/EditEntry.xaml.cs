@@ -127,7 +127,7 @@ namespace headachatracker
             {
                 // lisätään tiedot tietokantaan
                 DatabaseAccess.SaveEditedEntryToSQLite(headacheObj);
-                // näyttää pääikkunan ja sulkee tämän
+                // sulkee tämän ja näyttää pääikkunan
                 this.Close();
             }
             catch (InvalidOperationException ex) // Näyttää virheviestin
