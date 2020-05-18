@@ -248,9 +248,53 @@ namespace headachatracker
             }
         }
 
-        public static void LoginToDatabase(string username, string password)
+        public static int LoginToDatabase(string username, string inputPassword)
         {
-            
+            // Luodaan yhteys
+            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+            // Luodaan komento ja lisätään sille yhteys
+            SQLiteCommand cmd = new SQLiteCommand($"SELECT Password FROM User WHERE Username = @Username");
+
+            // Lisätään tieto komentoon muuttujina
+            cmd.Parameters.AddWithValue("@Username", username);
+
+            // Avataan yhteys
+            connection.Open();
+
+            // Suoritetaan komento
+            var hold = cmd.ExecuteScalar();
+
+            // Suljetaan yhteys
+            connection.Close();
+
+            if (hold != null)
+            {
+                string validPassword = hold.ToString();
+                if (validPassword == inputPassword)
+                {
+                    // Luodaan komento ja lisätään sille yhteys
+                    SQLiteCommand cmd2 = new SQLiteCommand($"SELECT UserID FROM User WHERE Username = @Username");
+                    // Lisätään tieto komentoon muuttujina
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    // Suoritetaan komento
+                    var holdID = cmd.ExecuteScalar();
+                    // Suljetaan yhteys
+                    connection.Close();
+                    if (holdID != null)
+                    {
+                        string userIDstr = holdID.ToString();
+                        Int32.TryParse(userIDstr, out int userID);
+                        return userID;
+                    }
+                    else
+                        return 0;
+                }
+                else
+                    return 0;
+            }
+            else
+                return 0;
         }
 
         /*
