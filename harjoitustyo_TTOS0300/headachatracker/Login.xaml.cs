@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace headachatracker
 {
     /// <summary>
@@ -19,10 +20,8 @@ namespace headachatracker
     /// </summary>
     public partial class Login : Window
     {
-        private Headache headacheObj;
         public Login()
         {
-            headacheObj = new Headache();
             // Avataan ikkuna keskellä näyttöä
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
@@ -35,23 +34,29 @@ namespace headachatracker
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            
-            int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, pwbPassword.Password);
+            // Hashataan syötetty salasana
+            string rawPwd = pwbPassword.Password;
+            string hashedRawPwd = Security.ComputeSha256Hash(rawPwd);
+
+            // Tarkistetaan onko syötetty salasana oikein (verrataan hashattua salasanaan tietokannassa olevaan hashiin kyseisellä käyttäjänimellä)
+            int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, hashedRawPwd);
+
             if (userID != 0)
             {
-                headacheObj.UserID = userID;
-                //shows mainwindow and closes this window
-                MainWindow mainWindow = new MainWindow(headacheObj.UserID);
+                // Välitetään userID pääikkunaan
+                MainWindow mainWindow = new MainWindow(userID);
                 mainWindow.Show();
                 this.Close();
             }
             else
             {
+                // jos käyttäjänimi/salasana on väärin ilmoitetaan siitä
                 MessageBox.Show("Login failed! Username or Password is wrong.", "Error login", MessageBoxButton.OK);
                 pwbPassword.Password = "";
             }
             
 
         }
+
     }
 }

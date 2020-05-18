@@ -62,6 +62,7 @@
     <Compile Include="AddEntriesUI.xaml.cs">
       <DependentUpon>AddEntriesUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Security.cs" />
     <Page Include="AddEntriesUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
