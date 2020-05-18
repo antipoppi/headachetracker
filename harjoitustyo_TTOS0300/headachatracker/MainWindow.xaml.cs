@@ -107,7 +107,6 @@ namespace headachatracker
             Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
 
 
-
                 EditEntry editEntry = new EditEntry(entryID);
                 editEntry.Show();
                 this.Hide();
