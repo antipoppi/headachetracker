@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
+        Icon="/Resources/headacheicon.ico"
         Title="Login" Height="450" Width="400" FontSize="16">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -31,18 +32,22 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+        
+        <Border Background="#92CCC1" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="9" Opacity="0.4" Margin="0,0,0,-10"/>
+        <Border Background="#92CCC1" Grid.Column="0" Grid.Row="28" Grid.ColumnSpan="6" Height="30" Opacity="0.7"/>
 
 
         <Image Source="/Resources/paakuva.png" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="0"/>
         <TextBlock x:Name="Logo" Grid.Column="2" Grid.Row="1" Padding="8" HorizontalAlignment="Left" FontSize="24" Margin="0" Text="HEADACHE TRACKER" Foreground="Black" FontFamily="Yu Gothic Medium"/>
 
-        <TextBlock Text="Login" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="0 35 0 0" FontSize="24" HorizontalAlignment="Center"/>
         <TextBlock Text="Username" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="65 40 0 0"/>
         <TextBox x:Name="txbUsername" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Width="200" HorizontalAlignment="Center" Margin="0 5 0 25"/>
         <TextBlock Text="Password" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="65 0 0 0"/>
         <PasswordBox x:Name="pwbPassword" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Width="200" HorizontalAlignment="Center" Margin="0 5 0 0"/>
 
-        <TextBlock Text="Register" Grid.Row="7" Grid.Column="2" Foreground="Blue" HorizontalAlignment="Right" Margin="0 5 60 0"/>
+        <TextBlock Text="Register" Grid.Row="7" Grid.Column="2" Foreground="Blue" HorizontalAlignment="Right" Margin="0 3 60 10" FontStyle="Italic" FontSize="14"/>
+
+        <Button x:Name="btnLogin" Content="Login" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="130" Height="50" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
 
     </Grid>
 </Window>
