@@ -56,7 +56,7 @@ namespace headachatracker
         {
             // poistetaan valittu tapahtuma id:n perusteella
             var dt = (DataTable)dataHeadache.DataContext;
-            if (dataHeadache.SelectedIndex == 0)
+            if (dataHeadache.SelectedCells.Count == 0)
             {
                 return;
             }
@@ -101,12 +101,22 @@ namespace headachatracker
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             // kun painetaan edit-nappulaa, avataan uusi ikkuna ja lähetetään sille valittu indeksi. piilotetaan tämä ikkuna
+            if (dataHeadache.SelectedCells.Count > 0)
+            { 
             var dt = (DataTable)dataHeadache.DataContext;
             Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
-            EditEntry editEntry = new EditEntry(entryID);
-            editEntry.Show();
-            this.Hide();
 
+
+
+                EditEntry editEntry = new EditEntry(entryID);
+                editEntry.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                MessageBox.Show("You haven't selected anything!", "Error", MessageBoxButton.OK);
+            }
         }
     }
 }
