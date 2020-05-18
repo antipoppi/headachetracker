@@ -33,7 +33,7 @@ namespace headachatracker
             // avataan uusi ikkuna
             AddMedication medicationWindow = new AddMedication();
             medicationWindow.Owner = this;
-            medicationWindow.Show();
+            medicationWindow.ShowDialog();
 
         }
         public void UpdateMedication(string medications) // tällä metodilla voidaan päivittää oliota AddMedication-ikkunassa
@@ -46,7 +46,7 @@ namespace headachatracker
             // avataan uusi ikkuna
             AddSymptoms symptomWindow = new AddSymptoms();
             symptomWindow.Owner = this;
-            symptomWindow.Show();
+            symptomWindow.ShowDialog();
         }
 
         public void UpdateSymptoms(string symptoms) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
@@ -59,7 +59,7 @@ namespace headachatracker
             // avataan uusi ikkuna
             AddReliefs addReliefsWindow = new AddReliefs();
             addReliefsWindow.Owner = this;
-            addReliefsWindow.Show();
+            addReliefsWindow.ShowDialog();
         }
         public void UpdateReliefs(string reliefs) // tällä metodilla voidaan päivittää oliota AddReliefs-ikkunassa
         {
@@ -71,7 +71,7 @@ namespace headachatracker
             // avataan uusi ikkuna
             AddTriggers addTriggersWindow = new AddTriggers();
             addTriggersWindow.Owner = this;
-            addTriggersWindow.Show();
+            addTriggersWindow.ShowDialog();
         }
         public void UpdateTriggers(string triggers) // tällä metodilla voidaan päivittää oliota AddTriggers-ikkunassa
         {
@@ -97,8 +97,8 @@ namespace headachatracker
                 DatabaseAccess.AddToSQLite(headacheObj);
 
                 //shows mainwindow and closes this window
-                MainWindow window = new MainWindow();
-                window.Show();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
                 this.Close();
             }
 
@@ -118,9 +118,9 @@ namespace headachatracker
         private void Window_Closed(object sender, EventArgs e)
         {
             // shows mainwindow when this window is closed
-            MainWindow window = new MainWindow();
-            window.Show();
-
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            
         }
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
