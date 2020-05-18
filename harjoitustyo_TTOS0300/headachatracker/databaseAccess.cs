@@ -117,7 +117,6 @@ namespace headachatracker
                 // Lisätään merkinnän ID muuttujana komentoon
                 cmd.Parameters.AddWithValue("@AcheID", entryID);
 
-
                 // Avataan yhteys
                 connection.Open();
                 
