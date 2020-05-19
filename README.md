@@ -125,7 +125,7 @@ System.Data.SQLite
 3. Käyttöohjeet
 
 
-[Käyttöohjeet löytyvät täältä.](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md)
+Käyttöohjeet löytyvät [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md).
 
 
 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
