@@ -249,6 +249,9 @@ namespace headachatracker
             }
         }
 
+        /// <summary>
+        /// Below are Methods that are used to edit login
+        /// </summary>
         public static int LoginToDatabase(string username, string inputPassword)
         {
             // Luodaan yhteys
@@ -333,6 +336,16 @@ namespace headachatracker
             else
                 throw new Exception($"Salt can not be acquired!");
         }
+
+        /// <summary>
+        /// Below are Methods that are used to Register user
+        /// </summary>
+
+        public static void SaveUser(string username, string rawPassword)
+        {
+
+        }
+
         /*
         // NÄMÄ ON NYT YLIMÄÄRÄISIÄ ???
         /// <summary>
