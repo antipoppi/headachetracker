@@ -43,7 +43,7 @@
         <TextBlock Text="Username" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="65 40 0 0"/>
         <TextBox x:Name="txbUsername" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Width="200" HorizontalAlignment="Center" Margin="0 5 0 25"/>
         <TextBlock Text="Password" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="65 0 0 0"/>
-        <PasswordBox x:Name="pwbPassword" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Width="200" HorizontalAlignment="Center" Margin="0 5 0 0"/>
+        <PasswordBox x:Name="pwbPassword" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Width="200" HorizontalAlignment="Center" Margin="0 5 0 0" KeyDown="pwbPassword_KeyDown"/>
 
         <Button x:Name="btnRegister" Content="Register" Grid.Row="7" Grid.Column="2" Foreground="Gray" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Right" Margin="0 3 60 10" FontSize="14" Click="btnRegister_Click"/>
 

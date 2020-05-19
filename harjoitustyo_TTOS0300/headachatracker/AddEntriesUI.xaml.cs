@@ -130,5 +130,13 @@ namespace headachatracker
             MessageBox.Show("Headache information:\r\n" + headacheObj.Preview(), "Preview", MessageBoxButton.OK);
 
         }
+
+        private void txbNotes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnAddEntry_Click(sender, e);
+            }
+        }
     }
 }

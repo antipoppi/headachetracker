@@ -63,5 +63,12 @@ namespace headachatracker
 
         }
 
+        private void pwbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
     }
 }
