@@ -349,7 +349,7 @@ namespace headachatracker
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
 
                 // Luodaan komento ja lisätään sille yhteys
-                SQLiteCommand cmd = new SQLiteCommand($"INSERT INTO User WHERE UserName = @Username, Salt = @Salt, Password = @Password", connection);
+                SQLiteCommand cmd = new SQLiteCommand($"INSERT INTO User (UserName, Salt, Password) VALUES (@Username, @Salt, @Password);", connection);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = connection;
 

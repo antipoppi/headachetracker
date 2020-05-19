@@ -45,9 +45,19 @@ namespace headachatracker
             if (res == true)
             {
                 MessageBox.Show($"User '{username}' saved succesfully.", "Information", MessageBoxButton.OK);
+                Login loginWindow = new Login();
+                loginWindow.Show();
+                this.Close();
             }
             else
+            {
                 MessageBox.Show($"User '{username}' is already in use.", "Information", MessageBoxButton.OK);
+                txbUsername.Text = "";
+                txbPass1.Text = "";
+                txbPass2.Text = "";
+            }
+                
+
 
         }
 
