@@ -63,30 +63,41 @@ namespace headachatracker
             string pwdHashSalted = Security.ComputeSha256Hash(pwd1 + salt);
             // tallennetaan tiedot tietokantaan
             bool res2 = DatabaseAccess.SaveUserToSQL(username, salt, pwdHashSalted);
-            if (res2 == true)
+            try
             {
-                MessageBox.Show($"User '{username}' saved succesfully.", "Information", MessageBoxButton.OK);
-                Login loginWindow = new Login();
-                loginWindow.Show();
-                this.Close();
+                if (res2 == true)
+                {
+                    MessageBox.Show($"User '{username}' saved succesfully.", "Information", MessageBoxButton.OK);
+                    Login loginWindow = new Login();
+                    loginWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show($"User '{username}' can not be saved.", "Error", MessageBoxButton.OK);
+                    txbUsername.Text = "";
+                    txbPass1.Text = "";
+                    txbPass2.Text = "";
+                }
             }
-            else
+            catch (InvalidOperationException ex)
             {
-                MessageBox.Show($"User '{username}' can not be saved.", "Error", MessageBoxButton.OK);
-                txbUsername.Text = "";
-                txbPass1.Text = "";
-                txbPass2.Text = "";
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
             }
-                
-
-
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            Login loginWindow = new Login();
-            loginWindow.Show();
-            this.Close();
+            try
+            {
+                Login loginWindow = new Login();
+                loginWindow.Show();
+                this.Close();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
+            }
         }
 
         private void btnReset_Click(object sender, RoutedEventArgs e)
