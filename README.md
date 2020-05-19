@@ -116,16 +116,16 @@ Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:
 
 **2. Tietoa ohjelmasta (mitä tekee, miksi etc)**
 
-* listaa toteutetut toiminnalliset vaatimukset
-* listaa toteuttamatta jääneet toiminnalliset vaatimukset
-* listaa toiminnallisuus joka toteuttiin ohi/yli alkuperäisten vaatimusten
-*listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
+### Toteutetut toiminnalliset vaatimukset
+### Toteuttamatta jääneet toiminnalliset vaatimukset
+### Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten
+### Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset
 
 
 **3. Käyttöohjeet**
 
 
-Käyttöohjeet löytyvät [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md).
+Käyttöohjeet ja kuvankaappaukset löytyvät [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md).
 
 
 **4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat**
