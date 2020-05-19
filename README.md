@@ -118,10 +118,16 @@ Nämä vielä pitää kirjoittaa:
 
 **2. Tietoa ohjelmasta (mitä tekee, miksi etc)**
 
-### Toteutetut toiminnalliset vaatimukset
-### Toteuttamatta jääneet toiminnalliset vaatimukset
-### Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten
-### Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset
+_Toteutetut toiminnalliset vaatimukset_
+
+
+Toteuttamatta jääneet toiminnalliset vaatimukset
+
+
+Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten
+
+
+Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset
 
 
 **3. Käyttöohjeet**
