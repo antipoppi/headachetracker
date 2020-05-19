@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
-        Title="Registration_2" Height="450" Width="800">
+        Icon="/Resources/headacheicon.ico"
+        Title="Registration" Height="400" Width="380">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#92CCC1" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="6" Opacity="0.4" Margin="0 0 0 0"/>
+
+        <TextBlock Text="Register" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" Margin="10" FontFamily="Yu Gothic Medium"/>
+
+        <TextBlock Text="Username" Grid.Row="2" Grid.Column="1" Margin="10 35 0 5"/>
+        <TextBlock Text="Password" Grid.Row="3" Grid.Column="1" Margin="10 10 0 5"/>
+        <TextBlock Text="Confirm password" Grid.Row="4" Grid.Column="1" Margin="10 10 0 5"/>
+
+
+        <TextBox x:Name="txbUsername" Grid.Row="2" Grid.Column="2" Width="200"  Margin="10 35 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <TextBox x:Name="txbPass1" Grid.Row="3" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" TextChanged="txbPainLevel_TextChanged"/>
+        <TextBox x:Name="txbPass2" Grid.Row="4" Grid.Column="2" Width="200"  Margin="10 10 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+
+
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Left" Grid.ColumnSpan="2" Height="40" Width="70" Margin="35 20 5 10" Background="#d1d1d1" BorderBrush="#d1d1d1" FontWeight="DemiBold" Click="btnCancel_Click"/>
+        <Button x:Name="btnReset" Content="Reset" Grid.Column="1" Grid.Row="10"  Grid.ColumnSpan="2" Height="40" Width="70" Margin="0 20 0 10" Background="#d1d1d1" BorderBrush="#d1d1d1" FontWeight="DemiBold"/>
+        <Button x:Name="btnRegister" Content="Submit" Grid.Column="2" Grid.Row="10" Height="40" Width="100" HorizontalAlignment="Right" Margin="0 20 5 10" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold" Click="btnRegister_Click"/>
     </Grid>
 </Window>
