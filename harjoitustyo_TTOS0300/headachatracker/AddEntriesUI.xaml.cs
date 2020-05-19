@@ -31,11 +31,17 @@ namespace headachatracker
 
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
-            // avataan uusi ikkuna
-            AddMedication medicationWindow = new AddMedication();
-            medicationWindow.Owner = this;
-            medicationWindow.ShowDialog();
-
+            try
+            {
+                // avataan uusi ikkuna
+                AddMedication medicationWindow = new AddMedication();
+                medicationWindow.Owner = this;
+                medicationWindow.ShowDialog();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
         }
         public void UpdateMedication(string medications) // tällä metodilla voidaan päivittää oliota AddMedication-ikkunassa
         {
@@ -44,10 +50,17 @@ namespace headachatracker
 
         private void btnAddSymptoms_Click(object sender, RoutedEventArgs e)
         {
-            // avataan uusi ikkuna
-            AddSymptoms symptomWindow = new AddSymptoms();
-            symptomWindow.Owner = this;
-            symptomWindow.ShowDialog();
+            try
+            {
+                // avataan uusi ikkuna
+                AddSymptoms symptomWindow = new AddSymptoms();
+                symptomWindow.Owner = this;
+                symptomWindow.ShowDialog();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
         }
 
         public void UpdateSymptoms(string symptoms) // tällä metodilla voidaan päivittää oliota AddSymptoms-ikkunassa
@@ -57,10 +70,17 @@ namespace headachatracker
 
         private void btnAddReliefs_Click(object sender, RoutedEventArgs e)
         {
-            // avataan uusi ikkuna
-            AddReliefs addReliefsWindow = new AddReliefs();
-            addReliefsWindow.Owner = this;
-            addReliefsWindow.ShowDialog();
+            try
+            {
+                // avataan uusi ikkuna
+                AddReliefs addReliefsWindow = new AddReliefs();
+                addReliefsWindow.Owner = this;
+                addReliefsWindow.ShowDialog();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
         }
         public void UpdateReliefs(string reliefs) // tällä metodilla voidaan päivittää oliota AddReliefs-ikkunassa
         {
@@ -69,10 +89,17 @@ namespace headachatracker
 
         private void btnAddTriggers_Click(object sender, RoutedEventArgs e)
         {
-            // avataan uusi ikkuna
-            AddTriggers addTriggersWindow = new AddTriggers();
-            addTriggersWindow.Owner = this;
-            addTriggersWindow.ShowDialog();
+            try
+            {
+                // avataan uusi ikkuna
+                AddTriggers addTriggersWindow = new AddTriggers();
+                addTriggersWindow.Owner = this;
+                addTriggersWindow.ShowDialog();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
         }
         public void UpdateTriggers(string triggers) // tällä metodilla voidaan päivittää oliota AddTriggers-ikkunassa
         {
@@ -118,10 +145,16 @@ namespace headachatracker
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            // shows mainwindow when this window is closed
-            MainWindow mainWindow = new MainWindow(headacheObj.UserID);
-            mainWindow.Show();
-            
+            try
+            {
+                // shows mainwindow when this window is closed
+                MainWindow mainWindow = new MainWindow(headacheObj.UserID);
+                mainWindow.Show();
+            }
+            catch (InvalidOperationException ex) // Näyttää virheviestin
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
+            }
         }
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)

@@ -29,9 +29,16 @@ namespace headachatracker
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            Registration registrationWindow = new Registration();
-            registrationWindow.Show();
-            this.Close();
+            try
+            {
+                Registration registrationWindow = new Registration();
+                registrationWindow.Show();
+                this.Close();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
 
         }
 
@@ -48,10 +55,17 @@ namespace headachatracker
 
             if (userID != 0)
             {
-                // Välitetään userID pääikkunaan
-                MainWindow mainWindow = new MainWindow(userID);
-                mainWindow.Show();
-                this.Close();
+                try
+                {
+                    // Välitetään userID pääikkunaan
+                    MainWindow mainWindow = new MainWindow(userID);
+                    mainWindow.Show();
+                    this.Close();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+                }
             }
             else
             {
@@ -59,8 +73,6 @@ namespace headachatracker
                 MessageBox.Show("Login failed! Username or Password is wrong.", "Error login", MessageBoxButton.OK);
                 pwbPassword.Password = "";
             }
-            
-
         }
 
         private void pwbPassword_KeyDown(object sender, KeyEventArgs e)

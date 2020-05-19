@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -49,10 +50,17 @@ namespace headachatracker
 
         private void btnTesti_Click(object sender, RoutedEventArgs e)
         {
-            // Avataan merkintöjen lisäämistä varten uusi ikkuna
-            AddEntriesUI window = new AddEntriesUI(headacheObj.UserID);
-            window.Show();
-            this.Hide();        // Piilotetaan tämä MainWindow ikkuna
+            try
+            {
+                // Avataan merkintöjen lisäämistä varten uusi ikkuna
+                AddEntriesUI window = new AddEntriesUI(headacheObj.UserID);
+                window.Show();
+                this.Hide();        // Piilotetaan tämä MainWindow ikkuna
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -97,24 +105,35 @@ namespace headachatracker
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            // closing the application when this window is closed
-            Environment.Exit(0);
+            try
+            {
+                // closing the application when this window is closed
+                Environment.Exit(0);
+            }
+            catch (SecurityException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             // kun painetaan edit-nappulaa, avataan uusi ikkuna ja lähetetään sille valittu indeksi. piilotetaan tämä ikkuna
             if (dataHeadache.SelectedCells.Count > 0)
-            { 
-            var dt = (DataTable)dataHeadache.DataContext;
-            Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
-
-
-                EditEntry editEntry = new EditEntry(headacheObj.UserID, entryID);
-                editEntry.Show();
-                this.Hide();
+            {
+                try
+                {
+                    var dt = (DataTable)dataHeadache.DataContext;
+                    Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
+                    EditEntry editEntry = new EditEntry(headacheObj.UserID, entryID);
+                    editEntry.Show();
+                    this.Hide();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
+                }
             }
-
             else
             {
                 MessageBox.Show("You haven't selected anything!", "Error", MessageBoxButton.OK);
