@@ -341,8 +341,37 @@ namespace headachatracker
         /// Below are Methods that are used to Register user
         /// </summary>
 
-        public static void SaveUser(string username, string rawPassword)
+        public static bool SaveUserToSQL(string username,string salt, string hashSaltedPwd)
         {
+            if (System.IO.File.Exists(filePath)) // tarkistetaan onko tiedosto olemassa
+            {
+                // Luodaan yhteys
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+                // Luodaan komento ja lisätään sille yhteys
+                SQLiteCommand cmd = new SQLiteCommand($"INSERT INTO User WHERE UserName = @Username, Salt = @Salt, Password = @Password", connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
+
+                // Lisätään tieto komentoon muuttujina
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Salt", salt);
+                cmd.Parameters.AddWithValue("@Password", hashSaltedPwd);
+
+                // Avataan yhteys
+                connection.Open();
+
+                // Suoritetaan komento
+                cmd.ExecuteNonQuery();
+
+                // Suljetaan komento
+                connection.Close();
+                return true; 
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+            {
+                throw new System.IO.FileNotFoundException("File not found");
+            }
 
         }
 
