@@ -29,7 +29,7 @@ namespace headachatracker
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            Registration_2 registrationWindow = new Registration_2();
+            Registration registrationWindow = new Registration();
             registrationWindow.Show();
             this.Close();
 

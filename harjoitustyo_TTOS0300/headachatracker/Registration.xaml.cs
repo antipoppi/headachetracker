@@ -17,9 +17,9 @@ namespace headachatracker
     /// <summary>
     /// Interaction logic for Registration_2.xaml
     /// </summary>
-    public partial class Registration_2 : Window
+    public partial class Registration : Window
     {
-        public Registration_2()
+        public Registration()
         {
             InitializeComponent();
         }
