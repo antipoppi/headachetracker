@@ -111,7 +111,7 @@ namespace headachatracker
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            // shows mainwindow and closes this window
+            // closes this window
             this.Close();
 
         }
