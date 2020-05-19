@@ -104,7 +104,7 @@ Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3
 <a name="loppuraportti"></a>
 # Loppuraportti
 
-1. Asennus
+**1. Asennus**
 
 Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:
 System.Data.SQLite
@@ -114,7 +114,7 @@ System.Data.SQLite
 * konfiguroitavat asiat
 
 
-2. Tietoa ohjelmasta (mitä tekee, miksi etc)
+**2. Tietoa ohjelmasta (mitä tekee, miksi etc)**
 
 * listaa toteutetut toiminnalliset vaatimukset
 * listaa toteuttamatta jääneet toiminnalliset vaatimukset
@@ -122,21 +122,21 @@ System.Data.SQLite
 *listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
 
 
-3. Käyttöohjeet
+**3. Käyttöohjeet**
 
 
 Käyttöohjeet löytyvät [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md).
 
 
-4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
+**4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat**
 * laita tarvittaessa mukaan tietokannan luontiskriptit ja testidatan lisäysskriptit
 * Huomioitavaa käytössä
 
 
-5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
+**5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat**
 
-6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
+**6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne**
 
-7. Tekijät, vastuiden ja työmäärän jakautuminen
+**7. Tekijät, vastuiden ja työmäärän jakautuminen**
 
-8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille
+**8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille**
