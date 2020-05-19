@@ -28,5 +28,20 @@ namespace headachatracker
         {
 
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Login loginWindow = new Login();
+            loginWindow.Show();
+            this.Close();
+        }
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            // poistetaan tekstilaatikoiden sisältö, jos käyttäjä painaa reset-nappulaa
+            txbUsername.Text = "";
+            txbPass1.Text = "";
+            txbPass2.Text = "";
+        }
     }
 }
