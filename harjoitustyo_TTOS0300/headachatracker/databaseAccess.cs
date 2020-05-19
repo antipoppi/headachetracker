@@ -23,13 +23,16 @@ namespace headachatracker
         #endregion
 
         #region Methods
-        public static DataTable ReadFromSQLite() // Lukumetodi
+        public static DataTable ReadFromSQLite(int userID) // Lukumetodi
         {
             if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
             {
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
-                SQLiteCommand cmd = new SQLiteCommand("SELECT * from Headache", connection); // SQL-komento
+                SQLiteCommand cmd = new SQLiteCommand("SELECT * from Headache WHERE UserID = @UserID", connection); // SQL-komento
+
+                // Lisätään tieto komentoon muuttujana
+                cmd.Parameters.AddWithValue("@UserID", userID);
 
                 // Tiedon luku:
                 SQLiteDataReader rdr = cmd.ExecuteReader();

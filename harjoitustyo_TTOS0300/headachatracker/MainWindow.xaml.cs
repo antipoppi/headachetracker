@@ -33,11 +33,11 @@ namespace headachatracker
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            // Ikkunaa ladattaessa haetaan tiedot DatabaseAccess-luokasta
+            // Ikkunaa ladattaessa haetaan tiedot DatabaseAccess-luokasta ja välitetään haettavaksi käyttäjäID:n merkinnät
 
             try
             {
-                dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite();
+                dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
             }
 
             catch (Exception ex)
@@ -75,7 +75,7 @@ namespace headachatracker
                     else
                         MessageBox.Show($"Selected entry cannot be deleted", "", MessageBoxButton.OK);
                     // päivitetään datagrid tietokannasta
-                    dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite();
+                    dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
                 }
             }
         }
