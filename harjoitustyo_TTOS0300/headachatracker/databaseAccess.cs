@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
+using System.Windows;
 
 namespace headachatracker
 {
@@ -275,15 +276,15 @@ namespace headachatracker
                 if (validPassword == inputPassword)
                 {
                     // Luodaan komento ja lisätään sille yhteys
-                    SQLiteCommand cmd2 = new SQLiteCommand($"SELECT UserID FROM User WHERE Username = @Username", connection);
-                    cmd2.CommandType = CommandType.Text;
-                    cmd2.Connection = connection;
+                    SQLiteCommand cmd3 = new SQLiteCommand($"SELECT UserID FROM User WHERE Username = @Username", connection);
+                    cmd3.CommandType = CommandType.Text;
+                    cmd3.Connection = connection;
                     // Lisätään tieto komentoon muuttujina
-                    cmd2.Parameters.AddWithValue("@Username", username);
+                    cmd3.Parameters.AddWithValue("@Username", username);
                     // Avataan yhteys
                     connection.Open();
                     // Suoritetaan komento
-                    var holdID = cmd2.ExecuteScalar();
+                    var holdID = cmd3.ExecuteScalar();
                     // Suljetaan yhteys
                     connection.Close();
                     if (holdID != null)
@@ -302,6 +303,36 @@ namespace headachatracker
                 return 0;
         }
 
+        public static string GetUserSaltFromSQLite(string username)
+        {
+            // Luodaan yhteys
+            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+            // Luodaan komento ja lisätään sille yhteys
+            SQLiteCommand cmd = new SQLiteCommand($"SELECT Salt FROM User WHERE Username = @Username", connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = connection;
+
+            // Lisätään tieto komentoon muuttujina
+            cmd.Parameters.AddWithValue("@Username", username);
+
+            // Avataan yhteys
+            connection.Open();
+
+            // Suoritetaan komento
+            var hold = cmd.ExecuteScalar();
+
+            // Suljetaan yhteys
+            connection.Close();
+
+            if (hold != null)
+            {
+                string salt = hold.ToString();
+                return salt;
+            }
+            else
+                throw new Exception($"Salt can not be acquired!");
+        }
         /*
         // NÄMÄ ON NYT YLIMÄÄRÄISIÄ ???
         /// <summary>

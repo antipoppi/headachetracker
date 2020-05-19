@@ -8,6 +8,7 @@
 7. [Käsitemalli](#käsitemalli)
 8. [Työnjako](#työnjako)
 9. [Työaikasuunnitelma](#työaikasuunnitelma)
+10. [Loppuraportti](#loppuraportti)
 
 <a name="tietoa"></a>
 ## Tietoa tekijöistä
@@ -99,3 +100,43 @@ Työt jaetaan suunnilleen tasan, oman motivaation mukaan.
 **Yhteensä 120 tuntia**
 
 Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/tyotunnit.md).
+
+<a name="loppuraportti"></a>
+# Loppuraportti
+
+**1. Asennus**
+
+Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:
+* System.Data.SQLite
+
+
+* mitä asioita tehtävä ja huomioitava asennuksessa
+* konfiguroitavat asiat
+
+
+**2. Tietoa ohjelmasta (mitä tekee, miksi etc)**
+
+* listaa toteutetut toiminnalliset vaatimukset
+* listaa toteuttamatta jääneet toiminnalliset vaatimukset
+* listaa toiminnallisuus joka toteuttiin ohi/yli alkuperäisten vaatimusten
+*listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
+
+
+**3. Käyttöohjeet**
+
+
+Käyttöohjeet löytyvät [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md).
+
+
+**4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat**
+* laita tarvittaessa mukaan tietokannan luontiskriptit ja testidatan lisäysskriptit
+* Huomioitavaa käytössä
+
+
+**5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat**
+
+**6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne**
+
+**7. Tekijät, vastuiden ja työmäärän jakautuminen**
+
+**8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille**
