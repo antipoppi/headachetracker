@@ -39,10 +39,12 @@ namespace headachatracker
         {
             // Hashataan syötetty salasana
             string rawPwd = pwbPassword.Password;
-            string hashedRawPwd = Security.ComputeSha256Hash(rawPwd);
+            string salt = DatabaseAccess.GetUserSaltFromSQLite(txbUsername.Text);
+            string rawPwdSalted = rawPwd + salt;
+            string hashedAndSaltedInput = Security.ComputeSha256Hash(rawPwdSalted);
 
-            // Tarkistetaan onko syötetty salasana oikein (verrataan hashattua salasanaan tietokannassa olevaan hashiin kyseisellä käyttäjänimellä)
-            int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, hashedRawPwd);
+            // Tarkistetaan onko syötetty salasana oikein (verrataan saltattua ja hashattua salasanaa tietokannassa olevaan salted hashiin kyseisellä käyttäjänimellä)
+            int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, hashedAndSaltedInput);
 
             if (userID != 0)
             {
