@@ -1,4 +1,4 @@
-# Käyttöohjeet:
+# Käyttöohjeet
 
 ## Login-ikkuna
 Login-ikkunasta kirjaudutaan sisään kirjoittamalla käyttäjätunnus ja salasana niille tarkoitettuihin laatikoihin. Sen jälkeen painetaan Login-nappia, jotta kirjaudutaan sisään.
