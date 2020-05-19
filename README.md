@@ -110,6 +110,8 @@ Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:
 * System.Data.SQLite
 
 
+
+Nämä vielä pitää kirjoittaa:
 * mitä asioita tehtävä ja huomioitava asennuksessa
 * konfiguroitavat asiat
 
