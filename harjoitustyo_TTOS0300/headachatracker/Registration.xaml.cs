@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace headachatracker
 {
     /// <summary>
-    /// Interaction logic for Registration_2.xaml
+    /// Interaction logic for Registration.xaml
     /// </summary>
     public partial class Registration : Window
     {
@@ -29,6 +29,27 @@ namespace headachatracker
             string username = txbUsername.Text;
             string pwd1 = txbPass1.Text;
             string pwd2 = txbPass2.Text;
+
+            // tarkistetaan onko salasanakenttä tyhjä
+            if (pwd1.Length <= 5)
+            {
+                MessageBox.Show($"Salasanan pitää olla pitempi kuin 5 merkkiä");
+                txbPass1.Text = "";
+                txbPass2.Text = "";
+                return;
+            }
+
+            // tarkistetaan onko käyttäjänimi vapaana
+            bool res = DatabaseAccess.CheckIfUserExistInSQLite(username);
+            if (res == true)
+            {
+                MessageBox.Show($"User '{username}' is already in use.", "Information", MessageBoxButton.OK);
+                txbUsername.Text = "";
+                txbPass1.Text = "";
+                txbPass2.Text = "";
+                return;
+            }
+            // tarkistetaan täsmääkö salasanat
             if (pwd1 != pwd2)
             {
                 MessageBox.Show("Password doesn't match!", "Error", MessageBoxButton.OK);
@@ -41,8 +62,8 @@ namespace headachatracker
             // saltataan ja hashataan salasana
             string pwdHashSalted = Security.ComputeSha256Hash(pwd1 + salt);
             // tallennetaan tiedot tietokantaan
-            bool res = DatabaseAccess.SaveUserToSQL(username, salt, pwdHashSalted);
-            if (res == true)
+            bool res2 = DatabaseAccess.SaveUserToSQL(username, salt, pwdHashSalted);
+            if (res2 == true)
             {
                 MessageBox.Show($"User '{username}' saved succesfully.", "Information", MessageBoxButton.OK);
                 Login loginWindow = new Login();
@@ -51,7 +72,7 @@ namespace headachatracker
             }
             else
             {
-                MessageBox.Show($"User '{username}' is already in use.", "Information", MessageBoxButton.OK);
+                MessageBox.Show($"User '{username}' can not be saved.", "Error", MessageBoxButton.OK);
                 txbUsername.Text = "";
                 txbPass1.Text = "";
                 txbPass2.Text = "";

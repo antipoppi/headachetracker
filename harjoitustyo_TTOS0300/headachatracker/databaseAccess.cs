@@ -341,6 +341,37 @@ namespace headachatracker
         /// Below are Methods that are used to Register user
         /// </summary>
 
+        public static bool CheckIfUserExistInSQLite(string username)
+        {
+            // Luodaan yhteys
+            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+            // Luodaan komento ja lisätään sille yhteys
+            SQLiteCommand cmd = new SQLiteCommand($"SELECT UserName FROM User WHERE UserName = @Username;", connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = connection;
+
+            // Lisätään tieto komentoon muuttujina
+            cmd.Parameters.AddWithValue("@Username", username);
+
+            // Avataan yhteys
+            connection.Open();
+
+            // Suoritetaan komento
+            var hold = cmd.ExecuteScalar();
+
+            // Suljetaan komento
+            connection.Close();
+
+            // jos käyttäjänimi käytössä, palautetaan true. Jos vapaana, palautetaan false
+            if (hold != null)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
         public static bool SaveUserToSQL(string username,string salt, string hashSaltedPwd)
         {
             if (System.IO.File.Exists(filePath)) // tarkistetaan onko tiedosto olemassa
