@@ -121,13 +121,15 @@ Nämä vielä pitää kirjoittaa:
 _Toteutetut toiminnalliset vaatimukset_
 
 
-Toteuttamatta jääneet toiminnalliset vaatimukset
+_Toteuttamatta jääneet toiminnalliset vaatimukset_
+
+Käyttäjän tietojen muokkaus
 
 
-Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten
+_Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten_
 
 
-Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset
+_Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset_
 
 
 **3. Käyttöohjeet**
