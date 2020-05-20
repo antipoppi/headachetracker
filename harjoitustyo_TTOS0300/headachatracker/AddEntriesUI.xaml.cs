@@ -166,6 +166,16 @@ namespace headachatracker
 
         private void txbNotes_KeyDown(object sender, KeyEventArgs e)
         {
+            // jos painetaan entteriä notes-laatikossa, ohjataan addEntry-napin klikkaustapahtumaan
+            if (e.Key == Key.Enter)
+            {
+                btnAddEntry_Click(sender, e);
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            // jos painetaan entteriä ikkunassa, ohjataan addEntry-napin klikkaustapahtumaan
             if (e.Key == Key.Enter)
             {
                 btnAddEntry_Click(sender, e);
