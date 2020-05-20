@@ -91,7 +91,7 @@ namespace headachatracker
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult quit = MessageBox.Show("Do you really want to exit the application?", "Exit confirmation", MessageBoxButton.YesNo);
+            MessageBoxResult quit = MessageBox.Show("Are you sure you want to exit the application?", "Exit confirmation", MessageBoxButton.YesNo);
             
             switch(quit) // tarkistetaan haluaako käyttäjä sulkea ohjelman
             {
@@ -128,11 +128,22 @@ namespace headachatracker
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
-        {
-            // Logout napista avataan login-ikkuna ja suljetaan tämä ikkuna
-            Login loginWindow = new Login();
-            loginWindow.Show();
-            this.Close();
+        {   
+            // Logout-napista painamalla kysytään, haluaako käyttäjä kirjautua ulos. Vastatessaan kyllä, käyttäjä ohjataan Login-ikkunaan.
+
+            MessageBoxResult quit = MessageBox.Show("Are you sure you want to logout?", "Logout confirmation", MessageBoxButton.YesNo);
+
+            switch (quit)
+            {
+                case MessageBoxResult.Yes:
+                    Login loginWindow = new Login();
+                    loginWindow.Show();
+                    this.Close();
+                    break;
+                case MessageBoxResult.No:
+                    break;
+            }
+
         }
 
         private void Window_Activated(object sender, EventArgs e)

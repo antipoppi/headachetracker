@@ -311,7 +311,9 @@ namespace headachatracker
         }
 
         public static string GetUserSaltFromSQLite(string username)
-        {
+        { // LAITA TÄHÄN VIRHE JUTTU, jos väärät tunnukset
+
+
             // Luodaan yhteys
             SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
 

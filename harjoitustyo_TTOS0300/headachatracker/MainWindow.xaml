@@ -44,7 +44,7 @@
         <Button x:Name="btnAdd" Content="New entry" Grid.Column="1" Grid.Row="2" Margin="20,35,0,0" MinWidth="100" Height="40" Click="btnAdd_Click" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
         <Button x:Name="btnDelete"  Content="Delete selected" Grid.Column="1" Grid.Row="3" Margin="20,10,0,0" MinWidth="100" Height="40" Click="btnDelete_Click" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
         <Button x:Name="btnEdit" Content="Edit selected" Grid.Column="1" Grid.Row="4" Margin="20,10,0,0" Height="40" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold" Click="btnEdit_Click"/>
-        <Button x:Name="btnLogout" Content="Logout" Grid.Column="1" Grid.Row="5" Margin="20,10,0,0" Height="40" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold" Click="btnLogout_Click"/>
+        <Button x:Name="btnLogout" Content="Logout" Grid.Column="1" Grid.Row="5" Margin="20,10,0,0" Height="40" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold" Click="btnLogout_Click" VerticalAlignment="Top"/>
         <Button x:Name="btnQuit" Content="Quit" Grid.Column="1" Grid.Row="6" Margin="20,10,0,0" Click="btnQuit_Click" Height="40" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
 
         <DataGrid x:Name="dataHeadache" ItemsSource="{Binding}" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="6" Margin="21,35,15,0" HorizontalAlignment="Stretch" IsEnabled="True" IsReadOnly="True" SelectionMode="Single" Height="240" Grid.RowSpan="6" SelectedIndex="-1" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
