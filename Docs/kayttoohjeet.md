@@ -26,6 +26,7 @@ Registration-ikkunassa on myös mahdollista poistaa kirjoittamansa tiedot painam
 * New entry -napista avataan ikkuna, jossa voit tehdä uuden merkinnän. 
 * Edit selected -napista valittu datagridin rivi avataan muokattavaksi Edit entry -ikkunaan.
 * Delete selected -napista valittu datagridin rivi poistetaan tietokannasta.
+* Logout-napista palataan Login-ikkunaan.
 * Quit-napista ohjelma suljetaan. Tällöin ilmestyy viestiruutu, jossa varmistetaan ohjelman sulkeminen. Jos painat Yes-nappia, ohjelma suljetaan. Muutoin ohjelma pysyy käynnissä.
 
 
