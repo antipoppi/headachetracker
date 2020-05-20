@@ -137,8 +137,8 @@ _Toteutetut toiminnalliset vaatimukset_
 
 _Toteuttamatta jääneet toiminnalliset vaatimukset_
 
-* Käyttäjän tietojen muokkaaminen
-* Käyttäjän tietojen poistaminen
+|Käyttäjän tietojen muokkaaminen|
+|Käyttäjän tietojen poistaminen|
 
 _Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten_
 Nämä olivat ei-pakollisia:
