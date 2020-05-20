@@ -18,7 +18,7 @@ namespace headachatracker
 		private string symptoms;
 		private string reliefs;
 		private string notes;
-		private string date = System.DateTime.Today.ToString("dd/MM/yyyy");
+		private string date = System.DateTime.Today.ToString("yyyy-MM-dd");
 		#endregion
 
 		#region Properties
