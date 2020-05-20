@@ -27,15 +27,15 @@ namespace headachatracker
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             string username = txbUsername.Text;
-            string pwd1 = txbPass1.Text;
-            string pwd2 = txbPass2.Text;
+            string pwd1 = pwbPass1.Password;
+            string pwd2 = pwbPass2.Password;
 
             // tarkistetaan onko salasanakenttä tyhjä
             if (pwd1.Length <= 5)
             {
-                MessageBox.Show($"Salasanan pitää olla pitempi kuin 5 merkkiä");
-                txbPass1.Text = "";
-                txbPass2.Text = "";
+                MessageBox.Show($"The password needs to be at least 6 characters long.");
+                pwbPass1.Password = "";
+                pwbPass2.Password = "";
                 return;
             }
 
@@ -43,18 +43,18 @@ namespace headachatracker
             bool res = DatabaseAccess.CheckIfUserExistInSQLite(username);
             if (res == true)
             {
-                MessageBox.Show($"User '{username}' is already in use.", "Information", MessageBoxButton.OK);
+                MessageBox.Show($"Username '{username}' is already in use.", "Information", MessageBoxButton.OK);
                 txbUsername.Text = "";
-                txbPass1.Text = "";
-                txbPass2.Text = "";
+                pwbPass1.Password = "";
+                pwbPass2.Password = "";
                 return;
             }
             // tarkistetaan täsmääkö salasanat
             if (pwd1 != pwd2)
             {
                 MessageBox.Show("Password doesn't match!", "Error", MessageBoxButton.OK);
-                txbPass1.Text = "";
-                txbPass2.Text = "";
+                pwbPass1.Password = "";
+                pwbPass2.Password = "";
                 return;
             }
             // luodaan käyttäjälle salt
@@ -64,7 +64,7 @@ namespace headachatracker
             // tallennetaan tiedot tietokantaan
             bool res2 = DatabaseAccess.SaveUserToSQL(username, salt, pwdHashSalted);
             try
-            {
+            {   // Näytetään joko onnistumisboksi tai epäonnistumisboksi, kun tallennetaan
                 if (res2 == true)
                 {
                     MessageBox.Show($"User '{username}' saved succesfully.", "Information", MessageBoxButton.OK);
@@ -76,8 +76,8 @@ namespace headachatracker
                 {
                     MessageBox.Show($"User '{username}' can not be saved.", "Error", MessageBoxButton.OK);
                     txbUsername.Text = "";
-                    txbPass1.Text = "";
-                    txbPass2.Text = "";
+                    pwbPass1.Password = "";
+                    pwbPass2.Password = "";
                 }
             }
             catch (InvalidOperationException ex)
@@ -88,6 +88,7 @@ namespace headachatracker
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            // Mennään takaisin login-ikkunaan, jos painetaan cancel-nappia
             try
             {
                 Login loginWindow = new Login();
@@ -104,8 +105,8 @@ namespace headachatracker
         {
             // poistetaan tekstilaatikoiden sisältö, jos käyttäjä painaa reset-nappulaa
             txbUsername.Text = "";
-            txbPass1.Text = "";
-            txbPass2.Text = "";
+            pwbPass1.Password = "";
+            pwbPass2.Password = "";
         }
     }
 }
