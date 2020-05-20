@@ -41,6 +41,7 @@ Registration-ikkunassa on myös mahdollista poistaa kirjoittamansa tiedot painam
 * Add reliefs -nappia painettaessa avataan uusi ikkuna, jossa voit lisätä merkintään päänsärkyä helpottaneita asioita.
 * Add triggers -nappia painettaessa avataan uusi ikkuna, jossa voit lisätä merkintään päänsäryn aiheuttajia.
 * Preview-nappia painettaessa avataan ikkuna, josta voi esikatsella merkintään lisättyjä tietoja.
+* Kalenterista valitaan päivämäärä. Jos päivämäärää ei valita, niin tulee valituksi tämä päivä.
 * Cancel-napista palataan takaisin MainWindow-ikkunaan.
 
 Merkintä tallennetaan painamalla Save entry -nappia. Tällöin palataan pääikkunaan, jossa uusi merkintä päivittyy datagridiin ja tietokantaan.
