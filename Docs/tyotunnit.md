@@ -63,3 +63,4 @@
 
 **20.5.2020**
 * Venla 5h - Käyttöliittymän viimeistelyä, loppuraportin tekoa ja pientä säätöä
+* Tatu 5h - Käyttöliittymän viimeistelyä
