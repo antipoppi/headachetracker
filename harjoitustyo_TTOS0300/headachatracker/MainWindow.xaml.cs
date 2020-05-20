@@ -25,11 +25,13 @@ namespace headachatracker
         private Headache headacheObj;
         public MainWindow(int userID)
         {
+            InitializeComponent();
+            // luodaan headache-olio ja asetetaan sen userID:ksi parametri userID
             headacheObj = new Headache();
             headacheObj.UserID = userID;
             // avataan ikkuna keskellä ruutua
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            InitializeComponent();
+
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)

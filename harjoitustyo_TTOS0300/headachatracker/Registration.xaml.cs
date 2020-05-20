@@ -22,6 +22,8 @@ namespace headachatracker
         public Registration()
         {
             InitializeComponent();
+            // avataan ikkuna keskellä ruutua
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
@@ -103,10 +105,42 @@ namespace headachatracker
 
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
-            // poistetaan tekstilaatikoiden sisältö, jos käyttäjä painaa reset-nappulaa
+            // poistetaan tekstilaatikoiden ja tekstien sisältö, jos käyttäjä painaa reset-nappulaa
             txbUsername.Text = "";
             pwbPass1.Password = "";
             pwbPass2.Password = "";
+            txtLengthMessage.Text = "";
+            txtMatchMessage.Text = "";
         }
+
+        private void pwbPass1_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            CheckPassword();
+        }
+
+        private void pwbPass2_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            CheckPassword();
+        }
+
+        private void CheckPassword()
+        {
+            string pwd1 = pwbPass1.Password;
+            string pwd2 = pwbPass2.Password;
+
+            if (pwd1 != pwd2)
+            {
+                txtMatchMessage.Text = "Passwords don't match!";
+            }
+
+            if (pwd1.Length <= 5 || pwd2.Length <= 5)
+            {
+                txtLengthMessage.Text = "Password needs to be at least 6 characters long.";
+            }
+
+
+
+        }
+
     }
 }

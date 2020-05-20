@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
         Icon="/Resources/headacheicon.ico"
-        Title="Registration" Height="450" Width="370">
+        Title="Registration" Height="450" Width="370" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -48,11 +48,13 @@
         <TextBox x:Name="txbUsername" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Width="220"  Margin="50 5 0 5" MinHeight="25" MaxHeight="50" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
 
         <TextBlock Text="Password" Grid.Row="4" Grid.Column="1" Margin="50 10 0 5"/>
-        <PasswordBox x:Name="pwbPass1" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Width="220"  Margin="50 5 0 5" MinHeight="25"/>
+        <PasswordBox x:Name="pwbPass1" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Width="220"  Margin="50 5 0 5" MinHeight="25" PasswordChanged="pwbPass1_PasswordChanged"/>
 
 
         <TextBlock Text="Confirm password" Grid.Row="6" Grid.Column="1" Margin="50 10 0 5"/>
-        <PasswordBox x:Name="pwbPass2" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Width="220"  Margin="50 5 0 5" MinHeight="25" MaxHeight="50"/>
+        <PasswordBox x:Name="pwbPass2" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Width="220"  Margin="50 5 0 5" MinHeight="25" MaxHeight="50" PasswordChanged="pwbPass2_PasswordChanged"/>
+        <TextBlock x:Name="txtLengthMessage" Text="" FontSize="10" Grid.Row="8" MaxWidth="220" MaxHeight="50" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Right" Foreground="Red"/>
+        <TextBlock x:Name="txtMatchMessage" Text="" FontSize="10" Grid.Row="9" MaxWidth="220" MaxHeight="50" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0 0 0 20" HorizontalAlignment="Right" Foreground="Red"/>
 
 
         <Button x:Name="btnCancel" Content="Cancel" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Left" Grid.ColumnSpan="2" Height="40" Width="60" Margin="50 25 5 10" Background="#d1d1d1" BorderBrush="#d1d1d1" FontWeight="DemiBold" Click="btnCancel_Click"/>
