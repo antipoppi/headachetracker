@@ -50,14 +50,13 @@ namespace headachatracker
         }
 
 
-        private void btnTesti_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 // Avataan merkintöjen lisäämistä varten uusi ikkuna
                 AddEntriesUI window = new AddEntriesUI(headacheObj.UserID);
-                window.Show();
-                this.Close();        // Piilotetaan tämä MainWindow ikkuna
+                window.ShowDialog();
             }
             catch (InvalidOperationException ex)
             {

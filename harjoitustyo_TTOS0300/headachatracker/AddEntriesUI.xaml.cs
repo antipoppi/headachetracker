@@ -124,10 +124,8 @@ namespace headachatracker
                 // adds headacheObj in to database
                 DatabaseAccess.AddToSQLite(headacheObj);
 
-                //shows mainwindow and closes this window
-                MainWindow mainWindow = new MainWindow(headacheObj.UserID);
-                mainWindow.Show();
-                this.Close();
+                // closes this window
+                  this.Close();
             }
 
             catch (InvalidOperationException ex) // Näyttää virheviestin
@@ -143,19 +141,6 @@ namespace headachatracker
 
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            try
-            {
-                // shows mainwindow when this window is closed
-                MainWindow mainWindow = new MainWindow(headacheObj.UserID);
-                mainWindow.Show();
-            }
-            catch (InvalidOperationException ex) // Näyttää virheviestin
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
-            }
-        }
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
         {

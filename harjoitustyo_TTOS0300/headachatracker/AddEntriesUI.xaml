@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
         Icon="/Resources/headacheicon.ico"
-        Title="Headache tracker" Height="500" Width="750" FontSize="16" Closed="Window_Closed" ResizeMode="NoResize" KeyDown="Window_KeyDown">
+        Title="Headache tracker" Height="500" Width="750" FontSize="16" ResizeMode="NoResize" KeyDown="Window_KeyDown">
 
     <Grid>
         <Grid.ColumnDefinitions>
