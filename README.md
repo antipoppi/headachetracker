@@ -168,7 +168,15 @@ Ohjelman mukana tulee SQLiteHeadache.sql-tietokanta.
 
 #### 5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
 
+Tälle sovellukselle voisi tehdä vielä käyttäjälle lisätietoja (nimi, osoite ym.) sekä käyttäjä voisi muokata näitä tietojaan.
+
+
+
 #### 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
+
+MVVM-arkkitehtuuria pitäisi opiskella. Yritettiin tehdä tähän sitä aluksi, mutta koska se oli liian työläs tähän, päädyimme olemaan käyttämättä sitä.
+
+
 
 #### 7. Tekijät, vastuiden ja työmäärän jakautuminen
 
