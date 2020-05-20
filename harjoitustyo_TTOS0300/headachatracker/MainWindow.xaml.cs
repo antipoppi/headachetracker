@@ -94,7 +94,7 @@ namespace headachatracker
         {
             MessageBoxResult quit = MessageBox.Show("Do you really want to exit the application?", "Exit confirmation", MessageBoxButton.YesNo);
             
-            switch(quit)
+            switch(quit) // tarkistetaan haluaako käyttäjä sulkea ohjelman
             {
                 case MessageBoxResult.Yes:
                     MessageBox.Show("Application closing.", "Closing", MessageBoxButton.OK);
@@ -102,19 +102,6 @@ namespace headachatracker
                     break;
                 case MessageBoxResult.No:
                     break;
-            }
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            try
-            {
-                // closing the application when this window is closed
-                Environment.Exit(0);
-            }
-            catch (SecurityException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
             }
         }
 
@@ -136,10 +123,18 @@ namespace headachatracker
                     MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
                 }
             }
-            else
+            else // jos nappia painetaan, mutta mitään ei ole valittuna, tulee virheviesti
             {
                 MessageBox.Show("You haven't selected anything!", "Error", MessageBoxButton.OK);
             }
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            // Logout napista avataan login-ikkuna ja suljetaan tämä ikkuna
+            Login loginWindow = new Login();
+            loginWindow.Show();
+            this.Close();
         }
     }
 }
