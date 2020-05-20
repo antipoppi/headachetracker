@@ -115,12 +115,6 @@ namespace headachatracker
             this.Close();
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            // näytetään pääikkuna, jos tämä ikkuna suljetaan
-            MainWindow mainWindow = new MainWindow(headacheObj.UserID);
-            mainWindow.Show();
-        }
 
         private void btnAddEdit_Click(object sender, RoutedEventArgs e)
         {

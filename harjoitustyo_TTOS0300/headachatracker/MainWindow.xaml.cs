@@ -57,7 +57,7 @@ namespace headachatracker
                 // Avataan merkintöjen lisäämistä varten uusi ikkuna
                 AddEntriesUI window = new AddEntriesUI(headacheObj.UserID);
                 window.Show();
-                this.Hide();        // Piilotetaan tämä MainWindow ikkuna
+                this.Close();        // Piilotetaan tämä MainWindow ikkuna
             }
             catch (InvalidOperationException ex)
             {
@@ -115,8 +115,7 @@ namespace headachatracker
                     var dt = (DataTable)dataHeadache.DataContext;
                     Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
                     EditEntry editEntry = new EditEntry(headacheObj.UserID, entryID);
-                    editEntry.Show();
-                    this.Hide();
+                    editEntry.ShowDialog();
                 }
                 catch (InvalidOperationException ex)
                 {

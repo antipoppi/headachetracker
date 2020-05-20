@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
         Icon="/Resources/headacheicon.ico"
-        Title="Edit entry" Height="480" Width="370" FontSize="12" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" >
+        Title="Edit entry" Height="480" Width="370" FontSize="12" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
