@@ -116,9 +116,9 @@ Nämä vielä pitää kirjoittaa:
 * konfiguroitavat asiat
 
 
-**2. Tietoa ohjelmasta (mitä tekee, miksi etc)**
+#### 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
 
-_Toteutetut toiminnalliset vaatimukset_
+**Toteutetut toiminnalliset vaatimukset**
 
 * Käyttäjän ilmoittaa rekisteröityessään käyttäjänimen
 * Käyttäjä ilmoittaa rekisteröityessään salasanan
@@ -135,40 +135,40 @@ _Toteutetut toiminnalliset vaatimukset_
 * Merkintöjen tekemisessä voi lisätä päänsäryn aiheuttajia
 * Merkintöjen tekemisessä voi lisätä muistiinpanoja
 
-_Toteuttamatta jääneet toiminnalliset vaatimukset_
+**Toteuttamatta jääneet toiminnalliset vaatimukset**
 
 * Käyttäjän tietojen muokkaaminen
 * Käyttäjän tietojen poistaminen
 
-_Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten_
+**Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten**
 Nämä olivat ei-pakollisia:
 * Kirjautuminen
 * Rekisteröityminen
 
 
-_Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset_
+**Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset**
 * Salasanan tulee olla yli 5 merkkiä
 * Käyttäjänimen tulee olla uniikki
 * Salasanat on suolattu
 * Salasanoissa käytetty sha256-hashausta
 
 
-**3. Käyttöohjeet**
+#### 3. Käyttöohjeet
 
 
 Käyttöohjeet ja kuvankaappaukset löytyvät [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md).
 
 
-**4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat**
+#### 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
 
 Ohjelman mukana tulee SQLiteHeadache.sql-tietokanta.
 
 
 
-**5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat**
+#### 5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
 
-**6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne**
+#### 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
 
-**7. Tekijät, vastuiden ja työmäärän jakautuminen**
+#### 7. Tekijät, vastuiden ja työmäärän jakautuminen
 
-**8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille**
+#### 8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille
