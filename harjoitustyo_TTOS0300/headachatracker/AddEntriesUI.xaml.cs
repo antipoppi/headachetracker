@@ -184,7 +184,8 @@ namespace headachatracker
 
         private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string selected = calendar.SelectedDate.ToString();
+            headacheObj.Date = selected;
         }
     }
 }

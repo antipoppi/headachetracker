@@ -69,12 +69,13 @@ namespace headachatracker
                     
 
                     // Luodaan komento ja lisätään sille yhteys
-                    SQLiteCommand cmd = new SQLiteCommand("INSERT INTO Headache (UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) Values (@UserID, @AcheType, @PainLevel, @Medications, @Symptoms, @Triggers, @Reliefs, @Notes)", connection);
+                    SQLiteCommand cmd = new SQLiteCommand("INSERT INTO Headache (Date, UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) Values (@Date, @UserID, @AcheType, @PainLevel, @Medications, @Symptoms, @Triggers, @Reliefs, @Notes)", connection);
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
 
 
                     // Lisätään tieto komentoon muuttujina
+                    cmd.Parameters.AddWithValue("@Date", headache.Date);
                     cmd.Parameters.AddWithValue("@UserID", headache.UserID);
                     cmd.Parameters.AddWithValue("@AcheType", headache.AcheType);
                     cmd.Parameters.AddWithValue("@PainLevel", headache.PainLevel);

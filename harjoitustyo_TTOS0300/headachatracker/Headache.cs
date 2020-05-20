@@ -18,6 +18,7 @@ namespace headachatracker
 		private string symptoms;
 		private string reliefs;
 		private string notes;
+		private string date = System.DateTime.Today.ToString();
 		#endregion
 
 		#region Properties
@@ -74,6 +75,12 @@ namespace headachatracker
 			get { return notes; }
 			set { notes = value; }
         }
+
+		public string Date
+		{
+			get { return date; }
+			set { date = value; }
+		}
 		#endregion
 
 		#region Methods
