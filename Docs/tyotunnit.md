@@ -58,4 +58,8 @@
 * Tatu 3.5h - Käyttöliittymän toteutusta. Kirjatumisen toteuttaminen, hashien käyttö
 
 **19.5.2020** 
+* Venla 3,5h - Loppuraportin tekoa, pieniä muutoksia. Rekisteröinti-ikkunan ulkoasun luonti.
 * Tatu 5h - Käyttöliittymän toteutusta. Rekisteröitymisen ja kirjautumisen tekemistä.
+
+**20.5.2020**
+* Venla 4,5h - Käyttöliittymän viimeistelyä, loppuraportin tekoa ja pientä säätöä
