@@ -104,7 +104,7 @@ Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3
 <a name="loppuraportti"></a>
 # Loppuraportti
 
-**1. Asennus**
+#### 1. Asennus
 
 Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:
 * System.Data.SQLite
