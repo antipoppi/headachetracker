@@ -128,18 +128,26 @@ namespace headachatracker
             string pwd1 = pwbPass1.Password;
             string pwd2 = pwbPass2.Password;
 
-            if (pwd1 != pwd2)
+            if (pwd1 != pwd2) // jos salasanat eivät ole samat, näytetään muistutus
             {
                 txtMatchMessage.Text = "Passwords don't match!";
             }
+            else // jos salasanat ovat samat, muistutusta ei näytetä
+            {
+                txtMatchMessage.Text = "";
+                txtLengthMessage.Text = "";
+            }
 
-            if (pwd1.Length <= 5 || pwd2.Length <= 5)
+            if (pwd1.Length <= 5 || pwd2.Length <= 5) // jos salasana on 5 merkkiä tai alle, näytetään muistutus
             {
                 txtLengthMessage.Text = "Password needs to be at least 6 characters long.";
             }
 
-
-
+            if (pwd1.Length <= 0 && pwd2.Length <= 0) // viimeisenä tarkistetaan, että salasanaruudut eivät ole tyhjiä, jotta viestejä ei näytetä silloin, kun laatikoissa ei lue mitään
+            {
+                txtMatchMessage.Text = "";
+                txtLengthMessage.Text = "";
+            }
         }
 
     }
