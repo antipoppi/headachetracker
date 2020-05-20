@@ -120,11 +120,20 @@ Nämä vielä pitää kirjoittaa:
 
 _Toteutetut toiminnalliset vaatimukset_
 
-* Uusien merkintöjen tekeminen
-* Merkintöjen tarkastelu
-* Merkintöjen muokkaaminen
-* Merkintöjen poistaminen
-
+* Käyttäjän ilmoittaa rekisteröityessään käyttäjänimen
+* Käyttäjä ilmoittaa rekisteröityessään salasanan
+* Käyttäjä voi kirjautua sisään
+* Käyttäjä voi muokata merkintöjään
+* Käyttäjä voi poistaa merkintöjään
+* Käyttäjä voi tarkastella merkintöjään
+* Käyttäjä voi tehdä uusia merkintöjä
+* Merkintöjen tekemisessä voi lisätä päänsäryn tyypin
+* Merkintöjen tekemisessä voi lisätä kiputason
+* Merkintöjen tekemisessä voi lisätä käytettyjä lääkkeitä
+* Merkintöjen tekemisessä voi lisätä päänsäryn oireita
+* Merkintöjen tekemisessä voi lisätä päänsäryn lievennyskeinoja
+* Merkintöjen tekemisessä voi lisätä päänsäryn aiheuttajia
+* Merkintöjen tekemisessä voi lisätä muistiinpanoja
 
 _Toteuttamatta jääneet toiminnalliset vaatimukset_
 
@@ -138,6 +147,10 @@ Nämä olivat ei-pakollisia:
 
 
 _Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset_
+* Salasanan tulee olla yli 5 merkkiä
+* Käyttäjänimen tulee olla uniikki
+* Salasanat on suolattu
+* Salasanoissa käytetty sha256-hashausta
 
 
 **3. Käyttöohjeet**
