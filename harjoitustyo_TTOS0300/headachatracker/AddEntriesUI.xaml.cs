@@ -181,5 +181,10 @@ namespace headachatracker
                 btnAddEntry_Click(sender, e);
             }
         }
+
+        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
