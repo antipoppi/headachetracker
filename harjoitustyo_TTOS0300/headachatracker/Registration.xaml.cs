@@ -28,6 +28,7 @@ namespace headachatracker
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
+            // rekisteröintinappia painettaessa, asetetaan muuttujiin käyttäjänimi ja salasanat
             string username = txbUsername.Text;
             string pwd1 = pwbPass1.Password;
             string pwd2 = pwbPass2.Password;
@@ -97,7 +98,7 @@ namespace headachatracker
                 loginWindow.Show();
                 this.Close();
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException ex) // Virheviesti
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
             }
@@ -115,11 +116,13 @@ namespace headachatracker
 
         private void pwbPass1_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            // kun salasanaruudun tekstiä muutetaan, ohjataan metodiin
             CheckPassword();
         }
 
         private void pwbPass2_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            // kun salasanaruudun tekstiä muutetaan, ohjataan metodiin
             CheckPassword();
         }
 

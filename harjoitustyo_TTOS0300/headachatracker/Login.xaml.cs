@@ -29,13 +29,14 @@ namespace headachatracker
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
+            // kun painetaan rekisteröintinappia, yritetään avata rekisteröinti-ikkuna
             try
             {
                 Registration registrationWindow = new Registration();
                 registrationWindow.Show();
                 this.Close();
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException ex) // virheviesti
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
             }
@@ -77,6 +78,7 @@ namespace headachatracker
 
         private void pwbPassword_KeyDown(object sender, KeyEventArgs e)
         {
+            // jos painetaan entteriä salasanakohdassa, ohjataan login-napin klikkaustapahtumaan
             if (e.Key == Key.Enter)
             {
                 btnLogin_Click(sender, e);
