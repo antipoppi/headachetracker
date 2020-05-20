@@ -141,6 +141,7 @@ Nämä vielä pitää kirjoittaa:
 * Käyttäjän tietojen poistaminen
 
 **Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten**
+
 Nämä olivat ei-pakollisia:
 * Kirjautuminen
 * Rekisteröityminen
