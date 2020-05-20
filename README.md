@@ -120,13 +120,21 @@ Nämä vielä pitää kirjoittaa:
 
 _Toteutetut toiminnalliset vaatimukset_
 
+* Uusien merkintöjen tekeminen
+* Merkintöjen tarkastelu
+* Merkintöjen muokkaaminen
+* Merkintöjen poistaminen
+
 
 _Toteuttamatta jääneet toiminnalliset vaatimukset_
 
-Käyttäjän tietojen muokkaus
-
+* Käyttäjän tietojen muokkaaminen
+* Käyttäjän tietojen poistaminen
 
 _Toiminnallisuus, joka toteutettiin yli alkuperäisten vaatimusten_
+Nämä olivat ei-pakollisia:
+* Kirjautuminen
+* Rekisteröityminen
 
 
 _Ei-toiminnalliset vaatimukset ja mahdolliset reunaehdot/rajoitukset_
@@ -139,8 +147,9 @@ Käyttöohjeet ja kuvankaappaukset löytyvät [täältä](https://gitlab.labrane
 
 
 **4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat**
-* laita tarvittaessa mukaan tietokannan luontiskriptit ja testidatan lisäysskriptit
-* Huomioitavaa käytössä
+
+Ohjelman mukana tulee SQLiteHeadache.sql-tietokanta.
+
 
 
 **5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat**
