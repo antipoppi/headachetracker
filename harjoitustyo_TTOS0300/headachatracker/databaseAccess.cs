@@ -29,7 +29,6 @@ namespace headachatracker
             {
                 SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
-                connection.SetPassword("salasana");
                 SQLiteCommand cmd = new SQLiteCommand("SELECT Date, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes from Headache WHERE UserID = @UserID", connection); // SQL-komento
 
                 // Lisätään tieto komentoon muuttujana
