@@ -134,5 +134,19 @@ namespace headachatracker
             loginWindow.Show();
             this.Close();
         }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            // Refreshing the grid when this window is activated
+            try
+            {
+                dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+            }
+        }
     }
 }
