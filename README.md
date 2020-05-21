@@ -174,7 +174,7 @@ Tälle sovellukselle voisi tehdä vielä käyttäjälle lisätietoja (nimi, osoi
 
 #### 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
 
-MVVM-arkkitehtuuria pitäisi opiskella. Yritettiin tehdä tähän sitä aluksi, mutta koska se oli liian työläs tähän, päädyimme olemaan käyttämättä sitä.
+MVVM-arkkitehtuuria pitäisi opiskella. Yritimme tehdä tähän sitä aluksi, mutta koska se oli liian työläs tähän, päädyimme olemaan käyttämättä sitä.
 
 
 
