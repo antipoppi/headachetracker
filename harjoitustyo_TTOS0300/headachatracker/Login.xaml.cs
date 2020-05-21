@@ -48,7 +48,7 @@ namespace headachatracker
             if (txbUsername.Text != "" && pwbPassword.Password != "")
             {
                 // Tarkistetaan löytyykö käyttäjää tällä nimellä
-                bool userExists = DatabaseAccess.CheckDoesUserExistFromSQLite(txbUsername.Text);
+                bool userExists = DatabaseAccess.CheckIfUserExistInSQLite(txbUsername.Text);
                 if (userExists == true)
                 {
                     // Hashataan syötetty salasana

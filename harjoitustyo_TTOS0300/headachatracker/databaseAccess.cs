@@ -23,6 +23,10 @@ namespace headachatracker
         #endregion
 
         #region Methods
+        /// <summary>
+        /// Methods that are used to read/write data into SQLite-database
+        /// </summary>
+
         public static DataTable ReadFromSQLite(int userID) // Lukumetodi
         {
             if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
@@ -47,68 +51,51 @@ namespace headachatracker
 
                 // Palautetaan datatable-muuttuja
                 return dt;
-
             }
-
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-            {
                 throw new System.IO.FileNotFoundException("File not found");
-            }
-
         }
 
         public static bool AddToSQLite(Headache headache) // Lisäysmetodi
         {
-            try
+            if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
             {
-                if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
-                {
-                    // Luodaan yhteys
-                    SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                // Luodaan yhteys
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
                     
 
-                    // Luodaan komento ja lisätään sille yhteys
-                    SQLiteCommand cmd = new SQLiteCommand("INSERT INTO Headache (Date, UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) Values (@Date, @UserID, @AcheType, @PainLevel, @Medications, @Symptoms, @Triggers, @Reliefs, @Notes)", connection);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Connection = connection;
+                // Luodaan komento ja lisätään sille yhteys
+                SQLiteCommand cmd = new SQLiteCommand("INSERT INTO Headache (Date, UserID, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes) Values (@Date, @UserID, @AcheType, @PainLevel, @Medications, @Symptoms, @Triggers, @Reliefs, @Notes)", connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
 
 
-                    // Lisätään tieto komentoon muuttujina
-                    cmd.Parameters.AddWithValue("@Date", headache.Date);
-                    cmd.Parameters.AddWithValue("@UserID", headache.UserID);
-                    cmd.Parameters.AddWithValue("@AcheType", headache.AcheType);
-                    cmd.Parameters.AddWithValue("@PainLevel", headache.PainLevel);
-                    cmd.Parameters.AddWithValue("@Medications", headache.Medications);
-                    cmd.Parameters.AddWithValue("@Symptoms", headache.Symptoms);
-                    cmd.Parameters.AddWithValue("@Triggers", headache.Triggers);
-                    cmd.Parameters.AddWithValue("@Reliefs", headache.Reliefs);
-                    cmd.Parameters.AddWithValue("@Notes", headache.Notes);
+                // Lisätään tieto komentoon muuttujina
+                cmd.Parameters.AddWithValue("@Date", headache.Date);
+                cmd.Parameters.AddWithValue("@UserID", headache.UserID);
+                cmd.Parameters.AddWithValue("@AcheType", headache.AcheType);
+                cmd.Parameters.AddWithValue("@PainLevel", headache.PainLevel);
+                cmd.Parameters.AddWithValue("@Medications", headache.Medications);
+                cmd.Parameters.AddWithValue("@Symptoms", headache.Symptoms);
+                cmd.Parameters.AddWithValue("@Triggers", headache.Triggers);
+                cmd.Parameters.AddWithValue("@Reliefs", headache.Reliefs);
+                cmd.Parameters.AddWithValue("@Notes", headache.Notes);
 
-                    // Avataan yhteys
-                    connection.Open(); 
+                // Avataan yhteys
+                connection.Open(); 
 
-                    // Suoritetaan komento
-                    cmd.ExecuteNonQuery();
+                // Suoritetaan komento
+                cmd.ExecuteNonQuery();
 
-                    // Suljetaan yhteys
-                    connection.Close();
+                // Suljetaan yhteys
+                connection.Close();
 
-                    return true;
-
-                }
-
-                else // Jos tiedostoa ei löydy, heitetään poikkeus
-                {
-                    throw new System.IO.FileNotFoundException("File not found");
-                }
+                return true;
             }
-
-            catch
-            {
-                throw;
-            }
-
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+                throw new System.IO.FileNotFoundException("File not found");
         }
+
         public static bool DeleteFromSQLite(int entryID) // poistometodi
         {
             if (System.IO.File.Exists(filePath)) // tarkistetaan onko tiedosto olemassa
@@ -133,9 +120,7 @@ namespace headachatracker
                 return true;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-            {
                 throw new System.IO.FileNotFoundException("File not found");
-            }
         }
         public static void GetHeadacheObjPFromSQLite(Headache headache, int id)
         {
@@ -209,9 +194,7 @@ namespace headachatracker
                 connection.Close();
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-            {
                 throw new System.IO.FileNotFoundException("File not found");
-            }
         }
 
         public static bool SaveEditedEntryToSQLite(Headache headache)
@@ -248,162 +231,140 @@ namespace headachatracker
                 return true; 
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-            {
                 throw new System.IO.FileNotFoundException("File not found");
-            }
         }
 
         /// <summary>
-        /// Methods that are used to edit login
+        /// Methods that are used in login and in registering userdata into SQLite-database
         /// </summary>
+
+        public static bool CheckIfUserExistInSQLite(string username)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                // Luodaan yhteys
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+                // Luodaan komento ja lisätään sille yhteys
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT UserName FROM User WHERE UserName = @Username;", connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
+
+                // Lisätään tieto komentoon muuttujina
+                cmd.Parameters.AddWithValue("@Username", username);
+
+                // Avataan yhteys
+                connection.Open();
+
+                // Suoritetaan komento
+                var hold = cmd.ExecuteScalar();
+
+                // Suljetaan komento
+                connection.Close();
+
+                // jos käyttäjänimi löytyy, palautetaan true. Jos ei, palautetaan false
+                if (hold != null)
+                    return true;
+                else
+                    return false; 
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+                throw new System.IO.FileNotFoundException("File not found");
+        }
+
+        public static string GetUserSaltFromSQLite(string username)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                // Luodaan yhteys
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+                // Luodaan komento ja lisätään sille yhteys
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT Salt FROM User WHERE Username = @Username", connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
+
+                // Lisätään tieto komentoon muuttujina
+                cmd.Parameters.AddWithValue("@Username", username);
+
+                // Avataan yhteys
+                connection.Open();
+
+                // Suoritetaan komento
+                var hold = cmd.ExecuteScalar();
+
+                // Suljetaan yhteys
+                connection.Close();
+
+                if (hold != null)
+                {
+                    string salt = hold.ToString();
+                    return salt;
+                }
+                else
+                    throw new Exception("Salt can not be acquired!"); 
+            }
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+                throw new System.IO.FileNotFoundException("File not found");
+        }
+
         public static int LoginToDatabase(string username, string inputPassword)
         {
-            // Luodaan yhteys
-            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
-
-            // Luodaan komento ja lisätään sille yhteys
-            SQLiteCommand cmd = new SQLiteCommand($"SELECT Password FROM User WHERE Username = @Username", connection);
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = connection;
-            // Lisätään tieto komentoon muuttujina
-            cmd.Parameters.AddWithValue("@Username", username);
-
-            // Avataan yhteys
-            connection.Open();
-
-            // Suoritetaan komento
-            var hold = cmd.ExecuteScalar();
-
-            // Suljetaan yhteys
-            connection.Close();
-
-            if (hold != null)
+            if (System.IO.File.Exists(filePath))
             {
-                string validPassword = hold.ToString();
-                if (validPassword == inputPassword)
+                // Luodaan yhteys
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+
+                // Luodaan komento ja lisätään sille yhteys
+                SQLiteCommand cmd = new SQLiteCommand($"SELECT Password FROM User WHERE Username = @Username", connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
+                // Lisätään tieto komentoon muuttujina
+                cmd.Parameters.AddWithValue("@Username", username);
+
+                // Avataan yhteys
+                connection.Open();
+
+                // Suoritetaan komento
+                var hold = cmd.ExecuteScalar();
+
+                // Suljetaan yhteys
+                connection.Close();
+
+                if (hold != null)
                 {
-                    // Luodaan komento ja lisätään sille yhteys
-                    SQLiteCommand cmd3 = new SQLiteCommand($"SELECT UserID FROM User WHERE Username = @Username", connection);
-                    cmd3.CommandType = CommandType.Text;
-                    cmd3.Connection = connection;
-                    // Lisätään tieto komentoon muuttujina
-                    cmd3.Parameters.AddWithValue("@Username", username);
-                    // Avataan yhteys
-                    connection.Open();
-                    // Suoritetaan komento
-                    var holdID = cmd3.ExecuteScalar();
-                    // Suljetaan yhteys
-                    connection.Close();
-                    if (holdID != null)
+                    string validPassword = hold.ToString();
+                    if (validPassword == inputPassword)
                     {
-                        string userIDstr = holdID.ToString();
-                        Int32.TryParse(userIDstr, out int userID);
-                        return userID;
+                        // Luodaan komento ja lisätään sille yhteys
+                        SQLiteCommand cmd3 = new SQLiteCommand($"SELECT UserID FROM User WHERE Username = @Username", connection);
+                        cmd3.CommandType = CommandType.Text;
+                        cmd3.Connection = connection;
+                        // Lisätään tieto komentoon muuttujina
+                        cmd3.Parameters.AddWithValue("@Username", username);
+                        // Avataan yhteys
+                        connection.Open();
+                        // Suoritetaan komento
+                        var holdID = cmd3.ExecuteScalar();
+                        // Suljetaan yhteys
+                        connection.Close();
+                        if (holdID != null)
+                        {
+                            string userIDstr = holdID.ToString();
+                            Int32.TryParse(userIDstr, out int userID);
+                            return userID;
+                        }
+                        else
+                            return 0;
                     }
                     else
                         return 0;
                 }
                 else
-                    return 0;
+                    return 0; 
             }
-            else
-                return 0;
-        }
-
-        public static bool CheckDoesUserExistFromSQLite(string username)
-        {
-            // Luodaan yhteys
-            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
-
-            // Luodaan komento ja lisätään sille yhteys
-            SQLiteCommand cmd = new SQLiteCommand($"SELECT Username FROM User WHERE Username = @Username", connection);
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = connection;
-
-            // Lisätään tieto komentoon muuttujina
-            cmd.Parameters.AddWithValue("@Username", username);
-
-            // Avataan yhteys
-            connection.Open();
-
-            // Suoritetaan komento
-            var hold = cmd.ExecuteScalar();
-
-            // Suljetaan yhteys
-            connection.Close();
-
-            if (hold != null)
-            {
-                return true;
-            }
-            else
-                return false;
-        }
-
-        public static string GetUserSaltFromSQLite(string username)
-        {
-            // Luodaan yhteys
-            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
-
-            // Luodaan komento ja lisätään sille yhteys
-            SQLiteCommand cmd = new SQLiteCommand($"SELECT Salt FROM User WHERE Username = @Username", connection);
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = connection;
-
-            // Lisätään tieto komentoon muuttujina
-            cmd.Parameters.AddWithValue("@Username", username);
-
-            // Avataan yhteys
-            connection.Open();
-
-            // Suoritetaan komento
-            var hold = cmd.ExecuteScalar();
-
-            // Suljetaan yhteys
-            connection.Close();
-
-            if (hold != null)
-            {
-                string salt = hold.ToString();
-                return salt;
-            }
-            else
-                throw new Exception("Salt can not be acquired!");
-        }
-
-        /// <summary>
-        /// Methods that are used to Register a new user
-        /// </summary>
-
-        public static bool CheckIfUserExistInSQLite(string username)
-        {
-            // Luodaan yhteys
-            SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
-
-            // Luodaan komento ja lisätään sille yhteys
-            SQLiteCommand cmd = new SQLiteCommand($"SELECT UserName FROM User WHERE UserName = @Username;", connection);
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = connection;
-
-            // Lisätään tieto komentoon muuttujina
-            cmd.Parameters.AddWithValue("@Username", username);
-
-            // Avataan yhteys
-            connection.Open();
-
-            // Suoritetaan komento
-            var hold = cmd.ExecuteScalar();
-
-            // Suljetaan komento
-            connection.Close();
-
-            // jos käyttäjänimi löytyy, palautetaan true. Jos ei, palautetaan false
-            if (hold != null)
-            {
-                return true;
-            }
-            else
-                return false;
+            else // Jos tiedostoa ei löydy, heitetään poikkeus
+                throw new System.IO.FileNotFoundException("File not found");
         }
 
         public static bool SaveUserToSQL(string username,string salt, string hashSaltedPwd)
@@ -434,9 +395,7 @@ namespace headachatracker
                 return true; 
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-            {
                 throw new System.IO.FileNotFoundException("File not found");
-            }
         }
     }
     #endregion
