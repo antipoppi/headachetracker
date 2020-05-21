@@ -22,9 +22,10 @@ namespace headachatracker
     {
         public Login()
         {
+            InitializeComponent();
             // Avataan ikkuna keskellä näyttöä
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            InitializeComponent();
+
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)

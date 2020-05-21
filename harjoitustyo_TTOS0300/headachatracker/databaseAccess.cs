@@ -122,7 +122,7 @@ namespace headachatracker
             else // Jos tiedostoa ei löydy, heitetään poikkeus
                 throw new System.IO.FileNotFoundException("File not found");
         }
-        public static void GetHeadacheObjPFromSQLite(Headache headache, int id) // haetaan tietoa tietokannasta ja lisätään se olioon
+        public static void GetHeadacheObjPFromSQLite(Headache headache, int id)
         {
             if (System.IO.File.Exists(filePath))
             {
