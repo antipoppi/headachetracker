@@ -13,6 +13,7 @@ namespace headachatracker
     {
         #region Fields
         private static string filePath;
+        private static string password = "esimerkkisalasana";
         #endregion
 
         #region Constructors
@@ -31,7 +32,7 @@ namespace headachatracker
         {
             if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
             {
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
                 SQLiteCommand cmd = new SQLiteCommand("SELECT AcheID, Date, AcheType, PainLevel, Medications, Symptoms, Triggers, Reliefs, Notes from Headache WHERE UserID = @UserID ORDER BY Date", connection); // SQL-komento
 
@@ -61,7 +62,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
             {
                 // Luodaan yhteys
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
                     
 
                 // Luodaan komento ja lisätään sille yhteys
@@ -101,7 +102,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath)) // tarkistetaan onko tiedosto olemassa
             {
                 // luodaan yhteys ja komento
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
                 SQLiteCommand cmd = new SQLiteCommand($"DELETE FROM Headache WHERE AcheID LIKE @AcheID", connection);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = connection;
@@ -127,7 +128,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath))
             {
                 headache.UserID = id;
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
                 connection.Open(); // Avataan yhteys
 
                 // asetetaan olion AcheType
@@ -202,7 +203,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath))
             {
                 // Luodaan yhteys
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
 
                 // Luodaan komento ja lisätään sille yhteys
                 SQLiteCommand cmd = new SQLiteCommand("UPDATE Headache SET AcheType = @AcheType, PainLevel = @PainLevel, Medications = @Medications, Symptoms = @Symptoms, Triggers = @Triggers, Reliefs = @Reliefs, Notes = @Notes WHERE AcheID = @AcheID;", connection);
@@ -243,7 +244,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath))
             {
                 // Luodaan yhteys
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
 
                 // Luodaan komento ja lisätään sille yhteys
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT UserName FROM User WHERE UserName = @Username;", connection);
@@ -277,7 +278,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath))
             {
                 // Luodaan yhteys
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
 
                 // Luodaan komento ja lisätään sille yhteys
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT Salt FROM User WHERE Username = @Username", connection);
@@ -313,7 +314,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath))
             {
                 // Luodaan yhteys
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
 
                 // Luodaan komento ja lisätään sille yhteys
                 SQLiteCommand cmd = new SQLiteCommand($"SELECT Password FROM User WHERE Username = @Username", connection);
@@ -372,7 +373,7 @@ namespace headachatracker
             if (System.IO.File.Exists(filePath)) // tarkistetaan onko tiedosto olemassa
             {
                 // Luodaan yhteys
-                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3;"); // Yhteys + connection string
+                SQLiteConnection connection = new SQLiteConnection($"Data Source = {filePath}; Version=3; Password={password}"); // Yhteys + connection string
 
                 // Luodaan komento ja lisätään sille yhteys
                 SQLiteCommand cmd = new SQLiteCommand($"INSERT INTO User (UserName, Salt, Password) VALUES (@Username, @Salt, @Password);", connection);
