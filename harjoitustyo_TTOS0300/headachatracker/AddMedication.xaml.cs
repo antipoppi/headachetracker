@@ -65,22 +65,26 @@ namespace headachatracker
                                 }
                             }
                         }
+                        if (checkOther.IsChecked == true) // jos Other on valittu, lisätään kyseisen textboxin sisältö
+                        {
+                            hold += $": {txbAddOtherMed.Text}";
+                        }
+
                         // päivitetään AddEntriesUI:n oliota kyseisillä lääkkeillä
                         ((AddEntriesUI)this.Owner).UpdateMedication(hold);
                         this.Close();
                     }
-                    catch (OverflowException) // virheiden näyttämistä varten
+                    catch (OverflowException ex) // virheiden näyttämistä varten
                     {
-
-                        throw;
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
                     }
                 }
                 else
                     return;
             }
-            catch (ArgumentNullException)
+            catch (ArgumentNullException ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
             }
         }
 

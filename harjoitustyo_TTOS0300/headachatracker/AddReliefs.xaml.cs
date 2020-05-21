@@ -64,6 +64,10 @@ namespace headachatracker
                                 }
                             }
                         }
+                        if (checkOther.IsChecked == true) // jos Other on valittu, lisätään kyseisen textboxin sisältö
+                        {
+                            hold += $": {txbAddOtherRelief.Text}";
+                        }
                         // päivitetään AddEntriesUI:n oliota kyseisillä helpotuksilla
                         ((AddEntriesUI)this.Owner).UpdateReliefs(hold);
                         this.Close();

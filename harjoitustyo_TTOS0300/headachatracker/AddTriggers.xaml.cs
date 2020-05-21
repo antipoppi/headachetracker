@@ -29,15 +29,15 @@ namespace headachatracker
         private void checkOther_Checked(object sender, RoutedEventArgs e)
         {
             // jos tietty ruutu valitaan, näytetään kaksi muuta komponenttia
-            txtAddRelief.Visibility = Visibility.Visible;
-            txbAddOtherRelief.Visibility = Visibility.Visible;
+            txtAddTrigger.Visibility = Visibility.Visible;
+            txbAddOtherTrigger.Visibility = Visibility.Visible;
         }
 
         private void checkOther_Unchecked(object sender, RoutedEventArgs e)
         {
             // piilotetaan komponentit, jos rasti otetaan pois valinnasta
-            txtAddRelief.Visibility = Visibility.Hidden;
-            txbAddOtherRelief.Visibility = Visibility.Hidden;
+            txtAddTrigger.Visibility = Visibility.Hidden;
+            txbAddOtherTrigger.Visibility = Visibility.Hidden;
         }
 
         private void btnAddMed_Click(object sender, RoutedEventArgs e)
@@ -64,22 +64,25 @@ namespace headachatracker
                                 }
                             }
                         }
+                        if (checkOther.IsChecked == true) // jos Other on valittu, lisätään kyseisen textboxin sisältö
+                        {
+                            hold += $": {txbAddOtherTrigger.Text}";
+                        }
                         // päivitetään AddEntriesUI:n oliota kyseisillä triggereillä
                         ((AddEntriesUI)this.Owner).UpdateTriggers(hold);
                         this.Close();
                     }
-                    catch (OverflowException) // virheiden tarkistus
+                    catch (OverflowException ex) // virheiden tarkistus
                     {
-
-                        throw;
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
                     }
                 }
                 else
                     return;
             }
-            catch (ArgumentNullException) // virheiden tarkistus
+            catch (ArgumentNullException ex) // virheiden tarkistus
             {
-                throw;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
             }
         }
 

@@ -57,6 +57,9 @@ namespace headachatracker
                 // Avataan merkintöjen lisäämistä varten uusi ikkuna
                 AddEntriesUI window = new AddEntriesUI(headacheObj.UserID);
                 window.ShowDialog();
+                // päivitetään Dialogin valintojen jälkeen datagrid tietokannasta
+
+                UpdateDatagrid();
             }
             catch (InvalidOperationException ex)
             {
@@ -84,7 +87,7 @@ namespace headachatracker
                     else
                         MessageBox.Show($"Selected entry cannot be deleted", "", MessageBoxButton.OK);
                     // päivitetään datagrid tietokannasta
-                    dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
+                    UpdateDatagrid();
                 }
             }
         }
@@ -92,15 +95,22 @@ namespace headachatracker
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult quit = MessageBox.Show("Are you sure you want to exit the application?", "Exit confirmation", MessageBoxButton.YesNo);
-            
-            switch(quit) // tarkistetaan haluaako käyttäjä sulkea ohjelman
+
+            try
             {
-                case MessageBoxResult.Yes:
-                    MessageBox.Show("Application closing.", "Closing", MessageBoxButton.OK);
-                    Environment.Exit(0);
-                    break;
-                case MessageBoxResult.No:
-                    break;
+                switch (quit) // tarkistetaan haluaako käyttäjä sulkea ohjelman
+                {
+                    case MessageBoxResult.Yes:
+                        MessageBox.Show("Application closing.", "Closing", MessageBoxButton.OK);
+                        Environment.Exit(0);
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                }
+            }
+            catch (SecurityException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
             }
         }
 
@@ -115,6 +125,8 @@ namespace headachatracker
                     Int32.TryParse(dt.Rows[dataHeadache.SelectedIndex][0].ToString(), out int entryID);
                     EditEntry editEntry = new EditEntry(headacheObj.UserID, entryID);
                     editEntry.ShowDialog();
+                    // päivitetään Dialogin valintojen jälkeen datagrid tietokannasta
+                    UpdateDatagrid();
                 }
                 catch (InvalidOperationException ex)
                 {
@@ -133,31 +145,29 @@ namespace headachatracker
 
             MessageBoxResult quit = MessageBox.Show("Are you sure you want to logout?", "Logout confirmation", MessageBoxButton.YesNo);
 
-            switch (quit)
+            try
             {
-                case MessageBoxResult.Yes:
-                    Login loginWindow = new Login();
-                    loginWindow.Show();
-                    this.Close();
-                    break;
-                case MessageBoxResult.No:
-                    break;
+                switch (quit)
+                {
+                    case MessageBoxResult.Yes:
+                        Login loginWindow = new Login();
+                        loginWindow.Show();
+                        this.Close();
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK);
             }
 
         }
-
-        private void Window_Activated(object sender, EventArgs e)
+        private void UpdateDatagrid()
         {
-            // Refreshing the grid when this window is activated
-            try
-            {
-                dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
-            }
+            dataHeadache.DataContext = null;
+            dataHeadache.DataContext = DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
         }
     }
 }

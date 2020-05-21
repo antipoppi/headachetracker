@@ -125,7 +125,7 @@ namespace headachatracker
                 DatabaseAccess.AddToSQLite(headacheObj);
 
                 // closes this window
-                  this.Close();
+                this.Close();
             }
 
             catch (InvalidOperationException ex) // Näyttää virheviestin
