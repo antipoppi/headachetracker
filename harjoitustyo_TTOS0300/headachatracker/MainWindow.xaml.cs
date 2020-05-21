@@ -57,8 +57,8 @@ namespace headachatracker
                 // Avataan merkintöjen lisäämistä varten uusi ikkuna
                 AddEntriesUI window = new AddEntriesUI(headacheObj.UserID);
                 window.ShowDialog();
-                // päivitetään Dialogin valintojen jälkeen datagrid tietokannasta
 
+                // päivitetään Dialogin valintojen jälkeen datagrid tietokannasta
                 UpdateDatagrid();
             }
             catch (InvalidOperationException ex)

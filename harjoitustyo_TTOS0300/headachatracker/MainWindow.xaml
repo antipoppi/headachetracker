@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:headachatracker"
         mc:Ignorable="d"
         Icon="/Resources/headacheicon.ico"
-        Title="Headache tracker" Height="440" Width="700" WindowStartupLocation="CenterScreen">
+        Title="Headache tracker" Height="440" Width="1000" WindowStartupLocation="CenterScreen" >
     <Grid Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -47,7 +47,113 @@
         <Button x:Name="btnLogout" Content="Logout" Grid.Column="1" Grid.Row="5" Margin="20,10,0,0" Height="40" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold" Click="btnLogout_Click" VerticalAlignment="Top"/>
         <Button x:Name="btnQuit" Content="Quit" Grid.Column="1" Grid.Row="6" Margin="20,10,0,0" Click="btnQuit_Click" Height="40" Background="#92CCC1" BorderBrush="#92CCC1" FontWeight="DemiBold"/>
 
-        <DataGrid x:Name="dataHeadache" ItemsSource="{Binding}" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="6" Margin="21,35,15,0" HorizontalAlignment="Stretch" IsEnabled="True" IsReadOnly="True" SelectionMode="Single" Height="240" Grid.RowSpan="6" SelectedIndex="-1" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        <DataGrid x:Name="dataHeadache" ItemsSource="{Binding}" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="6" Margin="21,35,15,0" HorizontalAlignment="Stretch" 
+                  IsEnabled="True" IsReadOnly="True" SelectionMode="Single" Height="240" Grid.RowSpan="6" SelectedIndex="-1" 
+                  ScrollViewer.CanContentScroll="True" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  AutoGenerateColumns="False"
+                  Width="Auto"
+                  MaxColumnWidth="150">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="AcheID" Binding="{Binding AcheID}" Visibility="Hidden"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" CanUserResize="False">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.Padding" Value="2"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Headache type" Binding="{Binding AcheType}" MinWidth="90">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.Padding" Value="2"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Pain intensity" Binding="{Binding PainLevel}" CanUserResize="False" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Medications" Binding="{Binding Medications}" MinWidth="80">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.Padding" Value="2"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Symptoms" Binding="{Binding Symptoms}" MinWidth="70">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.Padding" Value="2"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Triggers" Binding="{Binding Triggers}" MinWidth="70">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.Padding" Value="2"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Reliefs" Binding="{Binding Reliefs}" MinWidth="70">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.Padding" Value="2"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Notes" Binding="{Binding Notes}" MinWidth="70">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+                            <Setter Property="TextBlock.Padding" Value="2"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
