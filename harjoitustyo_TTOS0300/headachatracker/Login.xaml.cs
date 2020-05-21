@@ -45,7 +45,7 @@ namespace headachatracker
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (txbUsername.Text != "" && pwbPassword.Password != "")
+            if (txbUsername.Text != "" && pwbPassword.Password != "") // Tarkistetaan, että kentät eivät ole tyhjät
             {
                 // Tarkistetaan löytyykö käyttäjää tällä nimellä
                 bool userExists = DatabaseAccess.CheckIfUserExistInSQLite(txbUsername.Text);

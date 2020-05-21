@@ -164,7 +164,7 @@ namespace headachatracker
             }
 
         }
-        private void UpdateDatagrid()
+        private void UpdateDatagrid() // Päivitetään datagrid
         {
             dataHeadache.DataContext = null;
             dataHeadache.DataContext = DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
