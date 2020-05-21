@@ -66,5 +66,5 @@
 * Tatu 5h - Käyttöliittymän viimeistelyä
  
 **21.5.2020**
-* Venla 0,5h - Koodin kommentointia ja SQL-salauksen yrittämistä
+* Venla 1h - Koodin kommentointia ja SQL-salauksen tekoa
 * Tatu 5h - Käyttöliittymän hiomista
