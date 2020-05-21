@@ -122,7 +122,7 @@ namespace headachatracker
             else // Jos tiedostoa ei löydy, heitetään poikkeus
                 throw new System.IO.FileNotFoundException("File not found");
         }
-        public static void GetHeadacheObjPFromSQLite(Headache headache, int id)
+        public static void GetHeadacheObjPFromSQLite(Headache headache, int id) // haetaan tietoa tietokannasta ja lisätään se olioon
         {
             if (System.IO.File.Exists(filePath))
             {
@@ -197,7 +197,7 @@ namespace headachatracker
                 throw new System.IO.FileNotFoundException("File not found");
         }
 
-        public static bool SaveEditedEntryToSQLite(Headache headache)
+        public static bool SaveEditedEntryToSQLite(Headache headache) // Tallennetaan tietoja tietokantaan
         {
             if (System.IO.File.Exists(filePath))
             {
@@ -238,7 +238,7 @@ namespace headachatracker
         /// Methods that are used in login and in registering userdata into SQLite-database
         /// </summary>
 
-        public static bool CheckIfUserExistInSQLite(string username)
+        public static bool CheckIfUserExistInSQLite(string username) // Tarkistetaan onko käyttäjää olemassa
         {
             if (System.IO.File.Exists(filePath))
             {
@@ -272,7 +272,7 @@ namespace headachatracker
                 throw new System.IO.FileNotFoundException("File not found");
         }
 
-        public static string GetUserSaltFromSQLite(string username)
+        public static string GetUserSaltFromSQLite(string username) // Tällä etsitään suola-arvo käyttäjälle
         {
             if (System.IO.File.Exists(filePath))
             {
@@ -308,7 +308,7 @@ namespace headachatracker
                 throw new System.IO.FileNotFoundException("File not found");
         }
 
-        public static int LoginToDatabase(string username, string inputPassword)
+        public static int LoginToDatabase(string username, string inputPassword) // Tätä käytetään kirjautumisessa
         {
             if (System.IO.File.Exists(filePath))
             {
@@ -367,7 +367,7 @@ namespace headachatracker
                 throw new System.IO.FileNotFoundException("File not found");
         }
 
-        public static bool SaveUserToSQL(string username,string salt, string hashSaltedPwd)
+        public static bool SaveUserToSQL(string username,string salt, string hashSaltedPwd) // Tällä voi tallentaa käyttäjiä tietokantaan
         {
             if (System.IO.File.Exists(filePath)) // tarkistetaan onko tiedosto olemassa
             {
