@@ -79,7 +79,7 @@ namespace headachatracker
             var dt = (DataTable)dataHeadache.DataContext;
             if (dataHeadache.SelectedCells.Count == 0)
             {
-                return;
+                MessageBox.Show("You haven't selected anything!", "Error", MessageBoxButton.OK);
             }
             else
             {
