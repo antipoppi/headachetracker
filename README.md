@@ -124,6 +124,9 @@ Asennus löytyy myös [täältä](https://gitlab.labranet.jamk.fi/N3091/headache
 5. Paina Asenna.
 6. Paina Valmis.
 
+**Konfigurointi**
+
+Ohjelma pitää suorittaa järjestelmänvalvojana, koska tietokantaa muokataan muualla kuin AppData-kansiossa.
 
 #### 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
 
@@ -178,8 +181,10 @@ Ohjelman mukana tulee SQLiteHeadache.sql-tietokanta.
 #### 5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
 
 Tälle sovellukselle voisi tehdä vielä käyttäjälle lisätietoja (nimi, osoite ym.) sekä käyttäjä voisi muokata näitä tietojaan.
-Jatkokehitysideana olisi siistiä virheiden käsittelyä, joka on aika monimutkaisesti tehty tällä hetkellä.
+Jatkokehitysideana olisi siistiä virheiden käsittelyä, joka on aika monimutkaisesti tehty tällä hetkellä. Sen lisäksi esim. oireita valitessa olisi hyvä muistaa komponenttien tilat ja esim. muokkaustila voisi olla lisäystilan kaltainen.
 
+
+Lisäksi tietokannan voisi siirtää AppData-kansioon tms. jotta ei tarvitse olla järjestelmänvalvoja voidakseen käyttää sovellusta.
 
 
 #### 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
