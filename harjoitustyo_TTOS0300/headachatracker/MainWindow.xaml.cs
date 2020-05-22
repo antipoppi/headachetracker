@@ -41,6 +41,12 @@ namespace headachatracker
             try
             {
                 dataHeadache.DataContext = headachatracker.DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
+                if (dataHeadache.DataContext == null)
+                {
+                    MessageBox.Show("Could not read from database", "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+
+                }
+
             }
 
             catch (Exception ex)
@@ -168,6 +174,12 @@ namespace headachatracker
         {
             dataHeadache.DataContext = null;
             dataHeadache.DataContext = DatabaseAccess.ReadFromSQLite(headacheObj.UserID);
+
+            if (dataHeadache.DataContext == null)
+            {
+                MessageBox.Show("Could not read from database", "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+
+            }
         }
     }
 }

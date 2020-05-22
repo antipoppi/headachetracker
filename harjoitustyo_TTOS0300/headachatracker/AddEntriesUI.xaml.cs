@@ -32,7 +32,7 @@ namespace headachatracker
         private void btnAddMedications_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
+            {  
                 // avataan uusi ikkuna
                 AddMedication medicationWindow = new AddMedication();
                 medicationWindow.Owner = this;
@@ -48,7 +48,7 @@ namespace headachatracker
             headacheObj.Medications = medications;
         }
 
-        private void btnAddSymptoms_Click(object sender, RoutedEventArgs e)
+        private void btnAddSymptoms_Click(object sender, RoutedEventArgs e) // Klikatessa lisäysnappia, avataan tämä
         {
             try
             {
@@ -121,8 +121,17 @@ namespace headachatracker
                 // sets pain intensity to headacheObj
                 Int32.TryParse(PainLevel.Text.ToString(), out int painLvl);
                 headacheObj.PainLevel = painLvl;
-                // adds headacheObj in to database
-                DatabaseAccess.AddToSQLite(headacheObj);
+             
+                bool result = DatabaseAccess.AddToSQLite(headacheObj);
+
+                if (result == false)
+                {
+                    MessageBox.Show("Could not add entry", "Adding error", MessageBoxButton.OK);
+
+                }
+
+
+
 
                 // closes this window
                 this.Close();
@@ -167,7 +176,9 @@ namespace headachatracker
             }
         }
 
-        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e) // Jos kalenterissa olevaa päivää vaihdetaan,
+                                                                                               // Tallennetaan se oliolle
+                                                                                               // Muutoin oliolle tulee tietoihin tämä päivä
         {
             string selected = calendar.SelectedDate.Value.ToString("yyyy-MM-dd");
             headacheObj.Date = selected;

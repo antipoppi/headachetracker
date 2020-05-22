@@ -22,7 +22,8 @@ namespace headachatracker
     public partial class EditEntry : Window
     {
         private Headache headacheObj; // yksityinen olio käsittelyä varten
-        public EditEntry(int userID, int entryID)
+        public EditEntry(int userID, int entryID) // tässä konstruktorissa on paljon asiaa, mutta siksi, jotta voidaan siirtää tietoa
+                                                  // tälle ikkunalle toisesta ikkunasta käsin + asetettua ne kun ikkuna avataan
         {
             InitializeComponent();
 
