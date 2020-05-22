@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
 using System.Windows;
+using System.Data.Entity;
 
 namespace headachatracker
 {
@@ -14,6 +15,7 @@ namespace headachatracker
         #region Fields
         private static string filePath;
         private static string password = "esimerkkisalasana";
+        private static DataTable nullTable = null;
         #endregion
 
         #region Constructors
@@ -27,7 +29,6 @@ namespace headachatracker
         /// <summary>
         /// Methods that are used to read/write data into SQLite-database
         /// </summary>
-
         public static DataTable ReadFromSQLite(int userID) // Lukumetodi
         {
             if (System.IO.File.Exists(filePath))    // Tarkistetaan, onko tiedosto olemassa
@@ -54,7 +55,7 @@ namespace headachatracker
                 return dt;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return nullTable;
         }
 
         public static bool AddToSQLite(Headache headache) // Lisäysmetodi
@@ -94,7 +95,7 @@ namespace headachatracker
                 return true;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return false;
         }
 
         public static bool DeleteFromSQLite(int entryID) // poistometodi
@@ -112,7 +113,7 @@ namespace headachatracker
 
                 // Avataan yhteys
                 connection.Open();
-                
+
                 // Suoritetaan komento
                 cmd.ExecuteNonQuery();
 
@@ -121,7 +122,7 @@ namespace headachatracker
                 return true;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return false;
         }
         public static void GetHeadacheObjPFromSQLite(Headache headache, int id)
         {
@@ -191,6 +192,8 @@ namespace headachatracker
                 else
                     headache.Notes = null;
 
+                return headache;
+
                 // Suljetaan yhteys
                 connection.Close();
             }
@@ -229,10 +232,10 @@ namespace headachatracker
                 // Suljetaan yhteys
                 connection.Close();
 
-                return true; 
+                return true;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return false;
         }
 
         /// <summary>
@@ -267,10 +270,10 @@ namespace headachatracker
                 if (hold != null)
                     return true;
                 else
-                    return false; 
+                    return false;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return false;
         }
 
         public static string GetUserSaltFromSQLite(string username) // Tällä etsitään suola-arvo käyttäjälle
@@ -303,10 +306,10 @@ namespace headachatracker
                     return salt;
                 }
                 else
-                    throw new Exception("Salt can not be acquired!"); 
+                    return string.Empty;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return string.Empty;
         }
 
         public static int LoginToDatabase(string username, string inputPassword) // Tätä käytetään kirjautumisessa
@@ -362,10 +365,10 @@ namespace headachatracker
                         return 0;
                 }
                 else
-                    return 0; 
+                    return 0;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return 0;
         }
 
         public static bool SaveUserToSQL(string username,string salt, string hashSaltedPwd) // Tällä voi tallentaa käyttäjiä tietokantaan
@@ -393,10 +396,10 @@ namespace headachatracker
 
                 // Suljetaan komento
                 connection.Close();
-                return true; 
+                return true;
             }
             else // Jos tiedostoa ei löydy, heitetään poikkeus
-                throw new System.IO.FileNotFoundException("File not found");
+                return false;
         }
     }
     #endregion
