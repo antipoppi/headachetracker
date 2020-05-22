@@ -106,6 +106,11 @@ Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3
 
 #### 1. Asennus
 
+**[Asenna tästä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/Asennustiedosto/headachetracker_setup.exe).**
+
+
+Asennus löytyy myös [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Asennustiedosto/headachetracker_setup.exe).
+
 **Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:**
 * System.Data.SQLite
 
