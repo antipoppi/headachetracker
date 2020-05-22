@@ -106,14 +106,16 @@ Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3
 
 #### 1. Asennus
 
-Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:
+**Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:**
 * System.Data.SQLite
 
-
-
-Nämä vielä pitää kirjoittaa:
-* mitä asioita tehtävä ja huomioitava asennuksessa
-* konfiguroitavat asiat
+**Asennusohjeet**
+1. Tuplaklikkaa headachetracker_setup.exe-tiedostoa.
+2. Valitse haluatko asentaa ohjelman kaikille käyttäjille vai nykyiselle käyttäjälle. Paina Seuraava.
+3. Valitse asennuskansio. Paina Seuraava.
+4. Luo halutessasi pikakuvake työpöydälle. Paina Seuraava.
+5. Paina Install.
+6. Paina Finish.
 
 
 #### 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
@@ -169,6 +171,7 @@ Ohjelman mukana tulee SQLiteHeadache.sql-tietokanta.
 #### 5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
 
 Tälle sovellukselle voisi tehdä vielä käyttäjälle lisätietoja (nimi, osoite ym.) sekä käyttäjä voisi muokata näitä tietojaan.
+Jatkokehitysideana olisi siistiä virheiden käsittelyä, joka on aika monimutkaisesti tehty tällä hetkellä.
 
 
 
@@ -179,5 +182,7 @@ MVVM-arkkitehtuuria pitäisi opiskella. Yritimme tehdä tähän sitä aluksi, mu
 
 
 #### 7. Tekijät, vastuiden ja työmäärän jakautuminen
+Työn määrä jakautui aika lailla puoliksi. Tatu teki enemmän tietokantaan ja salaukseen liittyviä asioita. Venla puolestaan teki enemmän käyttöliittymän toiminnallisuuksia ja ulkoasua.
+Molemmat kuitenkin osallistuivatsekä käyttöliittymän suunnitteluun, toteutukseen että tietokantoihin liittyviin asioihin.
 
 #### 8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille
