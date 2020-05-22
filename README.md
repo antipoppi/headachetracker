@@ -106,6 +106,8 @@ Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3
 
 #### [Esittelyvideoon pääsee tästä](https://www.youtube.com/watch?v=W11ASStET-U)
 
+Ohjelman koodi on [täällä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/tree/master/harjoitustyo_TTOS0300%2Fheadachatracker).
+
 #### 1. Asennus
 
 **[Asenna tästä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/Asennustiedosto/headachetracker_setup.exe).**
