@@ -192,8 +192,6 @@ namespace headachatracker
                 else
                     headache.Notes = null;
 
-                return headache;
-
                 // Suljetaan yhteys
                 connection.Close();
             }
