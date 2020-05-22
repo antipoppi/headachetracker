@@ -114,8 +114,8 @@ Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3
 2. Valitse haluatko asentaa ohjelman kaikille käyttäjille vai nykyiselle käyttäjälle. Paina Seuraava.
 3. Valitse asennuskansio. Paina Seuraava.
 4. Luo halutessasi pikakuvake työpöydälle. Paina Seuraava.
-5. Paina Install.
-6. Paina Finish.
+5. Paina Asenna.
+6. Paina Valmis.
 
 
 #### 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
@@ -182,7 +182,15 @@ MVVM-arkkitehtuuria pitäisi opiskella. Yritimme tehdä tähän sitä aluksi, mu
 
 
 #### 7. Tekijät, vastuiden ja työmäärän jakautuminen
+
 Työn määrä jakautui aika lailla puoliksi. Tatu teki enemmän tietokantaan ja salaukseen liittyviä asioita. Venla puolestaan teki enemmän käyttöliittymän toiminnallisuuksia ja ulkoasua.
 Molemmat kuitenkin osallistuivatsekä käyttöliittymän suunnitteluun, toteutukseen että tietokantoihin liittyviin asioihin.
 
 #### 8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille
+
+Kyseessä on toimiva sovellus, jota voi käyttää päänsäryn seurantaan. Ulkoasultaan sovellus on selkeä.
+Virheitä, tietokantoja ja olioita on käsitelty. Lähdekoodi on kommentoitu ja sekä koodi että muuttujien ym. nimeäminen on yritetty tehdä mahdollisimman selkeästi.
+Teimme asennus- ja käyttöohjeet. Aika käytettiin hyvin ja tasapuolisesti.
+
+
+Näistä syistä ehdotamme arvosanaksi 5.
