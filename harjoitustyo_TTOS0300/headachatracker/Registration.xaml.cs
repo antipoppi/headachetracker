@@ -33,7 +33,7 @@ namespace headachatracker
             string pwd1 = pwbPass1.Password;
             string pwd2 = pwbPass2.Password;
 
-            // tarkistetaan onko salasanakenttä tyhjä
+            // tarkistetaan onko salasanakentässä 5 merkkiä tai alle
             if (pwd1.Length <= 5)
             {
                 MessageBox.Show($"The password needs to be at least 6 characters long.");

@@ -120,8 +120,17 @@ namespace headachatracker
         {
             try
             {
+                bool result = DatabaseAccess.SaveEditedEntryToSQLite(headacheObj);
                 // lisätään tiedot tietokantaan
-                DatabaseAccess.SaveEditedEntryToSQLite(headacheObj);
+                if (result)
+                {
+                    MessageBox.Show("Edit added to database", "Edit added", MessageBoxButton.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Edit could not be added to database", "Edit error", MessageBoxButton.OK);
+
+                }
                 // sulkee tämän
                 this.Close();
             }

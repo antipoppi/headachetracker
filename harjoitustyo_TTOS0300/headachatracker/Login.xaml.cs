@@ -57,28 +57,38 @@ namespace headachatracker
                     string rawPwdSalted = rawPwd + salt;
                     string hashedAndSaltedInput = Security.ComputeSha256Hash(rawPwdSalted);
 
-                    // Tarkistetaan onko syötetty salasana oikein (verrataan saltattua ja hashattua salasanaa tietokannassa olevaan salted hashiin kyseisellä käyttäjänimellä)
-                    int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, hashedAndSaltedInput);
 
-                    if (userID != 0)
+                    if (salt == string.Empty) // tarkistetaan, onko salt saatu
                     {
-                        try
-                        {
-                            // Välitetään userID pääikkunaan
-                            MainWindow mainWindow = new MainWindow(userID);
-                            mainWindow.Show();
-                            this.Close();
-                        }
-                        catch (InvalidOperationException ex)
-                        {
-                            MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
-                        }
+                        MessageBox.Show("Salt could not be acquired", "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+
                     }
                     else
                     {
-                        // jos käyttäjänimi/salasana on väärin ilmoitetaan siitä
-                        MessageBox.Show("Login failed! Username or Password is wrong.", "Error login", MessageBoxButton.OK);
-                        pwbPassword.Password = "";
+
+                        // Tarkistetaan onko syötetty salasana oikein (verrataan saltattua ja hashattua salasanaa tietokannassa olevaan salted hashiin kyseisellä käyttäjänimellä)
+                        int userID = DatabaseAccess.LoginToDatabase(txbUsername.Text, hashedAndSaltedInput);
+
+                        if (userID != 0)
+                        {
+                            try
+                            {
+                                // Välitetään userID pääikkunaan
+                                MainWindow mainWindow = new MainWindow(userID);
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            catch (InvalidOperationException ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK); // Jos tulee virhe, näytetään messagebox
+                            }
+                        }
+                        else
+                        {
+                            // jos käyttäjänimi/salasana on väärin ilmoitetaan siitä
+                            MessageBox.Show("Login failed! Username or Password is wrong.", "Error login", MessageBoxButton.OK);
+                            pwbPassword.Password = "";
+                        }
                     }
                 }
                 else
