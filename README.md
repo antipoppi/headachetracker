@@ -182,7 +182,7 @@ Jatkokehitysideana olisi siistiä virheiden käsittelyä, joka on aika monimutka
 
 #### 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
 
-MVVM-arkkitehtuuria pitäisi opiskella. Yritimme tehdä tähän sitä aluksi, mutta koska se oli liian työläs tähän, päädyimme olemaan käyttämättä sitä.
+MVVM-arkkitehtuuria olisi hyvä opiskella. Yritimme tehdä tähän sitä aluksi, mutta koska se oli liian työläs tähän, päädyimme olemaan käyttämättä sitä.
 
 
 
