@@ -8,7 +8,7 @@
 7. [Käsitemalli](#käsitemalli)
 8. [Työnjako](#työnjako)
 9. [Työaikasuunnitelma](#työaikasuunnitelma)
-10. [Loppuraportti](#loppuraportti)
+10. [Loppuraportti ja esittely](#loppuraportti)
 
 <a name="tietoa"></a>
 ## Tietoa tekijöistä
@@ -102,7 +102,9 @@ Työt jaetaan suunnilleen tasan, oman motivaation mukaan.
 Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/tyotunnit.md).
 
 <a name="loppuraportti"></a>
-# Loppuraportti
+# Loppuraportti ja esittely
+
+#### [Esittely](https://www.youtube.com/watch?v=W11ASStET-U)
 
 #### 1. Asennus
 
