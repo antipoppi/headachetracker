@@ -104,7 +104,7 @@ Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3
 <a name="loppuraportti"></a>
 # Loppuraportti ja esittely
 
-#### [Esittely](https://www.youtube.com/watch?v=W11ASStET-U)
+#### [Esittelyvideoon pääsee tästä](https://www.youtube.com/watch?v=W11ASStET-U)
 
 #### 1. Asennus
 
