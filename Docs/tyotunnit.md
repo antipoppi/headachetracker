@@ -72,3 +72,13 @@
 
 **22.5.2020**
 * Venla 4h - Viimeistelyä ja asennustiedoston tekemistä.
+* Tatu 3h - Viimeistelyä
+
+***
+
+# Yhteenveto ajankäytöstä  
+
+## Projektiin yhteensä käytetyt tunnit 96h
+
+* **Venla 48h**
+* **Tatu 48h**
