@@ -68,3 +68,7 @@
 **21.5.2020**
 * Venla 1h - Koodin kommentointia ja SQL-salauksen tekoa
 * Tatu 5h - Käyttöliittymän hiomista
+
+
+**22.5.2020**
+* Venla 4h - Viimeistelyä ja asennustiedoston tekemistä.
