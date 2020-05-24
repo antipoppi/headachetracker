@@ -184,7 +184,8 @@ Ohjelman mukana tulee SQLiteHeadache.sql-tietokanta.
 
 Tälle sovellukselle voisi tehdä vielä käyttäjälle lisätietoja (nimi, osoite ym.) sekä käyttäjä voisi muokata näitä tietojaan. Lisäksi käyttäjänimen pituus olisi hyvä rajoittaa ehkä johonkin tiettyyn pituuteen ja se ei saisi sisältää muuta kuin numeroita ja kirjaimia. 
 SQL-injektiot on muuttujilla estetty, niin siihen tällä ei oikeastaan ole vaikutusta.
-Jatkokehitysideana olisi siistiä virheiden käsittelyä, joka on aika monimutkaisesti tehty tällä hetkellä. Sen lisäksi esim. oireita valitessa olisi hyvä muistaa komponenttien tilat ja esim. muokkaustila voisi olla lisäystilan kaltainen.
+Jatkokehitysideana olisi siistiä virheiden käsittelyä, joka on aika monimutkaisesti tehty tällä hetkellä. Sen lisäksi esim. oireita valitessa olisi hyvä muistaa komponenttien tilat ja esim. muokkaustila voisi olla lisäystilan kaltainen. 
+Lisäksi myös käyttäjänimen tarkistuksessa ei tarvitsisi olla väliä onko kirjaimet isolla vai pienellä kirjoitettu.
 
 
 Lisäksi tietokannan voisi siirtää AppData-kansioon tms. jotta ei tarvitse olla järjestelmänvalvoja voidakseen käyttää sovellusta.
