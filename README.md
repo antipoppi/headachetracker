@@ -53,19 +53,19 @@ Sovelluksen käyttöympäristönä on Windows. Ohjelmoinnissa käytetään SQLit
 
 ### Sovellukseen kirjautuminen
 
-![Sovellukseen kirjautuminen](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecase_register_login.jpg "Sovellukseen kirjautuminen")  
+![Sovellukseen kirjautuminen](kuvat/usecase_register_login.jpg "Sovellukseen kirjautuminen")  
 **Sovellukseen rekisteröityminen:** Sovelluksen käyttämiseksi täytyy luoda ensin käyttäjätunnus, jossa pakollisena tietona on käyttäjänimi. Käyttäjä voi tallentaa myös muuta tietoa käyttäjäprofiiliinsa joka tallennetaan tietokantaan.  
 **Sovellukseen kirjautuminen:** Sovellukseen kirjaudutaan valitsemalla käyttäjänimi.  
 
 ### Käyttäjän tietojen muokkaaminen
 
-![Käyttäjän tietojen muokkaaminen](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecase_edit_delete_user.png "Käyttäjän tietojen muokkaaminen")  
+![Käyttäjän tietojen muokkaaminen](kuvat/usecase_edit_delete_user.png "Käyttäjän tietojen muokkaaminen")  
 **Käyttäjän tietojen muokkaaminen** Käyttäjän voi muokata omia tietojaan, kuten esim. käyttäjänimeään  
 **Käyttäjän tietojen poistaminen** Käyttäjä voi poistaa tunnuksensa sekä kaikki merkintänsä.
 
 ### Merkintöjen lisäys
 
-![Tietojen käsittely](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/usecases.jpg "Tietojen käsittely")
+![Tietojen käsittely](kuvat/usecases.jpg "Tietojen käsittely")
 
 **Tietojen syöttäminen:**   Sovellukseen lisätään uusi merkintä jossa selviää päänsärkytyyppi, särkytaso, mahdolliset lääkkeet, oireet, särynlievitys, 
 mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto tallennetaan tietokantaan.  
@@ -79,12 +79,12 @@ mikä aiheutti, päivämäärä sekä muistiinpanoja. Lopuksi tämä tieto talle
 Sovelluksen yksinkertainen käsitemalli:
 
 
-![Käsitemalli](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/kasitemalli.jpg "Käsitemalli")
+![Käsitemalli](kuvat/kasitemalli.jpg "Käsitemalli")
 
 Sovelluksen tietokannan luokkakaavio:
 
 
-![SQL-kaavio](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/kuvat/SQL_classdiagram.jpg "SQL-kaavio")
+![SQL-kaavio](kuvat/SQL_classdiagram.jpg "SQL-kaavio")
 
 <a name="työnjako"></a>
 ## Työnjako
@@ -99,21 +99,21 @@ Työt jaetaan suunnilleen tasan, oman motivaation mukaan.
 *  Vko21: Testaaminen, dokumentointi ja työn palautus (20 tuntia)  
 **Yhteensä 120 tuntia**
 
-Työaikojen dokumentaatio löytyy [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/tyotunnit.md).
+Työaikojen dokumentaatio löytyy [täältä](Docs/tyotunnit.md).
 
 <a name="loppuraportti"></a>
 # Loppuraportti ja esittely
 
 #### [Esittelyvideoon pääsee tästä](https://www.youtube.com/watch?v=W11ASStET-U)
 
-Ohjelman koodi on [täällä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/tree/master/harjoitustyo_TTOS0300%2Fheadachatracker).
+Ohjelman koodi on [täällä](harjoitustyo_TTOS0300%2Fheadachatracker).
 
 #### 1. Asennus
 
-**[Asenna tästä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/raw/master/Asennustiedosto/headachetracker_setup.exe).**
+**[Asenna tästä](Asennustiedosto/headachetracker_setup.exe).**
 
 
-Asennus löytyy myös [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Asennustiedosto/headachetracker_setup.exe).
+Asennus löytyy myös [täältä](Asennustiedosto/headachetracker_setup.exe).
 
 **Tarvittavat .NET Frameworkin ulkopuoliset kirjastot:**
 * System.Data.SQLite
@@ -171,7 +171,7 @@ Nämä olivat ei-pakollisia:
 #### 3. Käyttöohjeet
 
 
-Käyttöohjeet ja kuvankaappaukset löytyvät [täältä](https://gitlab.labranet.jamk.fi/N3091/headachetracker/-/blob/master/Docs/kayttoohjeet.md).
+Käyttöohjeet ja kuvankaappaukset löytyvät [täältä](Docs/kayttoohjeet.md).
 
 
 #### 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
